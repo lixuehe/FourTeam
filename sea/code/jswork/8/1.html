@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js字符串函数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//字符串长度
+		function strLength(str){
+			var a = 0;
+			for(var i=0;i<=a;i++){
+				if(str[a]==undefined){
+					break;
+				}
+				a++;
+			}
+			// console.log(a);
+			return a;
+		}
+		// 用指定字符分割字符串成为数组
+		function strSplit(str,symbol){
+			console.log(str);
+			var arr = new Array();
+			var temp = "";
+				//如果字符串长度等于1(一个字符)
+				if(strLength(symbol)==1){
+					str+=symbol;
+					//如果i小于str的长度,则一直循环
+					for(var i=0; i<strLength(str);i++){
+						if(str[i]!==symbol){
+							temp+=str[i];
+						}else{
+							arr.push(temp);
+							temp="";
+						}
+					}
+				}else{
+					var key = 0;
+					for(var i=0; i<strLength(str); i++){
+						//遍历出symbol的值
+						if(str[i]!==symbol[key]){
+							temp+=str[i];
+						}else if(str[i]==symbol[key]){
+							if(temp!==""){
+								arr.push(temp);
+							}
+							temp="";
+							key++;
+						}
+					}
+					arr.push(temp);
+				}
+				console.log(arr);
+		}
+		// 通过制定字符合并数组为字符串 参数,接收一个字符串,指定要使用的分隔符
+		function strMerge(arr,symbol){
+			var temp="";
+			for(var i=0; i<strLength(arr); i++){
+				// console.log(strLength(arr));
+				temp+=arr[i];
+				//如果i不是最后数组的最后一个元素,则加symbol符号
+				if(i!==(strLength(arr)-1)){
+					temp+=symbol;
+				}
+			}
+			console.log(temp);
+		}
+
+		var arr = new Array();
+		arr[0]="123123";
+		arr[1]="1sdfsd";
+		arr[2]="432543";
+		
+		//字符串搜索
+		function strSearch(str,symbol){
+			if(strLength(symbol)==1){
+				for(var i=0;i<strLength(str);i++){
+					if(str[i]==symbol){
+						console.log(str[i]+"的下标是"+i);
+						return i;
+						return false;
+					}
+				}
+			//如果字符symbol的长度不等于1时,则执行else块
+			}else{
+				var key = 0;
+				var result = "";
+				var sub = "";
+				var sub1 = ""
+				for(var i=0; i<strLength(str);i++){
+					if(str[i]==symbol[key]){
+						result+=symbol[key];
+						sub += i;
+						sub1 +=i;
+						//每次自增一个空格
+						sub += ' ';
+						key++;
+					}
+				}
+				console.log(sub1);
+				if(result==symbol){
+					console.log(result);
+					console.log(symbol);
+					//调用自定义的函数,只截取所有下标的前两位(有长度为两位的下标)
+					sub = strCut(sub,0,2);
+					console.log(symbol+"的下标是"+sub);
+				}else{
+					console.log(result);
+					console.log(symbol);
+					console.log("没有找到"+symbol+"这个值");
+				}
+
+			}
+		}
+		strSearch("abcdefghijklmnopqrst","mno");
+		//字符串截取	//接收参数要操作的字符串,从哪里截取,截取几个字符,
+		function strCut(str,start,stop){
+			var temp="";
+			for(var i=start;i<strLength(str);i++){
+				if(i!==stop){
+					temp+=str[i];
+				}else{
+					// temp+=str[i];
+					break;
+				}
+			}
+			// console.log(temp);
+			return temp;
+		}
+
+		// strLength("abcdefg");
+		strSplit("123,123,123,123,123","1");
+		// strMerge(arr,"|");
+		// strSearch("abcdefghijklmnopqrst","cg");
+		// strCut("12345678910",3,9);
+	</script>
+</body>
+</html>

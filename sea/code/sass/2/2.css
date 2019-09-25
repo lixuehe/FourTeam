@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/*
+春：#AEDD81
+夏：#00CCFF
+秋：#D67755
+冬：#fff
+*/
+body {
+  background: #E2EBED; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #307082; }
+
+.wrap .page-wrapper {
+  background-color: #fff;
+  height: 1700px;
+  width: 800px;
+  margin: 0 auto; }
+
+h2 {
+  font-weight: bold;
+  font: 13px Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; }
+
+.title {
+  margin: 20px;
+  display: inline-block; }
+
+.title h1 {
+  background: url(http://www.csszengarden.com/175/logo.gif) no-repeat;
+  width: 150px;
+  height: 50px; }
+
+.title h2 {
+  margin-top: -20px; }
+
+#change-style-spring {
+  display: inline-block;
+  float: left;
+  margin: 50px; }
+
+#change-style-summer {
+  display: inline-block;
+  float: left;
+  margin: 50px; }
+
+#change-style-autumn {
+  display: inline-block;
+  float: left;
+  margin: 50px; }
+
+#change-style-winter {
+  display: inline-block;
+  float: left;
+  margin: 50px; }
+
+.download-css {
+  display: inline-block;
+  margin: 20px; }
+
+.banner {
+  height: 170px;
+  width: auto;
+  background: url(http://www.csszengarden.com/175/background.jpg) no-repeat center top;
+  position: relative; }
+
+.banner span {
+  width: 170px;
+  height: 70px;
+  color: white;
+  font-size: 11px;
+  position: absolute;
+  top: 50px;
+  left: 65px; }
+
+.content {
+  margin: 50px 40px;
+  height: 100%; }
+
+.menu {
+  display: inline-block;
+  font-size: 13px; }
+
+.menu ul {
+  list-style: none; }
+
+.menu p {
+  color: #307082; }
+
+.menu h1 {
+  font-size: 18px; }
+
+.archives {
+  margin-top: 50px; }
+
+.resources {
+  margin-top: 50px; }
+
+.content-right {
+  display: inline-block;
+  width: 450px;
+  float: right; }
+
+.content-right h3 {
+  margin: 40px 0 20px 0; }
+
+.content-right p {
+  color: #333;
+  font: 13px Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; }
+
+.footer {
+  margin: 20px 0;
+  background: #327081; }
+
+.footer a {
+  color: white; }
+
+#change-style-spring:active ~ .page-wrapper {
+  background-color: #AEDD81; }
+
+#change-style-summer:active ~ .page-wrapper {
+  background-color: #00CCFF; }
+
+#change-style-autumn:active ~ .page-wrapper {
+  background-color: #D67755; }
+
+#change-style-winter:active ~ .page-wrapper {
+  background-color: #F5F5F5; }
+
+/*# sourceMappingURL=2.css.map */

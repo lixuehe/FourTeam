@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>使用正则对象验证手机号格式和邮箱格式</title>
+</head>
+<body>
+	<input type="input" id="inputFrame">
+	<input type="Button" value="确定" onclick="judgmentFormat();">
+	<script type="text/javascript">
+		function judgmentFormat(){
+			// 取输入框的值
+			var inputValue = document.getElementById("inputFrame").value;
+			// 正则,匹配以1开头,第二位匹配3,5,7,8,是否是真的手机号,第三位后面跟上9位数字
+			var checkPhone = /^1[3,4,5,6,7,8]\d{9}$/;
+			// 匹配任意字母或数字(用户名),中间加上@,匹配字母或数字(域名),匹配.号,再匹配字母(顶域)
+			var checkEmail = /^\w+@\w+\.[a-zA-Z]+$/;
+			if(checkPhone.test(inputValue)){
+				//如果匹配手机号正确,弹窗提示
+				alert("你输入的值是手机号");
+			} else if(checkEmail.test(inputValue)){
+				alert("你输入的值是邮箱");
+			} else {
+				alert("输入错误,请重新输入");
+			}
+		}
+	</script>
+</body>
+</html>

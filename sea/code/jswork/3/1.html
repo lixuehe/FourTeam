@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS获取当前时间戳</title>
+	<style type="text/css">
+		#time {
+		}
+	</style>
+</head>
+<body>
+	<span>当前时间戳是:</span><span id="timeStamp"></span><br>
+	<span>当前时间是:</span>
+	<span id="time"></span>
+	<div>
+		<!-- <input type="Button" value="Button" onclick="changeTime()"> -->	<!-- test -->
+	</div>
+	<script>
+		function changeTime(){
+			// 获取当前时间
+			var now = new Date();
+			// 获取当前时间戳
+			var now1 = now.getTime();
+			// 获取年月日时分秒
+			var year = now.getFullYear();
+			var month = now.getMonth()+1;
+			var day = now.getDay();
+			var hours = now.getHours() + ":";
+			//使用三元运算符,如果秒或分小于10 就使用 0x格式 
+			var minutes = now.getMinutes() < 10 ? ("0"+now.getMinutes()) + ":" : now.getMinutes() + ":";
+			var seconds = now.getSeconds() < 10 ? ("0"+now.getSeconds()) : now.getSeconds()
+			var nowDate = year+"年"+month+"月"+day+"日"+hours+minutes+seconds;
+			document.getElementById("time").innerHTML = nowDate;
+			document.getElementById("timeStamp").innerHTML = now1;
+			//console.log("test");
+		}
+		// 每秒执行一次changeTime()函数
+		setInterval("changeTime()",1000);
+	</script>
+</body>
+</html>

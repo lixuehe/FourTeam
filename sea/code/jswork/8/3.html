@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+		//字符串长度
+		function strLength(str){
+			var a = 0;
+			for(var i=0;i<=a;i++){
+				if(str[a]==undefined){
+					break;
+				}
+				a++;
+			}
+			// console.log(a);
+			return a;
+		}
+
+
+        //写一个自定义的函数 两行代码重写array的push,牛逼
+        Array.prototype.custom = function(temp){
+        	var a = strLength(this);
+        	// console.log(strLength(this))
+    		this[a]=temp;
+        	// console.log(temp);
+        }
+            
+		//用指定字符分割字符串成为数组
+		function strSplit(str,symbol){
+		console.log(str);
+		var arr = new Array();
+		var temp = "";
+			//如果字符串长度等于1(一个字符)
+			if(strLength(symbol)==1){
+				str+=symbol;
+				//如果i小于str的长度,则一直循环
+				for(var i=0; i<strLength(str);i++){
+					if(str[i]!==symbol){
+						temp+=str[i];
+					}else{
+						arr.custom(temp);
+						temp="";
+					}
+				}
+			}else{
+				var key = 0;
+				for(var i=0; i<strLength(str); i++){
+					//遍历出symbol的值
+					if(str[i]!==symbol[key]){
+						temp+=str[i];
+					}else if(str[i]==symbol[key]){
+						if(temp!==""){
+							arr.custom(temp);
+						}
+						temp="";
+						key++;
+					}
+				}
+				arr.custom(temp);
+			}
+			console.log(arr);
+		}
+		strSplit("abcbced","bc");
+
+/*		var arr3 = ["123","456","123","456","123","456","123","456","123","456","123","456"];
+		var temp = "sbcnmb";
+		var temp1 = "thissb";
+		// console.log(strLength(arr3));
+		arr3.custom(temp);
+		arr3.custom(temp1);
+		console.log(arr3);*/
+
+/*	
+		//写一个自定义的函数
+        Array.prototype.custom = function(temp){
+        	var a = strLength(this);
+        	console.log(strLength(this))
+    		this[a]=temp;
+        	// console.log(temp);
+        }
+      	arr3.custom(temp);
+        arr3.custom(temp1);
+        console.log(arr3);
+        console.log(strLength(arr3));*/
+       //写一个自定义的函数 两行代码重写array的push,牛逼
+        Array.prototype.fuck = function(temp){
+
+        }
+        var arr
+
+</script>
+</body>
+</html>
