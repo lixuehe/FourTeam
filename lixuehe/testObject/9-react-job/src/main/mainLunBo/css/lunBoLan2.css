@@ -1,0 +1,64 @@
+/* 轮播图右侧下边的div */
+#lunboLan2{
+    height:128px; 
+    width: 936px; 
+    padding:0 18px;  
+    position: absolute;
+    bottom:0px;
+    right:0px;
+}
+#lunboLan2::before{
+    content: " ";
+    background: url("../imgs/Lan2Logo.png") no-repeat;
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:66
+}
+.lunboLan2a{
+    float: left;
+    font-size:16px;
+    display: block;
+    width: 20%;
+    height: 128px;
+    text-align: center;
+}
+.lunboLan2a:hover{
+    margin-top:-8px;
+}
+.lunboLan2a：hover{
+    cursor: pointer;
+}
+.i{
+    background:greenyellow;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../imgs/lunbolan.png") no-repeat;
+    background-size: 100%;
+    margin-top: 22px;
+}
+.lunboLan2a p.p1{
+    margin:4px 0 0;
+    color:#071113;
+}
+.lunboLan2a p.p2{
+    margin:2px 0 0;
+    color:#93999F;
+}
+.i0 {
+background-position: center 0px; }  
+
+.i1 {
+background-position: center -36px; }
+
+.i2 {
+background-position: center -72px; }
+
+.i3 {
+background-position: center -108px; }
+
+.i4 {
+background-position: center -144px; }

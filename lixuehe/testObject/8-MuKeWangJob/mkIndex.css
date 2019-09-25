@@ -1,0 +1,423 @@
+body{
+    width:100%;
+    height:100%;
+    min-width: 1200px;
+    /* border:1px solid blue; */
+    font-family: "微软雅黑"
+}
+@media screen and (max-width: 1200px) {
+    #input3 a{
+        display: none;
+    }
+}
+@media screen and (max-width:1300px){
+    #ul li a{
+        padding: 0 8px !important;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width: 1479px){
+    #ul li{
+        transition: 0.3s;
+        margin: 0;
+    }
+}
+/* 主要为标题栏及底端链接栏的各种样式 */
+/*白色标题栏 */
+#header{
+    /* border:1px solid red; */
+    height:72px;
+    line-height:72px;
+    font-size: 16px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.1);
+}
+/* logo */
+.logo{
+   margin:0 20px;
+   /* float:left;  */
+   display:inline-block;  
+}
+.logo img{
+    width:180px;
+}
+#header ul{
+    display:inline-block;
+    padding:0px;
+    margin:0 0 0 -42px;    /* height:100%; */
+}
+#header ul li{
+    list-style: none;
+    display:inline;   
+    color:#5e5e5e;
+}
+#ul li a{
+    font-family: '微软雅黑';
+    cursor: pointer;
+    color:#5e5e5e;
+    text-decoration:none;
+    height:100%;
+    width:100%;
+    padding:0 20px;
+    text-align: center;
+}
+#ul li a:hover{
+    color:black;
+}
+
+#ul li a .i{
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    background: url(imgs/n.png) no-repeat 0 0;
+}
+#input{
+    display: inline-block;
+    height:72px;
+    /* border:1px solid blue; 
+    margin-bottom:15px;*/
+}
+/* 包括input的div 和搜索图标的div */
+#input1{ 
+    line-height:46px;
+    width:260px;
+    min-width:32px;
+    margin:12px 0;
+    position:relative;  
+    border-bottom:1px solid #D9DDE1;
+}
+/* java入门*/
+#input3{
+    position:absolute; 
+    bottom: 0px;
+    right:30px;
+    float:right;
+    /* border:1px solid blue; */
+    text-align: center;
+    /* z-index:1; */
+}
+#input3 a{
+    background-color:#F3F5F7;
+    font-size:12px;
+    text-decoration:none;
+    color:#4D555D;
+    border-radius: 12px;
+    height:24px;
+    padding:3px 8px; 
+ }
+/* input输入框 */
+#input4{
+    border:0px;
+    outline:none;
+    width:100%;     
+}
+/* 搜索图标 */
+#input5{
+    font-size:14px;
+    color:#757a7e;
+    float:right;
+    position: absolute;
+    top:13px;
+    right:0px;
+    width:35px;
+    line-height:24px;
+    text-align: center;
+}
+/* 导航栏右侧 */
+#login{
+    display: inline-block;
+    position: absolute;
+    right:10px;   
+}  
+#login a{
+    font-family: '微软雅黑';
+    cursor: pointer;
+    color:#5e5e5e;
+    text-decoration:none;
+    height:100%;
+    text-align: center;
+    font-size:14px
+}
+#login a:hover{
+    color:red;
+}
+/* 下载APP */
+#login1{
+    width:116px; 
+}
+/* 点击下载APP后弹出的div */
+#app1{
+    position: absolute;
+    right:240px;
+    width: 304px;
+    height:190px;
+    padding: 10px 24px 22px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #4D555D;
+    box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.2);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    z-index: 99999;
+    font-size: 12px;
+}
+#login1 a{
+   width:86px;
+   padding:0 15px; 
+}
+#login1 h4{
+    margin: 12px 0;
+    font-size: 14px;
+    color: #1C1F21;
+    text-align: center;
+    line-height: 22px;
+}
+#login img{
+    width: 108px;
+    height: 108px;
+    position:relative;
+    left:0;
+}
+#app2{  
+    display:inline-block;
+    position: relative;
+    top:-100px; 
+    right:-120px;
+    /* border:1px solid red; */
+}
+#app2 a img{
+    height: 15px;
+    width: 15px; 
+    position: absolute;
+    top:7px;
+    left:10px;
+}
+#app2 a{
+    display: block;
+    color: #fff;
+    width: 140px;
+    height: 32px;
+    margin-bottom: 8px;
+    line-height: 36px;
+    background: #4D555D;
+    border-radius: 18px;
+    position: relative;
+} 
+#app2 a:hover{
+    background:black;
+    color: #fff !important;
+}
+#app2 a span{
+   text-align: left;
+   /* border:1px solid red; */
+   position: absolute;
+   left:30px;
+   top:-4px;
+   line-height: 40px;
+}
+
+#app2 p{
+    padding:0px;
+    height:15px;
+    position: absolute;
+    top:60px;
+    left:5px;
+    font-size:14px;
+}
+/* 点击购物车后弹出div */
+/* 购物车的超链接 */
+#car1 span{
+    padding-left:0px;
+    padding-right:3px;
+}
+#login2 a{
+    display:inline-block;
+    width:104px;
+    line-height:35px;
+    padding:0 17.5px; 
+    border-radius: 18px;
+    border:1px solid #D9DDE1; 
+}
+#car2{
+    position: absolute;
+    right:120px;
+    width: 304px;
+    height:320px;
+    padding: 10px 24px 22px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #4D555D;
+    box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.2);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    z-index: 99999;
+    font-size: 12px;
+}
+#login3 a{
+    width:52px;
+    padding:0 12px;
+}
+#login3 span{
+    color:#D9DDE1;
+}
+#car3{
+    height:40px;
+    line-height:15px;
+    padding: 13px 12px;
+    border-bottom: 1px solid #D3D6D9;
+    font-size:14px;  
+}
+#car3 #span1{
+    font-weight: bold;
+    float:left;
+}
+#car3 #span2{
+    float:right;
+    color:#9199A1;
+}
+#car4 .glyphicon{
+    width:100%;
+    font-size:45px;
+    color:#D9DDE1;
+    /* border:1px solid red; */
+    text-align: center;
+    margin:40px 0 2px;
+}
+#car4 p{
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    margin:5px;
+    padding:0px;
+    position: relative;
+    top:-25px;
+}
+#car4 :nth-child(3){
+    color:#9199A1;
+}
+#car4 :nth-child(4){
+    color:rgba(240,20,20,0.6);
+    margin:8px 0;
+}
+#car4 :nth-child(4):hover{
+    color:red;
+}
+#car4 :nth-child(5){
+    color:rgba(240,20,20,0.6);
+}
+#car4 :nth-child(5):hover{
+    color:red;
+}
+#car4{
+    border-bottom: 1px solid #D3D6D9;
+}
+#car5{     
+    position: relative;
+    line-height:60px;  
+}
+#car5 #span3{
+    position: absolute;
+    top:15px;
+    left:20px;
+    line-height:35px; 
+}
+#car5 #span4{
+    width:96px;
+    line-height:35px;
+    color:white;
+    background: rgba(240,20,20,0.8);
+    border-radius:18px;
+    position: absolute;
+    top:15px;
+    right:10px;
+    text-align: center;
+}
+#car5 #span4:hover{
+    background: red;
+}
+
+
+/* 最底端链接栏 */
+#footer{
+    padding:36px 0; 
+    height:132px;
+    width: 100%;
+    background:#F8F9FC;
+    position: relative;
+}
+#footer1{
+    position: relative;
+    text-align: left; 
+    width:1152px;
+    height: 62px;
+    margin:0 auto;
+}
+#last1 a{
+    text-decoration: none;
+    color:#99a1a6;
+    height:28px;
+    margin:0 10px;
+}
+#last1 a:hover{
+    text-decoration: none;
+    color:#1c1f21;
+}
+#last2{
+    padding:0 0 0 10px ;
+}
+#last2 p{
+    color:#99a1a6;
+    font-size:12px;
+    line-height:26px;
+    margin-top:8px;
+    word-break: break-all;
+    /* 在合适的位置换行 */
+}
+#last2 img{
+    width: 18px;
+    height: 18px;
+    margin: 0 !important;
+    vertical-align:top;
+}
+#footer2{
+    width: auto;
+    position: absolute; 
+    right: 0;
+    bottom: 0; 
+    text-align: center;
+    color:#4D555D;
+    font-size: 13px;
+}
+#weixin{
+    display:inline-block;
+    margin-right: 32px;
+    
+}
+#weibo{
+    display:inline-block;   
+}
+#footer2 a img{
+    width:30px;
+    height:30px;
+    margin-bottom:5px;
+}
+#weixin3{
+    position: absolute;
+    top:-230px;
+    right:40px;
+    width: 180px;
+    height:210px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #4D555D;
+    box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.2);
+    border-radius:5px;
+    z-index: 99999;
+    font-size: 12px;
+}
+#weixin3 img{
+    display:inline-block;
+}
