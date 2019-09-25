@@ -1,16 +1,16 @@
-@charset "UTF-8";
-/*
-春：#AEDD81
-夏：#00CCFF
-秋：#D67755
-冬：#fff
-*/
 body {
   background: #E2EBED; }
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: Lato Light;
+  font-weight: 900;
+  line-height: 25px; }
+
+::selection {
+  background: #333;
+  color: #fff; }
 
 a {
   text-decoration: none;
@@ -18,78 +18,91 @@ a {
 
 .wrap .page-wrapper {
   background-color: #fff;
-  height: 1700px;
+  /*height:2000px;*/
   width: 800px;
   margin: 0 auto; }
 
 h2 {
-  font-weight: bold;
-  font: 13px Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; }
+  font-weight: 900;
+  font: 15px Lato Light; }
 
 .title {
   margin: 20px;
   display: inline-block; }
 
 .title h1 {
-  background: url(http://www.csszengarden.com/175/logo.gif) no-repeat;
+  background: url(./images/logo.gif) no-repeat;
   width: 150px;
   height: 50px; }
 
 .title h2 {
-  margin-top: -20px; }
+  margin-top: -20px;
+  font-weight: 900; }
 
 #change-style-spring {
   display: inline-block;
-  float: left;
-  margin: 50px; }
+  margin: 20px;
+  position: relative;
+  left: 60%;
+  top: 15%; }
 
 #change-style-summer {
   display: inline-block;
-  float: left;
-  margin: 50px; }
+  margin: 20px;
+  position: relative;
+  left: 60%;
+  top: 15%; }
 
 #change-style-autumn {
   display: inline-block;
-  float: left;
-  margin: 50px; }
+  margin: 20px;
+  position: relative;
+  left: 60%;
+  top: 15%; }
 
 #change-style-winter {
   display: inline-block;
-  float: left;
-  margin: 50px; }
+  margin: 20px;
+  position: relative;
+  left: 60%;
+  top: 15%; }
 
 .download-css {
   display: inline-block;
   margin: 20px; }
 
 .banner {
-  height: 170px;
+  height: 300px;
   width: auto;
-  background: url(http://www.csszengarden.com/175/background.jpg) no-repeat center top;
+  background: url(images/winter.jpg) no-repeat center top;
   position: relative; }
 
-.banner span {
-  width: 170px;
+/*.banner span{
+  width: 422px;
   height: 70px;
-  color: white;
-  font-size: 11px;
-  position: absolute;
-  top: 50px;
-  left: 65px; }
-
+  color:white;
+  font-size: 30px;
+  position:absolute;
+  top:50px;
+  left:65px;
+}*/
 .content {
   margin: 50px 40px;
-  height: 100%; }
+  height: 71%; }
 
 .menu {
   display: inline-block;
-  font-size: 13px; }
+  font-size: 15px;
+  margin-right: 184px;
+  margin-top: 40px;
+  vertical-align: top; }
 
 .menu ul {
   list-style: none; }
 
 .menu p {
-  color: #307082; }
+  color: #307082;
+  font-weight: 900; }
 
 .menu h1 {
   font-size: 18px; }
@@ -102,15 +115,17 @@ h2 {
 
 .content-right {
   display: inline-block;
-  width: 450px;
-  float: right; }
+  width: 350px; }
 
 .content-right h3 {
-  margin: 40px 0 20px 0; }
+  margin: 40px 0 20px 0;
+  font-size: 1.5em; }
 
 .content-right p {
   color: #333;
-  font: 13px Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; }
+  font: 15px Lato Light;
+  font-weight: 900;
+  line-height: 25px; }
 
 .footer {
   margin: 20px 0;
@@ -119,16 +134,110 @@ h2 {
 .footer a {
   color: white; }
 
+#change-style-spring:active ~ .page-wrapper .banner {
+  background: url(images/spring.jpg) no-repeat center top; }
+
 #change-style-spring:active ~ .page-wrapper {
-  background-color: #AEDD81; }
+  background-color: #4e72b8; }
+
+#change-style-spring:active ~ .page-wrapper .footer {
+  background: #4e72b8; }
+
+#change-style-spring:active ~ .page-wrapper p {
+  color: #E2EBED; }
+
+#change-style-spring:active ~ .page-wrapper h1 {
+  color: #E2EBED; }
+
+#change-style-spring:active ~ .page-wrapper h2 {
+  color: #E2EBED; }
+
+#change-style-spring:active ~ .page-wrapper h3 {
+  color: #E2EBED;
+  font-size: 1.5em; }
+
+#change-style-spring:active ~ .page-wrapper span {
+  color: #E2EBED; }
+
+#change-style-spring:active ~ .page-wrapper a {
+  color: #E2EBED; }
+
+#change-style-spring:active ~ .page-wrapper * {
+  font-family: Lato ltalic;
+  font-weight: 900; }
 
 #change-style-summer:active ~ .page-wrapper {
-  background-color: #00CCFF; }
+  background-color: #26A65B; }
+
+#change-style-summer:active ~ .page-wrapper .footer {
+  background: #26A65B; }
+
+#change-style-summer:active ~ .page-wrapper .banner {
+  background: url(images/summer.jpg) no-repeat center top; }
+
+#change-style-summer:active ~ .page-wrapper p {
+  color: #E2EBED; }
+
+#change-style-summer:active ~ .page-wrapper h1 {
+  color: #E2EBED; }
+
+#change-style-summer:active ~ .page-wrapper h2 {
+  color: #E2EBED; }
+
+#change-style-summer:active ~ .page-wrapper h3 {
+  color: #E2EBED;
+  font-size: 1.5em; }
+
+#change-style-summer:active ~ .page-wrapper span {
+  color: #E2EBED; }
+
+#change-style-summer:active ~ .page-wrapper a {
+  color: #E2EBED; }
+
+#change-style-summer:active ~ .page-wrapper * {
+  font-family: P052, Bold ltalic;
+  font-weight: 900; }
+
+#change-style-autumn:active ~ .page-wrapper .footer {
+  background: #26A65B; }
 
 #change-style-autumn:active ~ .page-wrapper {
-  background-color: #D67755; }
+  background-color: #E6A23C; }
 
-#change-style-winter:active ~ .page-wrapper {
-  background-color: #F5F5F5; }
+#change-style-autumn:active ~ .page-wrapper .footer {
+  background: #E6A23C; }
+
+#change-style-autumn:active ~ .page-wrapper p {
+  color: #E2EBED; }
+
+#change-style-autumn:active ~ .page-wrapper h1 {
+  color: #E2EBED; }
+
+#change-style-autumn:active ~ .page-wrapper h2 {
+  color: #E2EBED; }
+
+#change-style-autumn:active ~ .page-wrapper h3 {
+  color: #E2EBED;
+  font-size: 1.5em; }
+
+#change-style-autumn:active ~ .page-wrapper span {
+  color: #E2EBED; }
+
+#change-style-autumn:active ~ .page-wrapper a {
+  color: #E2EBED; }
+
+#change-style-autumn:active ~ .page-wrapper .banner {
+  background: url(images/autumn.jpg) no-repeat center top; }
+
+#change-style-autumn:active ~ .page-wrapper * {
+  font-family: Cantarell;
+  font-weight: 900; }
+
+#change-style-winter:active ~ .page-wrapper .banner {
+  background: url(images/winter.jpg) no-repeat center top; }
+
+#change-style-winter:active ~ .page-wrapper * {
+  font-family: Lato Light;
+  font-weight: 900; }
 
 /*# sourceMappingURL=2.css.map */
