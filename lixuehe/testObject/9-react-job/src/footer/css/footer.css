@@ -1,0 +1,15 @@
+/* 最底端链接栏 */
+#footer{
+    padding:36px 0; 
+    height:132px;
+    width: 100%;
+    background:#F8F9FC;
+    position: relative;
+}
+#footer1{
+    position: relative;
+    text-align: left; 
+    width:1152px;
+    height: 62px;
+    margin:0 auto;
+}

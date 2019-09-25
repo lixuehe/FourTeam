@@ -1,0 +1,22 @@
+//栅格数
+$j:7;
+
+.row{
+   margin:10px;
+   padding:10px;
+   border:1px solid blue;
+
+}
+
+@for $i from 1 through $j {
+   .c-#{$j}-#{$i} {
+   width: $i/$j*100%;
+   border:1px solid red;
+   margin:5px 0px;
+   float:left;
+   text-align: center;
+   } 
+}
+   
+
+ 

@@ -1,0 +1,72 @@
+// @for $i from 0 through 4 {
+//     .i#{$i}{
+//         background-position: center (-36*$i)px;
+//     } 
+//  }
+// @for $i from 1 through 4 {
+//     #lunboLanHide1#{$i}{
+//         background-color:#1132#{$i};
+//     } 
+//  }
+ #tou1{
+     &:hover{
+        background:#fff;        
+        .tou1{
+            width:60px;
+            height:60px;
+            left:35%;   
+            transition: 0.3s;               
+        }
+        .imgms1p1{
+            display:none;
+        }
+        .imgms1p2{
+            display:none;
+        }
+        .imgms1p3{
+            top:60px;
+            height:168px;
+            transition:height 0.3s; 
+        }
+     }
+ }
+
+#yuantou2dd.zikuang{
+    &:hover{
+        .zi{
+            display:block !important;
+        }
+        img{
+            border: 2px solid #653ddd;
+        }
+        
+    }
+}
+#yuantou2dd.lankuang{
+    &:hover{
+        .lan{
+            display:block !important;
+        }
+        img{
+            border: 2px solid blue;
+        }
+        
+    }
+}
+div.ce1{
+    &:hover{
+        .ce1s{
+            display:block;
+         }
+         svg{
+             display:none;
+         }
+    }
+
+    
+} 
+@for $i from 0 through 7 {
+    .i1#{$i}{
+        background-position: center -36+(-72*($i))px;
+    } 
+ }

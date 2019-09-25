@@ -1,0 +1,185 @@
+body{
+    background:black;
+    color:white;
+    padding-left:70px;
+    padding-right:70px;
+    //text-shadow: 2px 2px black;
+    /*padding-top:70px;*/
+    /*padding-bottom:70px;*/
+
+}
+p {
+    font-size:19px;
+    font-family:"Century Schoolbook L";
+    font-style:italic;
+    font-weight: bold;
+}
+header{
+    background: url('imgs/x2.gif') no-repeat;
+    background-size: 100%;
+    width:100%;
+    height:400px;
+    position: relative;
+}
+header:hover{
+    background: url('imgs/xing8.jpeg') no-repeat;
+}
+header>h1{
+    width:100%;
+    display: block;
+    font-family: "Courier 10 Pitch,Bold";
+    font-size:50px;
+    text-algin:center;
+    font-style:italic;
+    border-bottom:2px white solid;
+}
+h2{
+    font-size:25px;
+    display:block;
+    font-weight:bold;
+    color:#FFC7E4;
+    border:1px antiquewhite dashed;
+    width:300px;
+    position:absolute;
+    top:0px;
+    right:10px;
+}
+/*第一段文字*/
+.summary{
+    width:500px;
+    height:200px;
+    position :absolute;
+    top:150px;
+    left:100px;
+    font-size: 30px;
+    font-style:italic;
+
+}
+/*最外层div*/
+.page-wrapper{
+    width:100%;
+    border:4px solid white;
+    padding:20px;
+}
+.intro{
+    position: relative;
+}
+h3{
+    font-weight: bold;
+    font-family: Arial;
+    font-size:30px;
+    text-indent:20px;
+}
+a{
+    font-size:15px;
+    color:#5f9ea0;
+}
+a:hover{
+    color:red;
+}
+.preamble{
+    height:175px;
+    line-height:65%;
+    /*border:4px solid yellow;*/
+    text-indent:20px;
+
+}
+#a{
+    line-height: 120%;
+}
+/*三个连续的div开始*/
+.explanation{
+    background: url("imgs/a3.jpeg") no-repeat;
+    background-position:right top;
+    width:445px;
+    height:440px;
+    border:1px solid #4d4353;
+    float:left;
+    padding:5px;
+    padding-left:15px;
+
+}
+.explanation:hover{
+    background:black
+}
+.participation:hover{
+    background:black
+}
+.benefits:hover{
+    background:black
+}
+.requirements:hover{
+    background:black
+}
+.participation{
+    background: url("imgs/a4.jpg") no-repeat;
+    background-size: 100%;
+    width:635px;
+    height:440px;
+    border:1px solid #4d4353;
+    margin-left:15px;
+    margin-right:15px;
+    float:left;
+    padding:5px;
+    padding-left:15px;
+
+}
+.participation p{
+    /*color:rgb(73,120,55);*/
+    /*color:rgb(193,73,255);*/
+    /*font-weight: bold;*/
+}
+
+.benefits{
+    background: url("imgs/a5.jpeg") no-repeat;
+    border:1px solid #4d4353;
+    background-size: 100%;
+    background-position:bottom;
+    width:235px;
+    height:440px;
+    float:left;
+    padding:5px;
+    padding-left:15px;
+}
+.requirements{
+/*    最长的*/
+/*    border:4px solid #48ff32;*/
+    background: url("imgs/x00.jpeg") no-repeat;
+    background-size:75.5%;
+    background-position:left top;
+    float:left;
+    width:1000px;
+    padding-left:40px;
+}
+footer{
+    font-size:30px;
+    width:220px;
+    height:35px;
+    position:absolute;
+    top:40px;
+    right:60px;
+
+}
+.wrapper {
+    position:relative;
+    top:15px;
+    right:-100px;
+}
+.sidebar{
+    /*border:4px solid #48ff32;*/
+    background: url("imgs/x0.jpeg") no-repeat;
+    background-size:56%;
+    background-position: right bottom;
+}
+
+abbr{
+    color:pink;
+}
+.zen-resources{
+    position:relative;
+    top:-17px;
+}
+.design-archives{
+    position:relative;
+    top:-17px;
+}
