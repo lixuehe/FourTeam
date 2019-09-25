@@ -1,0 +1,16 @@
+/*新上好课*/
+#main > .bg000{
+    box-shadow: 0 2px 4px 0 rgba(7,17,27,0.06);
+}
+.container-types .types-title span.icon-new-l{
+    background-position: center -72px;
+}
+.container-types .types-title .tit-icon-l{
+    margin-right: 24px;
+}
+.container-types .types-title span.icon-new-r{
+    background-position: center -108px;
+}
+.container-types .types-title .tit-icon-r{
+    margin-left: 24px;
+}

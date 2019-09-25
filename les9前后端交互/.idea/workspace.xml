@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7b12242-f555-4288-b08f-4cfed50d4267" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PLmsGeVVNL8A9P4yv3EuvXQKS3" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.write.html">
+    <configuration name="03-JSON对象和JSON字符串.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/les5/03-JSON对象和JSON字符串.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="demo01.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/les5/demo01.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="listen.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/les5/listen.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="write.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/les5/write.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="str.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="str.js" working-dir="$USER_HOME$/work/les4">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.write.html" />
+        <item itemvalue="Node.js.str.js" />
+        <item itemvalue="JavaScript Debug.demo01.html" />
+        <item itemvalue="JavaScript Debug.listen.html" />
+        <item itemvalue="JavaScript Debug.03-JSON对象和JSON字符串.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7b12242-f555-4288-b08f-4cfed50d4267" name="Default Changelist" comment="" />
+      <created>1565661955644</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565661955644</updated>
+      <workItem from="1565661957024" duration="27816000" />
+      <workItem from="1565745797007" duration="19013000" />
+      <workItem from="1565831953809" duration="5484000" />
+      <workItem from="1565956616249" duration="614000" />
+      <workItem from="1565957712224" duration="1057000" />
+      <workItem from="1566021481796" duration="216000" />
+      <workItem from="1566023536867" duration="20542000" />
+      <workItem from="1566092179033" duration="1659000" />
+      <workItem from="1566098393255" duration="1890000" />
+      <workItem from="1566177961655" duration="9578000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
