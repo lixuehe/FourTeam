@@ -1,0 +1,301 @@
+## 如何查看隐藏元素
+
+**效果: 鼠标放上去, 显示出来**
+
+**实现方式:**
+
+1) 元素:hover
+
+​    查看方式:   F12调试窗口, 在元素上右键,  **Force State  强迫为某一个状态, 选 :hover**
+
+2) 元素.onmouseover = fn(){...}
+
+​    查看方式:   onclick **事件**函数  +  **debugger**
+
+
+
+**注意: JS 代码中写 debugger 就可以当断点使用(代码暂停, 不往下执了, 也做为一种调试手段)**
+
+
+
+**用哪种方式更好?**
+
+
+
+## 如何查看元素绑定事件
+
+#### 例子: 返回顶部
+
+1.查看元素自身绑定了什么事件(不包含父元素)
+
+2.查看事件代码, 格式化代码.
+
+
+
+## 选择器
+
+包含
+
+父子
+
+div.c1
+
+::after
+
+优先级
+
+
+
+## 字体文件
+
+1.现象做法: 把一些图标以字体文件的形式保存
+
+2.目的---**减少向服务器的请求**. 下载一次字体文件, 多次使用其中的字体图标
+
+3.具体使用
+
+```
+在 css 文件(代码)中
+@font-face {
+	font-family: 'xxoo';           // 自定义字体名称
+	src: url('./fonts/moco.ttf');    // 指定字体文件位置, 
+									                // 用户浏览网页加载css时,会自动下载这个字体文件
+}
+
+.xxoo::after {
+    font-family: 'xxoo';  // 指定字体
+	content: '\e921';          // 用特殊值来表示 某个特定图标
+}
+
+<span class="c1"></span>
+```
+
+4.如何获取 慕课网 字体图标文件
+
+
+
+## 轮播图 swiper
+
+1.官网  https://www.swiper.com.cn/
+
+2.使用简介   查看 **在线演示**     查看网页源代码, 而不是 Elements
+
+3.审查元素, 尝试修改重写局部样式(重点)
+
+
+
+**antd**
+
+https://ant.design/components/carousel-cn/
+
+
+
+## box-sizing   宽高问题
+
+**box-sizing: border-box;**     设置 width = content + padding + border
+
+**box-sizing: content-box;**    设置 width = content
+
+
+
+**标准规范值:**   width 只包含  内容(content)区域
+
+**Bootstrap:**   width 包含 内容 + 填充 + 边框
+
+
+
+
+
+## 主要标签   div  span   语义化
+
+1.无意义的元素
+
+2.span 为**行级元素**, 不能直接设置宽高, 转为块级元素可以
+
+3.语义化标签是为了搜索引擎看的
+
+**结论: 不用废时间记很多标签**
+
+
+
+## position 定位
+
+#### 常用定位方式: 
+
+相对定位	position: relative;
+
+绝对定位	position: absolute;
+
+固定定位    position: fixed;
+
+**注意: 有了上面三种定义中的某个, 才可以使用  left, right, top, bottom, z-index**
+
+也就是说,  只是设置 z-index 是无效的
+
+
+
+**提醒: 不要被它位的名字迷惑**
+
+
+
+#### 场景1:  子元素 参考 父元素定位
+
+父元素   position: relative;    (相对定位)
+
+子元素   position: absolute; (绝对定位)
+
+
+
+查看 慕课 课程样式
+
+父元素永远在子元素下面
+
+
+
+#### 场景2:   元素  参考  浏览器窗口定位
+
+元素     position: fixed;
+
+
+
+
+
+
+
+## 并排显示
+
+#### 方式1
+
+**浮动:** 子元素 float + 父元素::after{display:block;clear:both;}
+
+```
+1) 父元素 清除浮动
+2) 父元素 加宽 18 px           1152px + 18px
+3) 父元素 左边距  -18px
+
+4) 子元素 浮动
+5) 子元素 设置 左边距  18px   下边距 12px
+```
+
+
+
+#### 方式2
+
+**弹性:**
+
+```
+父元素 {
+	display: flex;
+	flex-wrap: wrap;  // 超出自动换行
+	justify-content: space-between;  // 两端顶头对齐,中间平均空白
+	align-content: flex-start;   // 行与行之间紧挨,可以再用 margin 调整
+}
+子元素 {
+	没有过多设置
+}
+
+好处: 不用清除浮动, 不用设置边距
+```
+
+
+
+##  垂直居中
+
+**尝试1:  line-height: 一般为父元素高度**
+
+**尝试2:  转为块元素，margin-top 向下顶   or  margin-bottom 向上顶, 负值也可以尝试**
+
+**尝试3:  定位 position:relative; top=xxx; left=xxx;  调整**
+
+**尝试4:  在 box-sizing:border-box; 情况下, 用 padding-top 或 padding-bottom调整**
+
+**尝试5:  行内元素, 有填充高度 ＝>  vertical-align: 像素或百分比;**
+
+**尝试6: 弹性**
+
+```
+父元素 {
+		display: flex;
+		align-items: center;   
+}
+子元素  重直居中    无要求
+```
+
+
+
+```
+参考： https://www.cnblogs.com/wfeicherish/p/8884903.html
+```
+
+
+
+
+
+## 水平居中
+
+**1.标签中的文本居中   text-align: center;**
+
+**2.块级元素 + 不浮动 + 不绝对定位  =>  margin:  0px   auto;**
+
+**3.在 box-sizing:border-box; 情况下, 用 padding-left 或  padding-right 调整**
+
+**4.text-indent 调整文本缩进值**
+
+**5.尝试弹性**
+
+```
+父元素 {
+	   display: flex;
+	   justify-content: center;
+}
+
+子元素： 可以是文本，行元素，块元素 任意
+```
+
+
+
+
+
+## 元素最终样式 Computed
+
+
+
+## 99.9% 的正确的写法
+
+1.函数做为参数时
+
+2.对象中的 变量和函数
+
+
+
+## 程序员最宝贵的是时间
+
+1.提示补全
+
+2.复制. 防错
+
+3.代码片段
+
+4.注释
+
+5.查找
+
+
+
+## 杂
+
+console.table()
+
+console.count()
+
+浏览器最小字号
+
+font-size:9px;
+
+**Audits**
+
+**color-ui**
+
+**uni-app**
+
+**e-chart**
