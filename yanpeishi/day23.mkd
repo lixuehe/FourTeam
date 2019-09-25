@@ -1,0 +1,12 @@
+##sass写栅格系统
+    @for $j from 1 through 12 {
+      .shange-#{$j} {
+        @for $i from 1 through 12 {
+          .item-#{$i} {
+           background: rgb(219, 204, 204);
+            float: left;
+            border-style:solid;
+            text-align: center;
+            width: 99%/$j* $i; }
+        } }
+    }
