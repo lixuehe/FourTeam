@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//字符串长度
+		function strLength(str){
+			var a = 0;
+			for(var i=0;i<=a;i++){
+				if(str[a]==undefined){
+					break;
+				}
+				a++;
+			}
+			// console.log(a);
+			return a;
+		}
+		function strSearch(str,symbol){
+				var key = 0;
+				var result = "";
+				var sub ="";
+				// 循环遍历出str字符串的值
+				for(var i=0; i<strLength(str); i++){
+					// console.log("第一层");
+					for(var j=0; j<strLength(symbol);){
+						// console.log("第二层");
+						if(str[i+j]!==symbol[j]){
+							break;
+						}else{
+							//如果result的长度等于symbol的长度,则跳出循环
+							if(strLength(result)===strLength(symbol)){
+								break;
+							}
+							result+=str[i+j];
+							sub += i;
+							sub += " ";
+							j++;
+							// console.log(sub);
+						}
+					}
+				}
+				if(result!==symbol){
+					// console.log(result);
+					console.log("没有这个值:"+result);
+				}else{
+					sub = strCut(sub,0,2);
+					console.log("存在:"+symbol+"的下标是"+sub);
+				}
+
+			}
+		// }
+		strSearch("adminsbsbsb250","sbsbsb");
+		//字符串截取	//接收参数要操作的字符串,从哪里截取,截取几个字符,
+		function strCut(str,start,stop){
+			var temp="";
+			for(var i=start;i<strLength(str);i++){
+				if(i!==stop){
+					temp+=str[i];
+				}else{
+					// temp+=str[i];
+					break;
+				}
+			}
+			// console.log(temp);
+			return temp;
+		}
+	</script>
+</body>
+</html>

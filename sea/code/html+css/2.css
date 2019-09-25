@@ -1,0 +1,99 @@
+#css-zen-garden {
+    margin: 0;
+    padding: 10%;
+    background: url(https://www.w3school.com.cn/i/eg_bg_03.gif);
+}
+
+ol {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.page-wrapper {
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+	/*width:1500px;*/
+	height:100%;
+    background:#FCF0EA;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+
+.page-wrapper h1 {
+    font-size: 50px;
+    background: #26A65B;
+    display: block;
+    margin: 0px;
+    color: white;
+    padding:30px;
+}
+
+.intro {
+    color: white;
+    background-color: #3e8cb0;
+    display: block;
+    /*width: 100%;*/
+    padding:30px;
+}
+
+.intro a {
+    text-decoration: none;
+    color: #01FF70;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: #01FF70;
+}
+
+.main a {
+    text-decoration: none;
+    color:cornflowerblue;
+}
+
+.main {
+    background: #fcf0ea;
+    display: inline-block;
+    width: 70%;
+    height: auto;
+    padding: 30px;
+}
+
+.main h3 {
+    color: #6e1200;
+}
+
+.main p {
+    color: #676d73;
+}
+
+.sidebar {
+    background: #1d232f;
+    display: inline-block;
+    width: 22%;
+    height: 100%;
+    color: white;
+    float: right;
+    padding: 25px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: black;
+}
+
+
+
+@media only screen and (max-width: 1800px){
+    .sidebar {
+        float:none;
+        width:calc(100% - 60px);
+        padding:30px;
+        height:auto;
+    }
+}

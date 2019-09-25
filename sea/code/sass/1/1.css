@@ -1,0 +1,74 @@
+ul {
+  color: red;
+}
+
+li {
+  color: red;
+}
+
+ul li {
+  border: 1px solid #F90;
+}
+
+div h1 {
+  color: green;
+}
+div p {
+  display: inline-block;
+  margin-bottom: 1.4px;
+}
+div p a:hover {
+  color: greenyellow;
+}
+
+/*
+div {
+  border: {
+    style: solid;
+    width: 1px;
+    color: $border-color;
+  }
+}
+div {
+  border: 1px solid green;
+  left: 0;
+  right: 0;
+}
+
+.class1 {
+  border: 1px solid #333;
+}
+
+.class1 a {
+  color:red;
+}
+
+.class2 {
+  @extend .class1;
+}
+
+
+@mixin mixName {
+  float:left;
+  margin-left: 10px;
+}
+
+a {
+  @include mixName;
+}
+
+
+@mixin left($value: 10px){
+  float:left;
+  margin-left:$value;
+}
+
+div {
+  @include left(100px);
+}
+*/
+.box {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3), 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=1.css.map */
