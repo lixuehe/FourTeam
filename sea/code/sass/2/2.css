@@ -17,7 +17,7 @@ a {
   color: #307082; }
 
 .wrap .page-wrapper {
-  background-color: #fff;
+  background-color: #d9dde6;
   /*height:2000px;*/
   width: 800px;
   margin: 0 auto; }
@@ -75,7 +75,8 @@ h2 {
   height: 300px;
   width: auto;
   background: url(images/winter.jpg) no-repeat center top;
-  position: relative; }
+  position: relative;
+  top: 20px; }
 
 /*.banner span{
   width: 422px;
@@ -133,6 +134,9 @@ h2 {
 
 .footer a {
   color: white; }
+
+#change-style-spring:active ~ .page-wrapper .list {
+  color: #FF9E6C; }
 
 #change-style-spring:active ~ .page-wrapper .banner {
   background: url(images/spring.jpg) no-repeat center top; }
@@ -232,6 +236,9 @@ h2 {
 #change-style-autumn:active ~ .page-wrapper * {
   font-family: Cantarell;
   font-weight: 900; }
+
+#change-style-winter:active ~ .page-wrapper {
+  background-color: #d9dde6; }
 
 #change-style-winter:active ~ .page-wrapper .banner {
   background: url(images/winter.jpg) no-repeat center top; }

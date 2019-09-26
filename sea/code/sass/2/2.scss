@@ -1,5 +1,5 @@
 $inlineb: inline-block;
-$bgcolor: #fff;
+$bgcolor: #d9dde6;
 body {
   background:#E2EBED;
 }
@@ -94,7 +94,7 @@ h2 {
   width:auto;
   background:url(images/winter.jpg)no-repeat center top;
   position: relative;
-  //border-radius: 2em;
+  top:20px;
 }
 
 /*.banner span{
@@ -167,6 +167,9 @@ h2 {
   color:white;
 }
 
+#change-style-spring:active~.page-wrapper .list {
+  color:#FF9E6C;
+}
 
 #change-style-spring:active~.page-wrapper .banner{
   background:url(images/spring.jpg)no-repeat center top;
@@ -304,7 +307,7 @@ h2 {
 
 
 #change-style-winter:active~.page-wrapper{
-  //background-color:#F5F5F5;
+  background-color:#d9dde6;
 }
 #change-style-winter:active~.page-wrapper .banner{
   background:url(images/winter.jpg)no-repeat center top;
