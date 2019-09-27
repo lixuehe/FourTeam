@@ -111,4 +111,31 @@ function f() {
 })
 */
 
+/*
+const PI = 3.1415;
+console.log(PI);
+
+PI = 3;
+*/
+
+/*
+if (true) {
+	const MAX = 5;
+	console.log(MAX);
+}
+*/
+
+/*
+const a = [];
+a.push('Hello');
+a.length = 0;
+a = ['whoami'];
+console.log(a);*/
+
+/*
+const foo = Object.freeze({});
+
+foo.prop = 123;*/
+
+
 
