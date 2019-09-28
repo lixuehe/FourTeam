@@ -139,3 +139,10 @@ foo.prop = 123;*/
 
 
 
+var getGlobal = function(){
+    if (typeof self !== 'undefined') { console.log(self); }
+    if (typeof window !== 'undefined') { console.log(window);}
+    if (typeof global !== 'undefined') { console.log(global); }
+    throw new Error('unable to locate global object');
+}
+getGlobal();
