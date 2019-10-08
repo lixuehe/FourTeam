@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    /*$(document).ready(function(){
+       alert("JQuery test")
+    });*/
+    $(function(){
+/*
+        $("#hide").click(function(){
+            $("p").hide(500,function(){
+                console.log("hide test!");
+            });
+        });
+        $("#show").click(function(){
+            $("p").show(500,function(){
+                console.log("show test!");
+            });
+        });
+        */
+        $("button").click(function(){
+            $("p").toggle(500,function(){
+                alert("toggle函数测试");
+            });
+        })
+    })
+</script>
+    <p>这是一个段落</p>
+    <p>这是另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+    <p>这是另另一个段落</p>
+<!--    <button id="hide">隐藏</button>
+    <button id="show">显示</button>-->
+    <button id="toggle">隐藏/显示</button>
+</body>
+</html>
