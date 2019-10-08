@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf8">
+        <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+            /*
+            $(function(){
+                alert("xss!!");
+            })
+             */
+/*            $(document).ready(function(){
+                $("button").click(function(){
+                    $(this).hide();
+                });
+            });*/
+            $(function(){
+                /*
+                $("p").mouseenter(function(){
+                    $(this).hide();
+                });
+                */
+                $("p").dblclick(function(){
+                    $(this).hide();
+                });
+/*                $(".h2").mouseup(function(){
+                    $(this).hide();
+                })*/
+                $("h2").hover(
+                    function(){
+                        $(this).hide();
+                    },
+                    function(){
+                        // alert("显示！");
+                    }
+                )
+            })
+        </script>
+    </head>
+    <body>
+        <h2 class="h2">这是一个标题</h2>
+        <p>这是一个段落。</p>
+        <p>这是一个段落。</p>
+        <p class="ptest">这是另一个段落。</p>
+        <button>点我</button>
+    </body>
+</html>

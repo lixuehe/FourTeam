@@ -372,5 +372,186 @@ const json = '"\u2028"';
 console.log(JSON.parse(json));
 */
 
+/*
 const PS = eval("'\u2029'");
 console.log(PS);
+*/
+
+/*
+console.log(JSON.stringify('\u{D834}'));
+
+console.log(JSON.stringify('\uDF06\uD834'));
+
+console.log(`In JavaScript '\n' is a line-feed.`);
+
+console.log(`In JavaScript this is
+not legal.`);
+*/
+
+/*
+console.log(`string text line 1
+string text line 2`);*/
+
+/*
+let name = "Bob", time = "today";
+console.log(`Hello ${name}, how are you ${time}?`);
+
+let greeting = `\`Yo\` World!`;
+console.log(greeting);*/
+
+/*
+function authorize(user, action) {
+    if (!user.hasPrivilege(action)) {
+        throw new Error(
+            // 传统写法为
+            // 'User '
+            // + user.name
+            // + ' is not authorized to do '
+            // + action
+            // + '.'
+            `User ${user.name} is not authorized to do ${action}.`);
+    }
+}
+console.log(authorize({},{}));
+*/
+
+/*
+let x = 1;
+let y = 2;
+
+console.log(`${x} + ${y} = ${x+y}`);
+
+console.log(`${x} + ${y * 2} = ${x + y * 2}`);
+
+let obj = {x: 1, y:2};
+console.log(`${obj.x + obj.y}`);
+*/
+
+/*
+function fn(){
+    return "Hello World";
+}
+let a = "abc";
+
+console.log(`foo ${fn()} ${a}`);
+*/
+
+/*
+let place = "world";
+let msg = `Hello, ${'World'}`;
+console.log(msg);*/
+/*
+let place = "world";
+let msg = `Hello, ${'World'}`;
+console.log(msg);*/
+
+/*
+const tmpl = addr => `
+  <table>
+  ${addr.map(addr => `
+    <tr><td>${addr.first}</td></tr>
+    <tr><td>${addr.last}</td></tr>
+  `).join('')}
+  </table>
+`;
+
+const data = [
+    { first: '<Jane>', last: 'Bond' },
+    { first: 'Lars', last: '<Croft>' },
+]
+console.log(tmpl(data));
+*/
+
+/*
+let func = (name) => `Hello ${name}!`;
+console.log(func('fuck'));
+*/
+
+/*let template = `
+    <ul>
+        <% for(let i=0; i<data.supplies.length; i++){ %>
+            <li><%= data.supplies[i] %></li>
+        <% } %>
+    </ul>
+`;
+
+function compile(template){
+    const evalExpr = /<%=(.+?)%>/g;
+    const expr = /<%([\s\S]+?)%>/g;
+
+    template = template
+        .replace(evalExpr, '`); \n  echo( $1 ); \n  echo(`')
+        .replace(expr, '`); \n $1 \n  echo(`');
+
+    template = 'echo(`' + template + '`);';
+
+    let script =
+        `(function parse(data){
+    let output = "";
+
+    function echo(html){
+      output += html;
+    }
+
+    ${ template }
+
+    return output;
+  })`;
+
+    return script;
+}
+
+let parse = eval(compile(template));
+div.innerHTML = parse({supplies: ["broom", "mop", "cleaner"]});
+*/
+
+/*
+let a = 5;
+let b = 10;
+
+tag `Hello ${ a + b } world ${ a * b }`;*/
+
+/*
+let a = 5;
+let b = 10;
+
+function tag(s, v1, v2){
+    console.log(s[0]);
+    console.log(s[1]);
+    console.log(s[2]);
+    console.log(v1);
+    console.log(v2);
+
+    return "OK";
+}
+
+tag`Hello ${a + b}world ${a * b}`;
+*/
+
+let total = 30;
+let msg = `The total is ${total} (${total*1.05} with tax)`;
+
+/*function passthru(literals){
+    let result = '';
+    let i = 0;
+
+    while(i < literals.length){
+        result += literals[i++];
+        if(i< arguments.length){
+            result += arguments[i];
+        }
+    }
+    return result;
+}*/
+
+function passthru(literals, ...values){
+    let output ="";
+    let index;
+    for (index = 0; index < value.length; index++){
+        output += literals[index] + values[index];
+    }
+    output += literals[index]
+    return output;
+}
+
+console.log(msg);

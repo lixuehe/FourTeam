@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("input").focus(function(){
+                $(this).css("background-color","#208fdf");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","#ffffff");
+            });
+        })
+    </script>
+</head>
+<body>
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
+</body>
+</html>
