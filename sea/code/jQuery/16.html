@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    let txt = "文本。";
+    function appendText(){
+        var txt1 = "<p>文本。</p>";
+        var txt2 = $("<p></p>").text(txt);
+        var txt3 = document.createElement("p");
+        txt3.innerHTML="文本。";
+        $("body").append(txt1,txt2,txt3);
+    }
+</script>
+<p>这是一个段落。</p>
+<button onclick="appendText()">追加文本</button>
+</body>
+</html>

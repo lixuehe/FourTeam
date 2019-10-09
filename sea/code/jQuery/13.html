@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    /*$(document).ready(function(){
+       alert("JQuery test")
+    });*/
+/*    $(function(){
+        $("button").click(function(){
+            $("#runoob").attr("href","https://www.baidu.com");
+        })
+    })*/
+    $(function(){
+        $("button").click(function(){
+            $("#runoob").attr({
+                "href": "http://www.runoob.com/jquery",
+                "title": "jQuery 教程"
+            });
+            title = $("#runoob").attr('title');
+            $("#runoob").html(title);
+        })
+    })
+</script>
+<p><a href="//www.runoob.com" id="runoob">菜鸟教程</a></p>
+<button>修改 href 和 title</button>
+<p>点击按钮修改后，可以查看 href 和 title 是否变化</p>
+</body>
+</html>

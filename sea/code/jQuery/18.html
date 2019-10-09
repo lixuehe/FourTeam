@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    /*$(document).ready(function(){
+       alert("JQuery test")
+    });*/
+    function afterText(){
+        var txt1 = "<b>I </b>";
+        var txt2 = $("<i></i>").text("love ");
+        var txt3 = document.createElement("big");
+        txt3.innerHTML="jQuery! ";
+        $("img").after(txt1,txt2,txt3);
+    }
+</script>
+<img src="https://www.runoob.com/images/logo2.png" alt="">
+<br><br>
+<button onclick="afterText()">之后插入</button>
+</body>
+</html>
