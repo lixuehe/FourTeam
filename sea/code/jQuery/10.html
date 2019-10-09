@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        /*
+        $(function(){
+            $("button").click(function(){
+                $("#p1").css("color","red")
+                    .slideUp(2000)
+                    .slideDown(2000);
+            })
+        })
+        */
+        $(function(){
+            $("#btn1").click(function(){
+                console.log($("#test11").text());
+            });
+            $("#btn2").click(function(){
+                console.log($("#test11").html());
+            });
+            $("#btn3").click(function(){
+                console.log($("#input1").val());
+            });
+            $("#btn4").click(function(){
+                console.log($("#test11").attr("id"));
+            });
+        })
+    </script>
+</head>
+<body>
+
+<p id="test">这是段落中的 <b>粗体</b>文本。</p>
+<p id="test11"><a id="link" href="https://www.baidu.com">点我访问百度！！</a></p>
+<input id="input1" type="text" placeholder="hello">
+<button id="btn1">显示文本</button>
+<button id="btn2">显示 HTML</button>
+<button id="btn3">val测试</button>
+<button id="btn4">获取属性值</button>
+</body>
+</html>

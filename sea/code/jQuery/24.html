@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    $(function(){
+/*        $("button").click(function(){
+            console.log($("p").css("background-color"));
+        })*/
+        /*$("button").click(function(){
+            $("p").css("background-color","#00ff00");
+        })*/
+        $("button").click(function(){
+            $("p").css({"background-color":"green","font-size":"200%"});
+        })
+    })
+</script>
+<h2>这是一个标题</h2>
+<p style="background-color:#ff0000">这是一个段落。</p>
+<p style="background-color:#00ff00">这是一个段落。</p>
+<p style="background-color:#0000ff">这是一个段落。</p>
+<button>返回第一个 p元素的 background-color </button>
+</body>
+</html>

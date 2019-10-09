@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        .important
+        {
+            font-weight:bold;
+            font-size:xx-large;
+        }
+        .blue
+        {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+<script>
+    /*$(document).ready(function(){
+       alert("JQuery test")
+    });*/
+    /*
+    $(function(){
+        alert("JQuery test!!");
+    })
+    */
+    $(function(){
+        $("button").click(function(){
+            $("body div:first").addClass("important blue");
+        });
+    });
+</script>
+<div id="div1">这是一些文本。</div>
+<div id="div2">这是一些文本。</div>
+<br>
+<button>为第一个 div 元素添加类</button>
+</body>
+</html>
