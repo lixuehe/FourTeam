@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    /*$(document).ready(function(){
+       alert("JQuery test")
+    });*/
+    $(function(){
+        $("button").click(function(){
+            var txt = "";
+            txt +="div 的 宽度是：" + $("div").width()+ "<br>";
+            txt +="div 的 高度是 :" + $("div").height()+ "<br>";
+            txt +="div 宽度，包含内边距: " + $("#div1").innerWidth()+ "<br>";
+            txt +="div 高度，包含内边距: " + $("#div1").innerHeight()+ "<br>";
+            txt +="div 宽度，包含内边距和边框:" + $("#div1").outerWidth()+ "<br>";
+            txt +="div 高度，包含内边距和边框:" + $("#div1").outerHeight();
+            console.log(txt);
+            $("div").html(txt);
+        })
+    })
+</script>
+    <div id="div1" style="height:100px;width:300px;padding:10px;margin:3px;border:1px solid blue;background-color:lightblue;"></div>
+    <br>
+    <button>显示 div 元素的尺寸</button>
+    <p>width() - 返回元素的宽度</p>
+    <p>height() - 返回元素的高度</p>
+</body>
+</html>

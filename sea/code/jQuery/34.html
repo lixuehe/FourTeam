@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>JQuery测试</title>
+        <meta charset="utf8">
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+/*            $.noConflict();
+            jQuery(function(){
+                jQuery("button").click(function(){
+                    jQuery("p").text("jQuery 仍然在工作!");
+                });
+            });*/
+            var fuck = $.noConflict();
+            fuck(function(){
+                fuck("button").click(function(){
+                    alert("Jquery仍在工作");
+                })
+            })
+        </script>
+        <p>这是一个段落。</p>
+        <button>点我</button>
+    </body>
+</html>
