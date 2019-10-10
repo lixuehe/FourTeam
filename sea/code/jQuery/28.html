@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>JQuery测试</title>
+    <meta charset="utf8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        .siblings *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script>
+        $(function(){
+            // $("h2").siblings("h3").css({"border":"2px solid red","color":"red"});
+            // $("h2").next().css({"border":"2px solid red","color":"red"});
+            $("h2").nextAll().css({"border":"2px solid red","color":"red"});
+        })
+    </script>
+</head>
+<body class="siblings">
+
+<div>div (父元素)
+    <p>p</p>
+    <span>span</span>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+</div>
+
+</body>
+</html>

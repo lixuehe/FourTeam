@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>JQuery测试</title>
+        <meta charset="utf8">
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            $(function(){
+                // $("p").first().css("background-color","red");
+                // $("div").eq(1).css("background-color","yellow");
+                // $("p").filter(".url").css("background-color","#00ff00");
+                $("p").not(".url").css("background-color","#ff0000")
+            })
+        </script>
+    </head>
+    <body>
+    <h1>欢迎访问我的主页</h1>
+    <p>菜鸟教程 (index 0).</p>
+    <p class="url">http://www.runoob.com (index 1)。</p>
+    <p>google (index 2).</p>
+    <p class="url">http://www.google.com (index 3)。</p>
+    </body>
+</html>
