@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+color:rgb(221, 53, 31);
+background: rgb(154, 144, 206);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 70%;
+}
+
+header{
+  height:230px;
+  padding: 20px 0 70px 0;
+  background:rgb(3, 82, 71);
+  text-align: center;
+}
+h1,h2{
+  color: aliceblue;
+}
+p{
+  line-height: 2;
+}
+.page-wrapper{
+  position: relative;
+  width: 80%;
+  margin: auto;
+  background:url(1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.summary,.preamble,.explanation{
+  width: 100%;
+  clear: both;
+  position: relative;
+  background-color:#ffffff;
+  border:0.01px solid #ffffff;
+  opacity:0.3;
+  
+}
+.participation,.benefits{
+  width: 100%;
+
+  background-color:#ffffff;
+  border:0.01px solid #ffffff;
+  opacity:1;
+}
+
+.requirements{
+  width:100%;
+
+  background-color:#ffffff;
+  border:1px solid rgb(214, 63, 63);
+  opacity:0.3;
+}
+.requirements p
+{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.sidebar {
+  background: #edf4f0;
+  width:100%;
+
+}
+.sidebar h3 {
+  display: none;
+}
+.sidebar a {
+  color: #607476;
+  text-decoration: none;
+}
+
+footer{
+  width:80%;
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
