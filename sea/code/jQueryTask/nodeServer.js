@@ -4,9 +4,11 @@ var
     fs = require('fs'),
     url = require('url'),
     path = require('path'),
-    http = require('http'),
+    http = require('http')
+    /*
     util = require('util'),
     querystring = require('querystring');
+    */
 
 // 从命令行参数获取root目录，默认是当前目录:
 var root = path.resolve(process.argv[2] || '.');
@@ -29,14 +31,33 @@ var server = http.createServer(function (request, response) {
                 // 将文件流导向response:
             fs.createReadStream(filepath).pipe(response);
             // 接收post参数。
-            var data = "";
+            var postData = "";
             request.on("data",function(chunk){
-                data += chunk;
+                postData += chunk;
             })
             request.on("end",function(){
-                //转为json对象后转为json字符串
-                data = util.inspect(querystring.parse(data));
-                console.log(data);
+                if(postData.length==0){
+                    return false;
+                }
+                fs.readFile('./text.json',function(err,data){
+                  if(err){
+                      return console.error(err);
+                  }
+                  var jsonStr = data.toString();//将二进制转为json字符串
+                  var json = JSON.parse(jsonStr);//将json字符串转换为json对象
+                  var post = JSON.parse(postData);//传进来的post数据是json字符串，转换为json对象
+                  json.message.push(post);
+                  console.log(json.message);
+                  var str = JSON.stringify(json);//json对象转换为json字符串
+                    fs.writeFile('./text.json',str,{flag:'w'},err=>{
+                        if(!err){
+                            console.log('数据写入成功');
+                            console.log(postData);
+                        }else{
+                            console.log('数据写入失败');
+                        }
+                    })
+                })
             })
         } else {
             // 出错了或者文件不存在:
@@ -47,6 +68,9 @@ var server = http.createServer(function (request, response) {
         }
     });
 });
+function testJson(){
+
+}
 
 server.listen(8080);
 
