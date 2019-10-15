@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>留言板任务</title>
+        <style>
+            #submitMessageArea {
+                display:block;
+            }
+            #inputName {
+                margin-bottom:10px;
+            }
+            #messageContent{
+                border:1px solid red;
+                width:auto;
+                height:auto;
+                margin-top:50px;
+                margin-bottom:50px;
+            }
+        </style>
+        <script src="./js/jquery.js"></script>
+        <script>
+            $(function(){
+                // 将请求到的json字符串转换为json对象，并循环输出到dom上。
+                var messageData;
+                $.get("http://127.0.0.1:8080/messageData.json",function(data){
+                    messageData = jQuery.parseJSON(data);
+                    for(let i=0; i<messageData.message.length;i++){
+                        let messageName = messageData.message[i].name;
+                        let messageContent = messageData.message[i].content;
+                        let messageTime = timestampToTime(messageData.message[i].time);
+                        $("#messageContent").append(
+                            "姓名: "+messageName+"<br>",
+                            "内容: "+messageContent+"<br>",
+                            "时间: "+messageTime+"<br>"+
+                            "<button>回复</button>"+
+                            "<button>删除</button>"+"<br>"+"<br>"+"<br>"
+                        );
+                    }
+                });
+                $("#submit").click(function(){
+                    //这里要写提交ajax请求数据
+                    $.post("http://127.0.0.1:8080/messageData.json",
+                        {
+                            name:$("#inputNameTag").val(),
+                            content:$("#submitMessageTag").val()
+                        },function(data,status){
+                            console.log(data,status);
+                    });
+                })
+                // 时间戳转时间函数
+                function timestampToTime(timestamp) {
+                    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+                    var Y = date.getFullYear() + '-';
+                    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+                    var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
+                    var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+                    var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+                    var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+                    return Y+M+D+h+m+s;
+                }
+            })
+        </script>
+    </head>
+    <body>
+    <h1>留言板</h1>
+    <div id="messageContent">
+        <ul>
+
+        </ul>
+    </div>
+    <div id="inputName">
+        <input type="text" placeholder="请输入你的名字" id="inputNameTag">
+    </div>
+    <div id="submitMessageArea">
+        <textarea cols="30" rows="10" id="submitMessageTag"></textarea>
+        <button id="submit">提交留言</button>
+    </div>
+    </body>
+</html>
