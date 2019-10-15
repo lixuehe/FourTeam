@@ -19,6 +19,28 @@
         </style>
         <script src="./js/jquery.js"></script>
         <script>
+            var test = "1";
+            //删除留言 函数
+            function deleteMessages(obj){
+                console.log(obj);
+            }
+            // 时间戳转时间函数
+            function timestampToTime(timestamp) {
+                let date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+                let Y = date.getFullYear() + '-';
+                let M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+                let D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
+                let h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+                let m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+                let s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+                return Y+M+D+h+m+s;
+            }
+            // 获取当前时间
+            function currentTime(){
+                var date = (Date.parse(new Date()) / 1000);
+                return date;
+            }
+
             $(function(){
                 requestServer();
                 $("#submit").click(function(){
@@ -43,7 +65,7 @@
                         success:function(){
                             console.log("提交成功");
                             // alert("留言成功！");
-                            // 请求成功时加载最新一条的数据;并，清空输入框
+                            // 请求成功时加载最新一条的数据,并清空输入框
                             requestServerNew()
                             $("#inputNameTag").val("");
                             $("#submitMessageTag").val("");
@@ -53,22 +75,9 @@
                         }
                     })
                 })
-                // 时间戳转时间函数
-                function timestampToTime(timestamp) {
-                    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
-                    var Y = date.getFullYear() + '-';
-                    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
-                    var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
-                    var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
-                    var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
-                    var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
-                    return Y+M+D+h+m+s;
-                }
-                // 获取当前时间
-                function currentTime(){
-                    var date = (Date.parse(new Date()) / 1000);
-                    return date;
-                }
+                $("body").on("click",".replyMessage",function(){
+                    alert("你点击了回复按钮");
+                })
                 // 请求服务端，并把结果输出到dom,加载全部的数据
                 function requestServer(){
                     // 将请求到的json字符串转换为json对象，并循环输出到dom上。
@@ -80,13 +89,12 @@
                             let messageName = messageData.message[i].name;
                             let messageContent = messageData.message[i].content;
                             let messageTime = timestampToTime(messageData.message[i].time);
-                            $("#messageContent").append(
-                                "姓名: "+messageName+"<br>",
-                                "内容: "+messageContent+"<br>",
-                                "时间: "+messageTime+"<br>"+
-                                "<button>回复</button>"+
-                                "<button>删除</button>"+"<br>"+"<br>"+"<br>"
-                            );
+                            //使用es6模板字符串，省去一大部分操作。
+                            $("#messageContent").append(`
+                                姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
+                                <button class='replyMessage'>回复</button>
+                                <button class='deleteMessage' onclick='deleteMessages(this)'id=${test}>删除</button><br><br><br>
+                            `);
                         }
                     });
                 }
@@ -102,13 +110,11 @@
                         let messageName = messageData.message[newValue].name;
                         let messageContent = messageData.message[newValue].content;
                         let messageTime = timestampToTime(messageData.message[newValue].time);
-                        $("#messageContent").append(
-                            "姓名: "+messageName+"<br>",
-                            "内容: "+messageContent+"<br>",
-                            "时间: "+messageTime+"<br>"+
-                            "<button>回复</button>"+
-                            "<button>删除</button>"+"<br>"+"<br>"+"<br>"
-                        );
+                        $("#messageContent").append(`
+                            姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
+                            <button class='replyMessage'>回复</button>
+                            <button class='deleteMessage'>删除</button><br><br><br>
+                        `);
                     })
                 }
             })
