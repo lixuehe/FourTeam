@@ -1,0 +1,194 @@
+/* 慕课精英名师 */
+#ms{
+    height:447px;    
+    background: #f3f5f7 url(./imgs/mkms0.jpg) no-repeat center center;
+    background-size:cover; 
+}
+#jyms{
+    width:1200px;
+    height:447px;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    padding:36px 20px 48px;
+    /* border:2px solid red; */
+    overflow:hidden !important; 
+}
+#jyms>h3{
+    position: relative;
+    font-size: 20px;
+    /* 字符间距 */
+    letter-spacing:6px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+}
+#jyms>h3>span{
+    float: right;
+    margin-right: 4px;
+    color: #93999f;
+    font-size:16px;
+    letter-spacing:1.5px;
+}
+#jyms>h3>span:hover{
+    color: #fff;
+    transition:0.3s;
+}
+/* 轮播图所在的div */
+div.swiper-container{
+    color:#1c1F21;
+    font-size:16px;
+    height:288px;
+    /* padding:0 px; */
+    box-sizing: content-box;
+    /* border:2px solid white; */
+    overflow:visible !important;  
+}
+/* 轮播图中的每一个小的div */
+div.swiper-slide{
+    /* width: 216px !important; */
+    height: 230px;
+    /* box-sizing: border-box; */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.05);
+    border-radius: 12px;
+    transition: all .3s;
+    font-size: 18px;
+    /* margin-right:22.6px !important;   */
+    margin-top:20px !important; 
+    
+}
+/* 小圆点 */
+div.swiper-pagination{
+    position: absolute;
+    bottom:0px !important;
+}
+div.swiper-pagination span{
+    background-color: #fff;
+}
+div.swiper-pagination span:nth-child(3){
+display:none;
+}
+div.swiper-pagination span:nth-child(4){
+    display:none;
+}
+div.swiper-pagination span:nth-child(5){
+    display:none;
+}
+/* 轮播图下的的小div */
+/* 头像 */
+
+div.swiper-slide img{
+    position: absolute;
+    top:-16.6px;
+    left:28%;
+    /* margin-left: -48px; */
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+}
+/* 头像下的名字 */
+div.swiper-slide span.imgms1p1{
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 92px;
+    padding: 0 36px;
+    white-space: nowrap;
+    color: #07111b;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/* 名字下的职业 */
+div.swiper-slide span.imgms1p2{
+    display: block;
+    font-size: 12px;
+    margin:0 0 12px;
+}
+/* 职业下的详细介绍 */
+div.swiper-slide span.imgms1p3{
+    position: absolute;
+    top:140px;
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    color: #4D555D;
+    height:72px;
+    padding:0 32px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    word-break: break-all;
+    text-align: justify;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/* 头像的悬停事件 */
+#tou1:hover {
+    background: #fff; }
+    #tou1:hover .tou1 {
+      width: 60px;
+      height: 60px;
+      left: 35%;
+      transition: 0.3s; }
+    #tou1:hover .imgms1p1 {
+      display: none; }
+    #tou1:hover .imgms1p2 {
+      display: none; }
+    #tou1:hover .imgms1p3 {
+      top: 60px;
+      height: 168px;
+      transition: all 0.3s; }
+/* 左右按钮 */
+div.anniu span{
+    width:32px;
+    height:32px;
+    font-size: 32px;
+    color: #9199A1;
+    line-height: 32px;   
+}
+.swiper-button-next:hover{
+    background-color:white !important;
+}
+.swiper-button-prev:hover{
+    background-color:white !important;
+}
+.swiper-button-next,.swiper-button-prev{
+    background-image:none !important;
+    background-color: rgba(255, 255, 255, 0.1)  !important;
+    text-align:center;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px;
+    z-index:10000;
+    font-size: 32px;
+    color: #9199A1;
+    line-height:32px;
+}
+div.swiper-button-next{
+    position: absolute;
+    top: 45%;
+    width: 48px;
+    height: 48px;   
+    right:-20px;
+}
+div.swiper-button-prev{
+    left:-20px;
+    position: absolute;
+    top: 45%;
+    width: 48px;
+    height: 48px;   
+    display: block; 
+}

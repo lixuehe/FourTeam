@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>慕课网--程序员的梦工厂</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="./dist/css/swiper.min.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="./dist/js/swiper.min.js"></script>
+  <script>
+     //  第二个轮播图和小圆点的js
+   var swiper = new Swiper('.swiper-container', {
+    autoplay:true,
+    slidesPerView: 5,
+    spaceBetween:50,
+    slidesPerGroup:5,
+    loop: true,
+    loopFillGroupWithBlank: true,
+  //   init: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      }
+   }
+ });
+</script>
+</html>
