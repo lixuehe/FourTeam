@@ -64,21 +64,25 @@ $(function(){
                 currentDivId = event.currentTarget.id;
                 // 这里 要想办法重新渲染dom（或者直接删除那个dom）
                 $("#div"+currentDivId).remove();
-                console.log("删除成功");
-                console.log(event.currentTarget.id);
+                console.log("删除成功,id为："+event.currentTarget.id);
             },
             error:function(){
                 console.log("删除失败");
             }
         })
     });
+    // 回复 函数
+    $("body").on("click",".replyMessage",function(event){
+        console.log(event.currentTarget.id);
+        $(".replyArea").toggle();
+    })
     // 请求服务端，并把结果输出到dom,加载全部的数据
     function requestServer(){
         // 将请求到的json字符串转换为json对象，并循环输出到dom上。
         var messageData;
         $.get("/text.json",function(data){
             messageData = jQuery.parseJSON(data);
-            console.log(messageData);
+            // console.log(messageData);
             for(let i=0; i<messageData.message.length;i++){
                 let messageName = messageData.message[i].name;
                 let messageContent = messageData.message[i].content;
@@ -86,8 +90,10 @@ $(function(){
                 //使用es6模板字符串，省去一大部分操作。
                 $("#messageContent").append(`<div id="div${messageId}">
                                 姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
-                                <button class='replyMessage'>回复</button>
-                                <button class='deleteMessage' id=${messageId}>删除</button><br><br><br>
+                                <button class="replyMessage" id="${messageId}">回复</button>
+                                <button class="deleteMessage" id="${messageId}">删除</button>
+                                <div class="replyArea"><input type="text"><button>确认</button></div>
+                                <br><br><br>
                             </div>`);
                 messageId++;//每生成一个留言。id自增1，给留言标序
             }
@@ -107,8 +113,10 @@ $(function(){
             let messageTime = timestampToTime(messageData.message[newValue].time);
             $("#messageContent").append(`<div id="div${messageId}">
                             姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
-                            <button class='replyMessage'>回复</button>
-                            <button class='deleteMessage' id=${messageId}>删除</button><br><br><br>
+                            <button class="replyMessage" id="${messageId}">回复</button>
+                            <button class="deleteMessage" id="${messageId}">删除</button>
+                            <div class="replyArea"><input type="text"><button>确认</button></div>
+                            <br><br><br>
                         </div>`);
             messageId++;//每生成一个留言。id自增1，给留言标序
         })
