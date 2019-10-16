@@ -1,5 +1,7 @@
 //自增函数，标识id，开始为0
 var messageId = 0;
+//当前div的id
+var currentDivId = 0;
 // 时间戳转时间函数
 function timestampToTime(timestamp) {
     let date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
@@ -51,7 +53,7 @@ $(function(){
             }
         })
     })
-    // 绑定删除的函数
+    // 删除留言的函数
     $("body").on("click",".deleteMessage",function(event){
         $.ajax({
             type: "POST",
@@ -59,15 +61,16 @@ $(function(){
             contentType: "application/text;charset=utf-8",
             data:event.currentTarget.id,
             success:function(){
+                currentDivId = event.currentTarget.id;
+                // 这里 要想办法重新渲染dom（或者直接删除那个dom）
+                $("#div"+currentDivId).remove();
                 console.log("删除成功");
-                //这里 要想办法重新渲染dom（或者直接删除那个dom）
-
+                console.log(event.currentTarget.id);
             },
             error:function(){
                 console.log("删除失败");
             }
         })
-        console.log(event.currentTarget.id);
     });
     // 请求服务端，并把结果输出到dom,加载全部的数据
     function requestServer(){
@@ -81,7 +84,7 @@ $(function(){
                 let messageContent = messageData.message[i].content;
                 let messageTime = timestampToTime(messageData.message[i].time);
                 //使用es6模板字符串，省去一大部分操作。
-                $("#messageContent").append(`<div class="${messageId}">
+                $("#messageContent").append(`<div id="div${messageId}">
                                 姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
                                 <button class='replyMessage'>回复</button>
                                 <button class='deleteMessage' id=${messageId}>删除</button><br><br><br>
@@ -90,7 +93,7 @@ $(function(){
             }
         });
     }
-    // 请求服务端，（获取最新数据）
+    // 请求服务端，（获取最新数据），然后渲染到页面上。
     function requestServerNew(){
         var messageData;
         $.get("./text.json",function(data){
@@ -102,7 +105,7 @@ $(function(){
             let messageName = messageData.message[newValue].name;
             let messageContent = messageData.message[newValue].content;
             let messageTime = timestampToTime(messageData.message[newValue].time);
-            $("#messageContent").append(`<div>
+            $("#messageContent").append(`<div id="div${messageId}">
                             姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
                             <button class='replyMessage'>回复</button>
                             <button class='deleteMessage' id=${messageId}>删除</button><br><br><br>
