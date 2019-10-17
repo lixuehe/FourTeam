@@ -1,0 +1,4717 @@
+<!DOCTYPE html>
+<html lang ="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>慕课网-程序员的梦工厂</title>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+      //图片地址的数组
+      var imgPaths = ["11.jpg","12.jpg","13.jpg","14.jpg","15.jpg"];
+      //用于存储当前显示的图片的下标 
+      var index = 0 ;
+  
+
+      timer = self.setInterval(function(){
+        clearInterval(setInterval);       
+             x1(1);
+          },1000);
+      function stop(){
+        clearInterval(timer);
+      }
+      function x1(i){
+        index+=i;
+        //当从0下标 向上一张切换时, 会切换成-1 , 
+        if(index == -1){
+          //则将其设置为最大下标 
+          index = imgPaths.length-1;
+        }else if(index == imgPaths.length){
+          index = 0;
+        }
+        //切换图片 
+        var img = document.getElementsByClassName("abc")[0];
+        img.src=imgPaths[index];
+        $(document).ready(function(e){
+          var a=$(".abc").attr("src");
+          var b='url'+'('+a+')';
+          $(".bk").css("background-image",b);
+        })
+        //寻找到对应下标的 class为d1的div
+        var d1s = document.getElementsByClassName("d1");
+        for(j=0;j<d1s.length;j++){
+          if(index==j){
+            //当前下标 对应的div
+            d1s[j].style="width:20px;cursor: pointer;";
+          }else{
+            //其他div
+            d1s[j].style="";
+          }
+        }
+      }     
+     
+    </script>
+
+    <script>
+        $(document).ready(function(){
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {console.log(121);
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        document.getElementById("myBtn").style.display = "block";
+        
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+ 
+$(".p6").click(function(){       
+  // document.body.scrollTop = 0;
+  //   document.documentElement.scrollTop = 0;
+  $("*").scrollTop(-2000);
+          }),
+
+          $(".ppp1").hide();
+          $(".ppp2").hide();
+          $(".ppp3").hide();
+          $(".ppp4").hide();
+          $(".ppp5").hide();
+          $(".ppp6").hide();
+          document.getElementById("myBtn").style.display = "none";
+$(".p1").mouseenter(function(){       
+            $(".ppp1").show();
+            $(".pp1").hide();
+          }),
+
+          $(".p1").mouseenter(function(){       
+            $(".ppp1").show();
+            $(".pp1").hide();
+          }),
+          $(".p1").mouseleave(function(){
+            $(".ppp1").hide();
+            $(".pp1").show();
+          }),
+
+          $(".p2").mouseenter(function(){       
+            $(".ppp2").show();
+            $(".pp2").hide();
+          }),
+          $(".p2").mouseleave(function(){
+            $(".ppp2").hide();
+            $(".pp2").show();
+          }),
+
+          $(".p3").mouseenter(function(){       
+            $(".ppp3").show();
+            $(".pp3").hide();
+          }),
+          $(".p3").mouseleave(function(){
+            $(".ppp3").hide();
+            $(".pp3").show();
+          }),
+
+          $(".p4").mouseenter(function(){       
+            $(".ppp4").show();
+            $(".nnnn").show();
+            $(".pp4").hide();
+          }),
+          $(".p4").mouseleave(function(){
+            $(".ppp4").hide();
+            $(".nnnn").hide();
+            $(".pp4").show();
+          }),
+
+          $(".p5").mouseenter(function(){       
+            $(".ppp5").show();
+            $(".mmmm").show();
+            $(".pp5").hide();
+          }),
+          $(".p5").mouseleave(function(){
+            $(".ppp5").hide();
+            $(".mmmm").hide();
+            $(".pp5").show();
+          }),
+
+          $(".p6").mouseenter(function(){       
+            $(".ppp6").show();
+            $(".pp6").hide();
+          }),
+          $(".p6").mouseleave(function(){
+            $(".ppp6").hide();
+            $(".pp6").show();
+          }),
+
+          $(".p7").mouseenter(function(){       
+            $(".bbbb").show();
+          }),
+          $(".p7").mouseleave(function(){
+            $(".bbbb").hide();
+          }),
+
+          $(".tt10").mouseenter(function(){           
+            $(".tt10").show();
+          }),
+          $(".tt10").mouseleave(function(){           
+            $(".tt10").hide();
+          }),
+          $(".t10").mouseenter(function(){  
+            $(".tt10").show();
+          }),
+
+          $(".tt11").mouseenter(function(){           
+            $(".tt11").show();
+          }),
+          $(".tt11").mouseleave(function(){           
+            $(".tt11").hide();
+          }),
+          $(".t11").mouseenter(function(){           
+            $(".tt11").show();
+          }),
+          $(".t11").mouseleave(function(){
+            $(".tt11").hide();
+          });
+
+          $(".tt12").mouseenter(function(){           
+            $(".tt12").show();
+          }),
+          $(".tt12").mouseleave(function(){
+              $(".tt12").hide();
+          }),
+          $(".t12").mouseenter(function(){           
+            $(".tt12").show();
+          }),
+          $(".t12").mouseleave(function(){
+              $(".tt12").hide();
+          });
+
+            $(".tt1").mouseenter(function(){           
+            $(".tt1").show();
+            stop();
+          }),
+          $(".tt1").mouseleave(function(){           
+            $(".tt1").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+          $(".t1").mouseenter(function(){           
+            $(".tt1").show();
+            stop();
+ 
+          }),
+          $(".t1").mouseleave(function(){
+            $(".tt1").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          });
+          $(".tt2").mouseenter(function(){           
+            $(".tt2").show();
+            stop();
+          }),
+          $(".tt2").mouseleave(function(){           
+            $(".tt2").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+          $(".t2").mouseenter(function(){           
+            $(".tt2").show();
+            stop();
+          }),
+          $(".t2").mouseleave(function(){
+            $(".tt2").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          });
+          $(".tt3").mouseenter(function(){           
+            $(".tt3").show();
+            stop();
+          }),
+          $(".tt3").mouseleave(function(){           
+            $(".tt3").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+          $(".t3").mouseenter(function(){           
+            $(".tt3").show();
+            stop();
+          }),
+          $(".t3").mouseleave(function(){
+            $(".tt3").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          });
+          $(".tt4").mouseenter(function(){           
+            $(".tt4").show();
+            stop();
+          }),
+          $(".tt4").mouseleave(function(){           
+            $(".tt4").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+          $(".t4").mouseenter(function(){           
+            $(".tt4").show();
+            stop();
+          }),
+          $(".t4").mouseleave(function(){
+            $(".tt4").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          });
+          $(".tt5").mouseenter(function(){           
+            $(".tt5").show();
+            stop();
+          }),
+          $(".tt5").mouseleave(function(){           
+            $(".tt5").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+          $(".t5").mouseenter(function(){           
+            $(".tt5").show();
+            stop();
+          }),
+          $(".t5").mouseleave(function(){
+            $(".tt5").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          });
+          $(".tt6").mouseenter(function(){           
+            $(".tt6").show();
+            stop();
+          }),
+          $(".tt6").mouseleave(function(){           
+            $(".tt6").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+          $(".t6").mouseenter(function(){           
+            $(".tt6").show();
+            stop();
+          }),
+          $(".t6").mouseleave(function(){
+            $(".tt6").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          });
+          $(".tt7").mouseenter(function(){           
+            $(".tt7").show();
+            stop();
+          }),
+          $(".tt7").mouseleave(function(){           
+            $(".tt7").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+          $(".abc").mouseenter(function(){           
+
+            stop();
+          }),
+          $(".abc").mouseleave(function(){           
+
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          }),
+
+          $(".d1").mouseenter(function(){           
+
+stop();
+}),
+$(".d1").mouseleave(function(){           
+
+timer = self.setInterval(function(){   
+ x1(1);
+},1000);
+}),
+
+          $(".t7").mouseenter(function(){           
+            $(".tt7").show();
+            stop();
+          }),
+          $(".t7").mouseleave(function(){
+            $(".tt7").hide();
+            timer = self.setInterval(function(){   
+             x1(1);
+          },1000);
+          });
+        });
+        </script>
+    <script>
+        $(document).ready(function(){
+          $(".kk").hide();
+            $(".gg").show();
+          $(".kkk").click(function(){
+            $(".kk").hide();
+            $(".gg").show();
+          });
+          $(".ggg").click(function(){
+            $(".gg").hide();
+            $(".kk").show();
+          });
+        });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".kk2").hide();
+                $(".kk3").hide();
+                $(".kk4").hide();
+                $(".kk5").hide();
+                $(".kk6").hide();
+                $(".kk7").hide();
+                $(".kk1").show();
+              $(".k1").click(function(){
+                $(".kk2").hide();
+                $(".kk3").hide();
+                $(".kk4").hide();
+                $(".kk5").hide();
+                $(".kk6").hide();
+                $(".kk7").hide();
+                $(".kk1").show();
+              });
+              $(".k2").click(function(){
+                $(".kk1").hide();
+                $(".kk3").hide();
+                $(".kk4").hide();
+                $(".kk5").hide();
+                $(".kk6").hide();
+                $(".kk7").hide();
+                $(".kk2").show();
+              });
+              $(".k3").click(function(){
+                $(".kk2").hide();
+                $(".kk1").hide();
+                $(".kk4").hide();
+                $(".kk5").hide();
+                $(".kk6").hide();
+                $(".kk7").hide();
+                $(".kk3").show();
+              });
+              $(".k4").click(function(){
+                $(".kk2").hide();
+                $(".kk3").hide();
+                $(".kk1").hide();
+                $(".kk5").hide();
+                $(".kk6").hide();
+                $(".kk7").hide();
+                $(".kk4").show();
+              });
+              $(".k5").click(function(){
+                $(".kk2").hide();
+                $(".kk3").hide();
+                $(".kk4").hide();
+                $(".kk1").hide();
+                $(".kk6").hide();
+                $(".kk7").hide();
+                $(".kk5").show();
+              });
+              $(".k6").click(function(){
+                $(".kk2").hide();
+                $(".kk3").hide();
+                $(".kk4").hide();
+                $(".kk5").hide();
+                $(".kk1").hide();
+                $(".kk7").hide();
+                $(".kk6").show();
+              });
+              $(".k7").click(function(){
+                $(".kk2").hide();
+                $(".kk3").hide();
+                $(".kk4").hide();
+                $(".kk5").hide();
+                $(".kk6").hide();
+                $(".kk1").hide();
+                $(".kk7").show();
+              });
+            });
+        </script>
+
+<style type="text/css">
+
+        @font-face {
+            font-family: 'xxoo';           
+            src: url('imv2.ttf');                                                             
+        }
+        @font-face {
+            font-family: 'xxxx';           
+            src: url('moco.ttf');                                                             
+        }
+        [class^="icon-"], [class*=" icon-"]{
+          font-style: normal;
+          line-height: 1;
+        }
+        [class^="imv-"], [class*=" imv-"]{
+          font-style: normal;
+          line-height: 1;
+        }
+        [class^="imv2-"], [class*=" imv2-"]{
+          font-style: normal;
+          line-height: 1;
+        }
+        .imv-right2::before{
+          font-family: 'xxoo';  
+            content: '\e925'; 
+        }
+        .imv2-right2::before{
+          font-family: 'xxoo';  
+            content: '\e925'; 
+        }
+        .imv-arrowl-r::before {
+            font-family: 'xxoo';  
+            content: '\e5cb';         
+        }
+
+        .icon-search::before{
+          font-family: 'xxoo';  
+            content: '\e610';  
+        }
+        .icon-shopping-cart::before{
+          font-family: 'xxoo';  
+            content: '\e963';  
+        }
+        .icon-feedback::before{
+          font-family: 'xxoo';  
+            content: '\e968';  
+        }
+        .icon-ques::before{
+          font-family: 'xxoo';  
+            content: '\e965';  
+        }
+        .icon-appdownload::before{
+          font-family: 'xxoo';  
+            content: '\e982';  
+        }
+        .icon-wxgzh::before{
+          font-family: 'xxoo';  
+            content: '\e969';  
+        }
+        .icon-up2::before{
+          font-family: 'xxxx';  
+            content: '\e904';  
+        }
+        .imv2-ques::before{
+          font-family: 'xxoo'; 
+          content:'\e965';
+        }
+        .icon-apple::before{
+          font-family: 'xxoo'; 
+          content:'\e643';
+      }
+      .icon-android::before{
+          font-family: 'xxoo'; 
+          content:'\e644';
+      }
+      .imv2-star2:before {
+        font-family: 'xxoo'; 
+      content: "\e900";
+}
+.imv2-set-sns:before {
+  font-family: 'xxoo'; 
+    content: "\e904";
+    margin-left: 100px;
+    font-size: 12px;
+    color: #9199A1;
+    height: 18px;
+    line-height: 18px;
+}
+.container-path .types-content .course-path-container .course-path-info {
+    margin-left: 164px;
+    font-size: 12px;
+    color: #9199A1;
+    height: 18px;
+    line-height: 18px;
+}
+        .search-warp .showhide-search{
+          width: 20px;
+          height: 24px;
+          text-align: right;
+          position: absolute;
+          display: inline-block;
+          right: 0;
+          bottom: 24px;
+          padding: 0 8px;
+          border-radius: 18px;
+        }
+        .search-warp .showhide-search i{
+          display:block;
+          height: 24px;
+          color: #757a7e;
+          font-size: 20px;
+          line-height: 24px;
+          width: 20px;
+        }
+    *{
+      margin: 0;
+      padding:0;
+    }
+  a{
+    text-decoration: none;
+  }
+  .elevator{
+    position:fixed;
+    padding: 0 16px;
+    top: 55%;
+    margin-top: -140px;
+    right: 0;
+    box-shadow: 0px 4px 12px 0px rgba(7,17,27,0.1);
+    background-color: #fff;
+
+  }
+  .elevator a{
+    display: block;
+    width: 26px;
+    padding: 16px 0;
+    font-size: 22px;
+    line-height: 20px;
+    color: #b5b9bc;
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom: 1px solid #edf1f2;
+  }
+  .elevator a i{
+    font-size: 24px;
+    color: #D9DDE1;
+  }
+  .elevator a span{
+    display: none;
+    font-size: 12px;
+    line-height: 14px;
+    color: #07111B;
+  }
+  .elevator .elevator-weixin-box{
+    display: block;
+    position: absolute;
+    width: 172px;
+    height: 212px;
+    bottom: -4px;
+    right: 56px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    max-width: 0;
+    -webkit-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    transform: scale(0.01);
+    -webkit-transform-origin: 100% 95%;
+    -ms-transform-origin: 100% 95%;
+    transform-origin: 100% 95%;
+    background: url(999png) no-repeat 0 0;
+  }
+
+        .footer{
+          height: 61px;
+          padding: 36px  0 36px;
+        }
+
+        .footer-link a{
+          margin: 0 10px;
+          color:#99a1a6;
+          font-size: 14px;
+        }
+        .footer-copyright{
+          font-size: 12px;
+          color:#99a1a6;
+          padding-left: 10px;
+          margin-top: 8px;
+        }
+        .footer .footer-wrap{
+          position: absolute;
+          width: auto;
+          right: 0;
+          bottom:0;
+        }
+        .footer .footer-sns>div:first-child{
+          margin-right: 32px;
+        }
+        .footer .footer-sns p{
+          font-size: 12px;
+          color: #40555d;
+          line-height: 24px;
+          margin-top: 4px;
+        }
+        .footer-sns a{
+          display: inline-block;
+          height: 32px;
+          width: 32px;
+          vertical-align: middle;
+          background-image: url(999.png);
+          background-repeat: no-repeat;
+          margin: 0 9px;
+        }
+        .footer-sns-weixin{
+          position: relative;
+          background-position: -52px -221px;
+        }
+        .footer-sns-weibo{
+          background-position: 0 -221px;
+        }
+        html,body {
+          font: 14px/1.5 "PingFang SC", "微软雅黑", "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+          color: #1c1f21;
+          height: 100%;
+        }
+        body {
+          min-width: 1200px;
+          background-color: #f8fafc;
+          overflow-y: scroll;
+          padding-top: 0;
+        }
+        ul{
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .visible-xs-block{
+          display: none;
+        }
+      .banner-box{
+        padding-bottom: 1px;
+      }
+ 
+        a:visited {
+          color: #1c1f21;
+        }
+        a:hover,
+        a:active {
+          color: #ec1500;
+        }
+        .clearfix:after {
+          content: '\0020';
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden;
+        }
+        .clearfix {
+          *zoom: 1;
+        }
+        .l {
+          float: left;
+        }
+        .r {
+          float: right;
+        }
+        .hide {
+          display: none;
+        }
+        .hide-text {
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .newcontainer,
+        .page-container {
+          margin: 0 auto;
+          width: 1152px;
+        }
+        .container {
+          margin: 0 auto;
+        }
+        .container {
+          width: 1152px;
+        }
+        #main {
+          padding: 20px 0;
+          min-height: calc(100% - 140px);
+        }
+        .waper {
+          width: 1200px;
+          margin: 0 auto;
+        }
+        .shadow {
+          -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .text-ellipsis {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .addZ-index {
+          z-index: 9999;
+        }
+        .addZ-indexCode {
+          z-index: 9999;
+        }
+
+        #header {
+          background: #07111b;
+        }
+        #header .page-container {
+          width: auto;
+          padding-right: 10px;
+          z-index: 900;
+          box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.1);
+          position: relative;
+        }
+        #header .logo {
+          float: left;
+          margin: 0 20px;
+        }
+        #header .logo a {
+          display: block;
+          width: 140px;
+          height: 72px;
+          background: url(/static/img/common/logo.png?t=2.4) center center no-repeat;
+          -webkit-transition: background-color 0.2s;
+          -moz-transition: background-color 0.2s;
+          transition: background-color 0.2s;
+        }
+        #header .nav-item li {
+          float: left;
+        }
+        #header .nav-item li a {
+          padding: 0 20px;
+          display: block;
+          color: rgba(255, 255, 255, 0.6);
+          text-align: center;
+          font-size: 16px;
+          height: 72px;
+          line-height: 72px;
+          -webkit-transition: background-color 0.3s;
+          -moz-transition: background-color 0.3s;
+          transition: background-color 0.3s;
+          position: relative;
+        }
+        #header .nav-item li a .icn-new {
+          position: absolute;
+          display: inline-block;
+          top: 14px;
+          width: 16px;
+          height: 16px;
+          background: url(/static/img/common/new.png) no-repeat 0 0;
+        }
+        #header .nav-item li a.active,
+        #header .nav-item li a:hover {
+          color: #fff;
+        }
+        #header #login-area {
+          float: right;
+          position: relative;
+        }
+
+        #header #login-area .user-mycourse-box > a {
+          text-align: center;
+          color: #787D82;
+        }
+        #header #login-area .app-download {
+          line-height: 72px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+        #header #login-area .app-download > a {
+          padding: 0 15px;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+        #header #login-area .app-download > a:hover {
+          color: #fff;
+        }
+        #header #login-area .shop-cart {
+          height: 36px;
+          line-height: 36px;
+          margin: 18px 0;
+        }
+        #header #login-area .shop-cart .shop-cart-icon {
+          display: inline-block;
+          padding: 0 18px;
+          width: auto;
+          box-sizing: border-box;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 18px;
+          height: 36px;
+          line-height: 34px;
+          color: #787d82;
+          text-align: center;
+        }
+        .shop-cart .shop-cart-icon{
+          border: 1px solid #D9DDE1 !important;
+        }
+        .shop-cart .shop-cart-icon .icon-shopping-cart{
+          position: relative;
+          font-size: 16px;
+          top: 2px;
+          margin-right: 8px;
+        }
+        #header #login-area .remind_warp {
+          width: 60px;
+          height: 48px;
+        }
+        #header #login-area .remind_warp a {
+          height: 48px;
+          line-height: 48px;
+        }
+
+        #header #login-area .logined > li {
+          float: left;
+          position: relative;
+        }
+        #header #login-area .logined > li.user-mycourse-box a:hover {
+          color: #f01414;
+        }
+        #header #login-area .logined > li > a {
+          display: block;
+          width: 60px;
+          height: 72px;
+          line-height: 72px;
+          color: #787d82;
+          text-align: center;
+          -webkit-transition: background-color 0.2s;
+          -moz-transition: background-color 0.2s;
+          transition: background-color 0.2s;
+        }
+        #header #login-area .logined > li > a:hover {
+          color: #fff;
+        }
+        #header #login-area .header-unlogin > li {
+          float: left;
+        }
+        #header #login-area .header-unlogin .header-signin {
+          margin-left: 12px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+        #header #login-area .header-unlogin .header-signin a {
+          display: inline-block;
+          padding: 0 12px;
+          height: 72px;
+          line-height: 72px;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.6);
+          -webkit-transition: background-color 0.2s;
+          -moz-transition: background-color 0.2s;
+          transition: background-color 0.2s;
+        }
+        #header #login-area .header-unlogin .header-signin a:hover {
+          color: rgba(240, 20, 20, 0.8);
+        }
+        .remind_warp,
+        .search-area {
+          margin: 12px 0;
+        }
+        .search-warp {
+          position: relative;
+          float: left;
+          margin-left: 24px;
+        }
+      
+        .search-warp .search-area.suggest-active {
+          border-bottom-color: #F01414;
+        }
+        .search-warp.search-active .showhide-search {
+          background: rgba(240, 20, 20, 0.2);
+        }
+        .search-warp.search-active .showhide-search i {
+          color: #F01414;
+        }
+        .search-area {
+          float: right;
+          position: relative;
+          height: 46px;
+          width: 260px;
+          padding-right: 40px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+          zoom: 1;
+          -webkit-transition: width 0.3s;
+          -moz-transition: width 0.3s;
+          transition: width 0.3s;
+        }
+        .search-area .search-input {
+          padding: 12px 0;
+          width: 100%;
+          height: 46px;
+          line-height: 22px;
+          font-size: 12px;
+          float: left;
+          border: 0;
+          color: #fff;
+          -webkit-transition: background-color 0.3s;
+          -moz-transition: background-color 0.3s;
+          transition: background-color 0.3s;
+          background-color: transparent;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        .search-area .btn_search {
+          float: left;
+          cursor: pointer;
+          width: 30px;
+          height: 38px;
+          text-align: center;
+          -webkit-transition: background-color 0.3s;
+          -moz-transition: background-color 0.3s;
+          transition: background-color 0.3s;
+        }
+        .search-area .search-area-result {
+          position: absolute;
+          left: 0;
+          top: 60px;
+          width: 300px;
+          margin-bottom: 20px;
+          border-top: none;
+          background-color: #fff;
+          box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.2);
+          font-size: 12px;
+          overflow: hidden;
+          display: none;
+          z-index: 800;
+          border-bottom-right-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        .search-area .search-area-result h2 {
+          font-size: 12px;
+          color: #1c1f21;
+          line-height: 12px;
+          margin-bottom: 8px;
+          font-weight: 700;
+        }
+
+
+        html,
+        body {
+          height: 100%;
+          width: 100%;
+          min-width: 1200px;
+        }
+        body .bk {
+          width: 100%;
+          height: 490px;
+          position: absolute;
+          top: 0px;
+
+        }
+        div {
+          background-size: cover;
+        }
+
+        .search-warp .search-area {
+          border-bottom: 1px solid #D9DDE1;
+        }
+        .search-warp .search-area .search-input {
+          color: #71777d;
+        }
+        #login-area {
+          float: right;
+          position: relative;
+        }
+        #login-area .app-download > a,
+        #login-area .dist-money > a {
+          color: #71777d !important;
+        }
+        #login-area .app-download > a:hover,
+        #login-area .dist-money > a:hover {
+          color: red !important;
+        }
+        #login-area .dist-money {
+          line-height: 72px;
+        }
+
+        .user-card-box:hover .user-card-item {
+          background-color: transparent;
+        }
+        #nav-item-index {
+          display: none;
+        }
+        #header .app-down-area a:hover {
+          color: #93999f;
+        }
+        #header .page-container #login-area .header-unlogin .header-signin {
+          color: #D9DDE1;
+        }
+        #header .page-container #login-area .header-unlogin .header-signin a {
+          color: #4D555D;
+        }
+        #header .page-container #login-area .header-unlogin .header-signin a:hover {
+          color: #f01414;
+        }
+        .suggest-active .search-input {
+          border-bottom: 0px;
+        }
+
+        .set_btn img {
+          border: 0;
+        }
+        .hide-text {
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .header {
+          position: relative;
+          z-index: 10;
+          height: 80px;
+          top: -10px;
+          opacity: 0;
+          filter: alpha(opacity=0);
+        }
+        .header-wrap {
+          position: relative;
+          height: 81px;
+          margin: 0 40px;
+          padding: 0 30px;
+          background: url(/static/img/index/top-border.png) repeat-x 0 bottom;
+        }
+
+        #header .page-container #login-area .logined > li > a:hover i {
+          color: #f01414 !important;
+        }
+
+        .color-red {
+          color: #f01414;
+        }
+        .menuContent {
+          position: relative;
+          float: left;
+          width: 216px;
+          height: 382px;
+          z-index: 2;
+          padding-top: 17px;
+          box-sizing: border-box;
+          background: #2b333b;
+          border-bottom-left-radius: 4px;
+          font-weight: 400;
+        }
+        .menuContent .item .box a:hover {
+          color: #f01414 !important ;
+        }
+        .menuContent .item {
+          height: 50px;
+          line-height: 50px;
+          font-size: 12px;
+          cursor: pointer;
+          padding-left: 12px;
+          position: relative;
+        }
+        .menuContent .item > a {
+          display: block;
+          color: rgba(255, 255, 255, 0.6);
+          padding: 0 16px;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          height: 50px;
+          transition: all .1s;
+        }
+        .menuContent .item i {
+          position: absolute;
+          right: 8px;
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 16px;
+          top: 18px;
+        }
+        .menuContent .item .box a {
+          color: #fff !important;
+        }
+        .menuContent .js-menu-item-on a {
+          color: #fff;
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        .article .linkbtn {
+          border: 1px solid #fff;
+          border-radius: 3px;
+          height: 34px;
+          font-size: 14px;
+          color: #fff;
+          line-height: 34px;
+          text-align: center;
+          margin: auto;
+          margin-bottom: 8px;
+          width: 184px;
+        }
+        .bbnone {
+          border-bottom: none !important;
+        }
+        .contentwrap {
+          width: 1200px;
+          margin: auto;
+        }
+        .contentwrap .classify {
+          background-image: -moz-linear-gradient(-90deg, #ff2d50 0%, rgba(255, 87, 115, 0.2) 100%);
+          background-image: -webkit-linear-gradient(-90deg, #ff2d50 0%, rgba(255, 87, 115, 0.2) 100%);
+          background-image: -ms-linear-gradient(-90deg, #ff2d50 0%, rgba(255, 87, 115, 0.2) 100%);
+          float: left;
+          width: 224px;
+          height: 364px;
+        }
+        .contentwrap .longer {
+          width: 468px;
+          height: 172px;
+          background-color: #fff;
+          float: left;
+          font-size: 20px;
+          color: #fff;
+          font-weight: bold;
+          text-align: center;
+          line-height: 172px;
+          overflow: hidden;
+        }
+     
+        .contentwrap .normal {
+          width: 224px;
+          height: 172px;
+          background-color: #fff;
+          float: left;
+        }
+        .contentwrap .heigher {
+          width: 224px;
+          height: 364px;
+          background-color: #fff;
+          float: right;
+          margin-right: 0px;
+        }
+       
+        .contentwrap .recomend {
+          line-height: 16px;
+          font-size: 16px;
+          color: #07111b;
+          margin-top: 42px;
+          margin-bottom: 24px;
+        }
+
+        .container {
+          position: relative;
+        }
+        .article .longer .left {
+          float: left;
+          width: 82px;
+          margin: 32px;
+          height: 60px;
+          font-size: 20px;
+          color: #07111b;
+          line-height: 20px;
+          font-weight: bold;
+        }
+        .article .longer .right {
+          float: right;
+          margin-right: 32px;
+          text-align: left;
+          width: 290px;
+          margin-top: 23px;
+        }
+        .article .longer .right a {
+          font-size: 14px;
+          line-height: 32px;
+          color: #07111b;
+          font-weight: normal;
+        }
+        .article .longer .right a:hover {
+          color: #f01414;
+        }
+
+        p {
+          word-break: break-all;
+        }
+
+        .logo-wrap {
+          position: absolute;
+          left: 30px;
+          top: 11px;
+          line-height: 1em;
+        }
+        .header-mid {
+          width: 100%;
+          text-align: center;
+        }
+        .header-right {
+          position: absolute;
+          right: 0;
+          top: 0;
+          *width: 400px;
+        }
+        .header-mid li {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          margin: 0 10px;
+          white-space: nowrap;
+        }
+        .header-right-item {
+          margin: 0 10px;
+          float: left;
+        }
+        .header-mid a,
+        .header-mid a:visited,
+        .header-right-item > a,
+        .header-right-item > a:visited {
+          display: block;
+          height: 80px;
+          font-size: 14px;
+          line-height: 80px;
+          padding: 0 10px;
+          transition: 0.3s;
+          color: #656e73;
+          border-bottom: 1px solid transparent;
+        }
+        .header-mid a:hover,
+        .header-mid a:active,
+        .header-right-item > a:hover,
+        .header-right-item > a:active {
+          color: #fff;
+          border-color: #be3948;
+        }
+
+        .more {
+          color: #4d555d;
+          font-size: 14px;
+          font-weight: normal;
+          position: relative;
+          top: -4px;
+        }
+        .more:hover {
+          color: #93999f ;
+        }
+        .more:hover .icon-right2 {
+          color: #b7bbbf;
+        }
+        .header-right-item a:hover .header-app-icon {
+          background-position: 0 -16px;
+        }
+
+        .index_mp span {
+          display: block;
+          line-height: 16px;
+          color: #6c7072;
+        }
+        .index_mp .mp {
+          padding-top: 25px;
+          font-size: 12px;
+        }
+        .index_mp a:hover .mp_num {
+          color: #fff;
+        }
+        .header-user {
+          position: relative;
+        }
+        .header-user-avator img {
+          border-radius: 50%;
+          vertical-align: middle;
+        }
+        .header-user #nav_list {
+          top: 80px;
+        }
+        .bg-grey {
+          background-color: #eef1f2;
+        }
+        .bg-white {
+          background-color: #fff;
+        }
+
+        .banner-box {
+          padding-top: 32px;
+        }
+        .g-banner {
+          position: relative;
+          overflow: hidden;
+          width: 1152px;
+          margin: auto;
+          border-radius: 8px;
+        }
+        .g-banner .g-banner-content {
+          position: relative;
+          float: left;
+          width: 936px;
+        }
+        .g-banner .g-banner-content .g-banner-box {
+          position: relative;
+          height: 316px;
+        }
+
+        .g-banner .banner-anchor {
+          position: absolute;
+          top: 50%;
+          margin-top: -24px;
+          width: 48px;
+          height: 48px;
+          overflow: hidden;
+          line-height: 48px;
+          background: rgba(28, 31, 33, 0.1);
+          border-radius: 50%;
+          font-size: 32px;
+          color: #FFFFFF;
+          text-align: center;
+        }
+        .g-banner .next {
+          right: 16px;
+        }
+        .g-banner .prev {
+          left: 16px;
+        }
+        .g-banner .next:hover,
+        .g-banner .prev:hover {
+          background: rgba(28, 31, 33, 0.5);
+        }
+        .g-banner .g-banner-box > a:first-child .banner-slide {
+          display: block;
+        }
+        .g-banner .banner-slide {
+          position: absolute;
+          display: none;
+          width: 936px;
+          height: 316px;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-repeat: no-repeat;
+          background-position: center 0;
+        }
+
+        .g-banner .banner-slide img {
+          width: 100%;
+          height: 100%;
+        }
+        .g-banner .inner {
+          position: relative;
+          width: 1200px;
+          margin: 0 auto;
+        }
+
+        .linux .moco-course-list {
+          margin-left: 0;
+        }
+        .course-card-container .cost-price {
+          margin-left: 5px;
+          color: #4D555D;
+          text-decoration: line-through;
+        }
+        .course-card-container .sales-tip1 {
+          color: #fff !important;
+          background: #FF6D00 !important;
+        }
+        body .bk {
+          height: 180px;
+          opacity: 0.3;
+          -webkit-filter: blur(100px);
+          -moz-filter: blur(100px);
+          -o-filter: blur(100px);
+          -ms-filter: blur(100px);
+          filter: blur(100px);
+          filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='100');
+        }
+        body {
+          background-color: #f8fafc !important;
+        }
+        .elevator {
+          z-index: 899;
+        }
+        .cfff {
+          color: #fff !important;
+        }
+        .bgfff {
+          background-color: #fff !important;
+        }
+        .marl0 {
+          margin-left: 40px !important;
+        }
+        .marr0 {
+          margin-right: 0 !important;
+        }
+        #main {
+          display: block;
+          padding: 0;
+        }
+        #main > .bgfff {
+          box-shadow: 0 2px 8px 0 rgba(7, 17, 27, 0.06);
+        }
+        #main > .bg000 {
+          box-shadow: 0 2px 4px 0 rgba(7, 17, 27, 0.06);
+        }
+        #header .logo a {
+          background: none !important;
+        }
+        #header .logo a img {
+          height: 72px;
+        }
+        #header .nav-item li a {
+          color: #4D555D !important;
+        }
+        #header .nav-item li a.active,
+        #header .nav-item li a:hover {
+          color: #07111b !important;
+        }
+        .app-load:hover > a {
+          color: red;
+        }
+
+        .ellipsis {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        body {
+          background-color: #f3f5f7;
+        }
+        .menuwrap,
+        .menuContent {
+          height: 382px;
+        }
+        .menuContent .item .group{
+          font-size: 14px;
+        }
+        .g-banner {
+          height: 382px;
+          margin-bottom: 44px;
+          background-color: #93999f;
+          box-shadow: 0 12px 24px 0 rgba(7, 17, 27, 0.2);
+        }
+        .g-banner .g-banner-content .g-banner-box {
+          height: 382px;
+        }
+        .g-banner .banner-slide {
+          height: 382px;
+        }
+        .path-list {
+          margin-top: 24px;
+        }
+        .path-list i {
+          float: left;
+          width: 50px;
+          height: 50px;
+          background: url(01.png) no-repeat;
+          background-size: 100%;
+          margin-left: 12px;
+          margin-right: 10px;
+        }
+        .path-list .i-web {
+          background-position: center 0;
+        }
+        .path-list .i-java {
+          background-position: center -50px;
+        }
+        .path-list .i-android {
+          background-position: center -150px;
+        }
+        .path-list .i-php {
+          background-position: center -200px;
+        }
+        .path-list .i-python {
+          background-position: center -100px;
+        }
+        .path-list > a {
+          float: left;
+          margin-left: 18px;
+          font-size: 0;
+          display: block;
+          width: 216px;
+          padding-top: 15px;
+          height: 65px;
+          overflow: hidden;
+          transition: all .3s;
+          background: #F3F5F6;
+          border-radius: 8px;
+        }
+        .path-list > a:hover {
+          box-shadow: 0px 4px 8px #0000001f;
+        }
+        .path-list > a:first-child {
+          margin-left: 0;
+        }
+        .path-list .tit {
+          font-size: 16px;
+          font-weight: bold;
+          color: #1C1F21;
+          letter-spacing: 1px;
+          margin-top: 4px;
+        }
+        .path-list .desc {
+          font-size: 12px;
+          color: #1C1F21;
+          line-height: 16px;
+          margin-top: 2px;
+          font-weight: 400;
+        }
+        .container-types {
+          width: 1152px;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          padding: 36px 0 38px;
+        }
+        .container-types .index-card-container {
+          float: left;
+          margin-left: 24px;
+          border-radius: 4px;
+          margin-bottom: 12px;
+        }
+        .container-types .types-title {
+          position: relative;
+          font-size: 24px;
+          color: #1C1F21;
+          letter-spacing: 0px;
+          line-height: 26px;
+        }
+        .qu .types-title span {
+          float: left;
+          font-weight: bold;
+        }
+
+        .container-types .types-title ul {
+          float: left;
+          margin-left: 54px;
+        }
+        .container-types .types-title ul li {
+          margin: 0 14px;
+          float: left;
+          font-size: 14px;
+          letter-spacing: 0;
+          line-height: 26px;
+          cursor: pointer;
+          color: #545C63;
+        }
+        .container-types .types-title ul li.curr {
+          color: #F20D0D;
+          border-bottom: 2px solid #F20D0D;
+        }
+        .container-types .types-title ul li:hover {
+          color: #F20D0D;
+        }
+        .container-types .types-title .more {
+          float: right;
+          margin-top: 2px;
+          line-height: 24px;
+          color: #1C1F21;
+        }
+        .container-types .types-title .more:hover {
+          color: #383D42;
+        }
+        .container-types .types-title .intro {
+          margin-top: 6px;
+          margin-left: 12px;
+          font-weight: normal;
+          font-size: 14px;
+          color: #545C63;
+          line-height: 20px;
+        }
+        .container-types .types-content {
+          margin-top: 24px;
+          margin-left: -24px;
+        }
+        .container-types .adsense-box {
+          margin-left: 24px;
+          border-radius: 8px;
+          transition: all 0.3s;
+          text-align: center;
+          background-color: #ccc;
+        }
+        .container-types .adsense-box a {
+          display: block;
+          width: 564px;
+          height: 90px;
+          border-radius: 8px;
+          overflow: hidden;
+          padding: 20px 0;
+          box-sizing: border-box;
+        }
+        .container-types .adsense-box a h3 {
+          font-size: 20px;
+          font-weight: 700;
+          color: #FFFFFF;
+          letter-spacing: 2px;
+          line-height: 28px;
+          text-shadow: 0 2px 2px rgba(7, 17, 27, 0.4);
+          display: none;
+        }
+        .container-types .adsense-box a p {
+          font-size: 12px;
+          color: #FFFFFF;
+          line-height: 16px;
+          text-shadow: 0 2px 2px rgba(7, 17, 27, 0.4);
+          margin-top: 4px;
+          display: none;
+        }
+        .container-types .adsense-box:hover {
+          box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.2);
+        }
+        .container-types .advert-cart {
+          float: left;
+          width: 224px;
+          height: 228px;
+          overflow: hidden;
+          box-sizing: border-box;
+          transition: all .3s;
+        }
+        .container-types .advert-cart img {
+          display: block;
+          width: 224px;
+          height: 228px;
+          border: none;
+          outline: none;
+        }
+        .container-types .advert-cart:hover {
+          box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.2);
+        }
+        .container-types .article,
+        .container-types .question {
+          width: 590px;
+        }
+        .container-types li {
+          margin-bottom: 16px;
+        }
+        .container-types li:last-child {
+          margin-bottom: 0;
+        }
+        .container-types li .label {
+          float: left;
+          padding: 5px 10px;
+          background-color: #fff;
+          font-size: 12px;
+          color: #4d555d;
+          line-height: 12px;
+          border: 1px solid #b9bdc1;
+          border-radius: 20px;
+          margin-right: 12px;
+        }
+        .container-types li i {
+          float: left;
+          line-height: 24px;
+          margin-right: 9px;
+        }
+        .container-types li .content {
+          float: left;
+          color: #000000;
+          font-size: 14px;
+          line-height: 24px;
+        }
+        .container-types li .content:hover {
+          color: #f01414;
+        }
+        .container-types .lecturer-list {
+          margin-top: 40px;
+        }
+        .container-types .lecturer-item {
+          float: left;
+          position: relative;
+          width: 216px;
+          height: 248px;
+          margin-right: 18px;
+          box-sizing: border-box;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.8);
+          box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.05);
+          border-radius: 12px;
+          transition: all .3s;
+        }
+        .container-types .lecturer-item:last-child {
+          margin-right: 0;
+        }
+        .container-types .lecturer-item:hover {
+          background-color: #fff;
+          box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.2);
+        }
+        .container-types .lecturer-item:hover .lecturer-uimg {
+          width: 60px;
+          height: 60px;
+          margin-left: -30px;
+          transition: all .3s;
+        }
+        .container-types .lecturer-item:hover .lecturer-p {
+          position: relative;
+          height: 168px;
+          top: -92px;
+          color: #07111B;
+          transition: all .3s;
+        }
+        .container-types .lecturer-item:hover .lecturer-name,
+        .container-types .lecturer-item:hover .lecturer-title {
+          opacity: 0;
+        }
+        .container-types .lecturer-item .lecturer-uimg {
+          position: absolute;
+          top: -16.6px;
+          left: 50%;
+          margin-left: -48px;
+          width: 96px;
+          height: 96px;
+          border-radius: 50%;
+        }
+        .container-types .lecturer-item .lecturer-name {
+          display: block;
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 92px;
+          padding: 0 36px;
+          white-space: nowrap;
+          color: #07111b;
+          font-weight: 700;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          word-wrap: break-word;
+          overflow: hidden;
+          text-overflow: -o-ellipsis-lastline;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+        .container-types .lecturer-item .lecturer-title {
+          display: block;
+          font-size: 12px;
+          margin-bottom: 12px;
+          color: #4D555D;
+          height: 24px;
+          line-height: 24px;
+        }
+        .container-types .lecturer-item .lecturer-p {
+          position: relative;
+          top: 0;
+          display: block;
+          font-size: 12px;
+          line-height: 24px;
+          color: #4D555D;
+          height: 72px;
+          padding: 0 36px;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          overflow: hidden;
+          text-overflow: -o-ellipsis-lastline;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          text-align: justify;
+          word-break: break-all;
+          font-weight: 400;
+        }
+        .container-teacher-types .types-title {
+          color: rgba(255, 255, 255, 0.4);
+        }
+        .container-teacher-types .types-title em {
+          color: #ffffff;
+        }
+
+        /*改版样式*/
+        .container-types.container-recommend {
+          padding-top: 0px;
+          padding-bottom: 44px;
+        }
+
+        .course-card-price {
+          font-size: 12px;
+          color: #545C63;
+        }
+
+ 
+        .course-card-container {
+          width: 270px;
+          height: 268px;
+          position: relative;
+          transition: .3s all linear;
+        }
+        .course-card-container:hover .course-card-top.hashadow {
+          box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.1);
+        }
+        .course-card-container:hover .course-card-top .course-banner {
+          background-color: #f3f5f7;
+        }
+        .course-card-container:hover .course-card-top .course-banner .img-up {
+          top: -10px;
+          left: 0px;
+          width: 216px;
+        }
+        .course-card-container:hover .course-card-top .course-banner .img-mid {
+          top: 0px;
+          left: 8px;
+          width: 200px;
+        }
+        .course-card-container:hover .course-card-top .course-banner .img-down {
+          top: 10px;
+          left: 16px;
+          width: 184px;
+        }
+        .course-card-container:hover .course-card-name {
+          color: #F20D0D !important;
+        }
+        .course-card-container .course-rate {
+          position: absolute;
+          width: 42px;
+          right: -7px;
+          top: 8px;
+          text-align: center;
+          font-size: 12px;
+          color: #FFFFFF;
+          line-height: 20px;
+          background-image: linear-gradient(-90deg, #65da98 0%, #0cba4d 100%);
+          border: 2px solid #FFFFFF;
+          border-radius: 12px;
+          box-sizing: border-box;
+          z-index: 1;
+        }
+        .course-card-container .course-stat {
+          position: absolute;
+          border: 2px solid #FFFFFF;
+          border-radius: 12px;
+          top: 8px;
+          left: -8px;
+          z-index: 4;
+          font-family: 'dincondm';
+          font-size: 12px;
+          color: #FFFFFF;
+          line-height: 20px;
+          padding: 0 8px;
+        }
+        .course-card-container .course-stat.new {
+          background-color: #FFAA00;
+          background-image: linear-gradient(90deg, #ffaa00 17%, #f76b1c 100%);
+        }
+        .course-card-container .course-stat.hot {
+          background-color: #F02930;
+          background-image: linear-gradient(90deg, #f68688 0%, #f02930 100%);
+        }
+        .course-card-container .course-stat.upgrade {
+          background-color: #9447EB;
+          background-image: linear-gradient(90deg, #bd89f8 6%, #9447eb 93%);
+        }
+        .course-card-container .course-card-top {
+          width: 270px;
+          height: 148px;
+          position: relative;
+          border-radius: 8px;
+          transition: all .3s;
+        }
+        .course-card-container .course-card-top.hashadow {
+          overflow: hidden;
+        }
+        .course-card-container .course-card-top .course-banner {
+          width: 100%;
+          height: 100%;
+          background-color: #f3f5f7;
+          border-radius: 8px;
+        }
+        .course-card-container .course-card-top .course-label {
+          position: absolute;
+          bottom: 6px;
+          left: 8px;
+          font-size: 12px;
+          color: #FFFFFF;
+          line-height: 16px;
+        }
+        .course-card-container .course-card-top .course-label label{
+          display: inline-block;
+          background: rgba(28,31,33,0.6);
+          border-radius: 4px;
+          margin-bottom: 2px;
+          padding: 4px 8px;
+          font-weight: 200;
+        }
+        .course-card-container .course-card-content {
+          padding: 8px;
+        }
+        .course-card-container .course-card-content .course-card-name {
+          font-size: 16px;
+          color: #07111B;
+          line-height: 24px;
+          word-wrap: break-word;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          transition: all .3s;
+          font-weight: bold;
+          height: 46px;
+        }
+        .course-card-container .course-card-content .course-card-info {
+          font-size: 12px;
+          color: #93999F;
+          line-height: 24px;
+          margin-top: 8px;
+          font-weight: 400;
+        }
+        .container-path {
+          height: 380px;
+        }
+        .container-path .types-content {
+          margin-left: -24px;
+        }
+        .container-path .types-content .course-path-container {
+          float: left;
+          margin-left: 24px;
+          margin-bottom: 24px;
+          width: 564px;
+          height: 148px;
+        }
+        .container-path .types-content .course-path-container .course-path-info{
+          margin-left: 164px;
+          font-size: 12px;
+        }
+        .container-path .types-content .course-path-container:hover h4 {
+          color: #F20D0D;
+        }
+        .container-path .types-content .course-path-container:hover .course-banner .img-up {
+          top: -5px;
+          left: 0px;
+        }
+        .container-path .types-content .course-path-container:hover .course-banner .img-mid {
+          top: 0px;
+          left: 6px;
+          width: 128px;
+        }
+        .container-path .types-content .course-path-container:hover .course-banner .img-down {
+          top: 5px;
+          left: 11px;
+          width: 118px;
+        }
+        .container-path .types-content .course-path-container .course-banner {
+          float: left;
+          position: relative;
+          transition: all .3s;
+          width: 140px;
+          height: 140px;
+          background-color: #f3f5f7;
+          border-radius: 8px;
+        }
+        .container-path .types-content .course-path-container .course-banner .img-up,
+        .container-path .types-content .course-path-container .course-banner .img-mid,
+        .container-path .types-content .course-path-container .course-banner .img-down {
+          margin: 0 auto;
+          position: absolute;
+          border-radius: 8px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          /* Firefox 4 */
+          -webkit-transition: all 0.3s;
+          /* Safari and Chrome */
+          -o-transition: all 0.3s;
+          /* Opera */
+        }
+        .container-path .types-content .course-path-container .course-banner .img-up {
+          left: 0px;
+          top: 0;
+          width: 140px;
+          height: 140px;
+          z-index: 3;
+        }
+        .container-path .types-content .course-path-container .course-banner .img-mid {
+          top: 4px;
+          left: 4px;
+          width: 132px;
+          height: 140px;
+          opacity: 0.4;
+          z-index: 2;
+        }
+        .container-path .types-content .course-path-container .course-banner .img-down {
+          top: 8px;
+          left: 8px;
+          width: 124px;
+          height: 140px;
+          opacity: 0.2;
+          z-index: 1;
+        }
+        .container-path .types-content .course-path-container h4 {
+          margin: 8px 0;
+          margin-left: 164px;
+          font-size: 16px;
+          color: #1C1F21;
+          line-height: 20px;
+          min-height: 20px;
+          font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .container-path .types-content .course-path-container p {
+          margin-left: 164px;
+          font-size: 14px;
+          color: #545C63;
+          letter-spacing: 0;
+          line-height: 20px;
+          height: 60px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+
+        .container-path .types-content.loading p {
+          height: 40px;
+        }
+        .container-path .types-content.loading .course-path-info {
+          margin-top: 20px;
+          width: 30%;
+        }
+        .container-rank h3 .rank-info .info{
+          display: none;
+          position: absolute;
+          top: 32px;
+          right: 0;
+          font-size: 12px;
+          color: #1c1f21;
+          text-align: center;
+          line-height: 26px;
+          background: #ffffff;
+          box-shadow: 0 8px 16px 0 rgba(28, 31, 33, 0.2);
+          border-radius: 12px;
+          width: 290px;
+          height: 200px;
+          box-sizing: border-box;
+          padding:35px 20px;
+          z-index: 9;
+        }
+        .container-rank h3 .rank-info .info  .free{
+          border-top: 1px solid rgba(28, 31, 33, 0.1);
+          margin-top: 13px;
+          padding-top: 13px;
+        }
+        .container-rank h3 .rank-info .info dd{
+          font-weight: 400;
+        }
+        .container-rank h3 .rank-info i{
+          font-size: 22px;
+          color: #b2bbbd;
+          letter-spacing: 3.3px;
+          text-align: center;
+          line-height: 36px;
+          cursor:pointer;
+        }
+        /*专栏*/
+        .container-read {
+          padding-bottom: 0;
+        }
+        .container-read .types-content {
+          margin-left: -24px;
+        }
+        .container-read .course-read-container {
+          float: left;
+          padding: 18px;
+          margin-left: 24px;
+          margin-bottom: 24px;
+          width: 332px;
+          height: 174px;
+          transition: all .3s;
+        }
+        .container-read .course-read-container:hover {
+          background: #FFFFFF;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+        }
+        .container-read .course-read-container .course-banner {
+          float: left;
+          position: relative;
+        }
+        .container-read .course-read-container .course-banner img {
+          height: 118px;
+          width: 104px;
+        }
+        .container-read .course-read-container .course-banner .try-read-img {
+          margin-top: 5px;
+          text-indent: 999em;
+          overflow: hidden;
+          background: url(/static/img/column/try-read-img_new_2x.png);
+          background-repeat: no-repeat;
+          background-size: 34px auto;
+          background-position: center;
+          width: 30px;
+          height: 20px;
+        }
+        .container-read .course-read-container h4 {
+          margin-left: 112px;
+          font-size: 14px;
+          line-height: 22px;
+          height: 44px;
+          font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .container-read .course-read-container h4 a {
+          color: #1C1F21;
+        }
+        .container-read .course-read-container h4 a:hover {
+          color: #37f;
+        }
+        .container-read .course-read-container .course-read-info {
+          margin-left: 112px;
+          padding: 10px 0;
+          font-size: 12px;
+          color: #9199A1;
+          text-align: left;
+          line-height: 14px;
+          border-bottom: 1px solid rgba(28, 31, 33, 0.1);
+        }
+        .container-read .course-read-container .course-read-teacher {
+          margin: 10px 0;
+          margin-left: 112px;
+          font-size: 12px;
+          color: #1C1F21;
+          text-align: left;
+          line-height: 16px;
+          overflow: hidden;
+          height: 16px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .container-read .course-read-container .course-read-teacher span {
+          font-weight: bold;
+        }
+        .container-read .course-read-container .course-read-price {
+          margin-left: 112px;
+          margin-top: 17px;
+          position: relative;
+        }
+        .container-read .course-read-container .course-read-price .sale {
+          font-size: 16px;
+          color: #3377FF;
+          text-align: left;
+          line-height: 32px;
+          font-weight: bold;
+        }
+        .container-read .course-read-container .course-read-price .learn {
+          background: rgba(51, 119, 255, 0.2);
+          border-radius: 24px;
+          line-height: 32px;
+          display: inline-block;
+          padding: 0 16px;
+          font-size: 14px;
+          color: #3377FF;
+          font-weight: bold;
+        }
+        .container-read .course-read-container .course-read-price .ori {
+          margin-left: 8px;
+          font-size: 12px;
+          color: #9199A1;
+          text-align: left;
+          line-height: 30px;
+          text-decoration: line-through;
+        }
+        .container-read .course-read-container .course-read-price .countdown {
+          position: absolute;
+          top: 7px;
+          right: 0;
+          text-align: right;
+        }
+        .container-read .course-read-container .course-read-price .countdown .name {
+          color: #fff;
+          line-height: 16px;
+          height: 16px;
+          background-image: linear-gradient(90deg, #3377ff 0, #74ccff 99%);
+          padding: 2px 6px;
+          font-size: 12px;
+        }
+        .submenu{
+          height: 382px;
+          background: #fff;
+          position:absolute;
+          left: 216px;
+          top: 0;
+          width: 768px;
+          z-index: 5;
+        }
+        .submenu .innerBox{
+          padding:26px 36px 32px;
+          position: relative;
+          min-height: 150px;
+        }
+        .submenu .banner-line{
+          line-height: 22px;
+          margin-bottom: 12px;
+        }
+        .submenu .banner-line span{
+          font-size: 14px;
+          color: #1c1f21;
+          letter-spacing: 0;
+          line-height: 22px;
+          font-weight: 700;
+        }
+        .submenu .tag-box a{
+          margin: 0 24px 16px 0;
+          font-size: 14px;
+        }
+        .recomment-box{
+          padding: 27px 0 0 36px;
+        }
+        .recomment-box .banner-course-card{
+        width:312px;
+        margin-right: 48px;
+        margin-bottom: 27px;
+      }
+        .recomment-box .banner-course-card img{
+        width:70px;
+        height: 52px;
+        border-radius: 4px;
+        background-color: #ccc;
+      }
+
+      .elevator .elevator-dist i{
+        display: inline-block;
+        width: 18px;
+        height: 20px;
+        background: url(800.png);
+        background-size: 100% 100%;
+        background-position: top center;
+        margin: 2px 0;
+      }
+
+      .app-download .app-load-box{
+        display: none;
+        position: absolute;
+        right: 230px;
+        top: 100%;
+        width: 303px;
+        padding: 10px 24px 22px;
+        box-sizing: border-box;
+        background-color: #FFFFFF;
+        color: #4d555d;
+        line-height: 16px;
+        box-shadow: 0 8px 16px 0 rgba(7,17,27,0.2);
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        z-index: 99;
+        font-size: 12px;
+      }
+      .app-download .app-load-box img{
+        width: 108px;
+        height: 108px;
+      }
+      .app-download .app-load-box h4{
+        margin:12px 0;
+        font-size: 14px;
+        color: #1C1F21;
+        text-align: center;
+        line-height: 22px;
+      }
+      .app-download .app-load-box{
+        text-align: center;
+      }
+      .app-download .app-load-box .app-load-btn{
+        display: block;
+        color: #fff;
+        width:132px;
+        height: 36px;
+        margin-bottom: 8px;
+        line-height: 36px;
+        background: #4d555d;
+        border-radius: 18px;
+      }
+      .app-load-btn i{
+        font-size: 16px;
+        margin: 0 8px 0 -3px;
+        vertical-align: -2px;
+      }
+
+      .shop-cart .my-cart{
+        display: none;
+        width:344px;
+        padding:0 16px;
+        position: absolute;
+        right: 126px;
+        top:72px;
+        background: #FFFFFF;
+        box-sizing: border-box;
+        z-index: 99999;
+        box-shadow: 0 8px 16px 0 rgba(28,31,33,0.2);
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      .shop-cart .my-cart .cart-title-box{
+        padding: 13px 12px;
+        border-bottom: 1px solid #D3D6D9;
+      }
+      .shop-cart .my-cart .cart-title-box h2 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1C1F21;
+}
+.shop-cart .my-cart .cart-title-box h2, .shop-cart .my-cart .cart-title-box h5 {
+    height: 24px;
+    line-height: 24px;
+}
+.shop-cart .my-cart .cart-wrap .clear-cart {
+    height: 284px;
+    text-align: center;
+}
+.shop-cart .my-cart .cart-wrap .clear-cart .cartIcon {
+    margin: 36px 0 8px;
+    display: inline-block;
+    font-size: 72px;
+    color: #D3D6D9;
+}
+.shop-cart .my-cart .cart-wrap .clear-cart h3 {
+    font-size: 14px;
+    color: #545C63;
+    text-align: center;
+    line-height: 24px;
+}
+.shop-cart .my-cart .cart-wrap .clear-cart .text {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #9199A1;
+    text-align: center;
+    line-height: 24px;
+}
+.shop-cart .my-cart .cart-wrap .clear-cart .go-link {
+    display: block;
+    color: rgba(240,20,20,0.6);
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+.shop-cart .my-cart .more-box {
+    padding: 16px 12px;
+    border-top: 1px solid #D3D6D9;
+} 
+.tianjia{
+  background: #fff;
+  width: 100px;
+  height: 18px;
+  position: absolute;
+  right: 128px;
+  top: 54px;
+}
+.tianjia1{
+
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: 128px;
+  top: 10px;
+}
+.p1{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+}
+.p2{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+}
+.p3{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+
+}
+.p4{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+}
+.p5{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+}
+.p6{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+}
+.nnnn{
+  display:none;
+background:url(888.png);
+position: absolute;
+width: 172px;
+height: 212px;
+right: 58px;
+bottom: 0px;
+}
+.mmmm{
+  display: none;
+background:url(888.png) 0 212px;
+position: absolute;
+width: 172px;
+height: 212px;
+right: 58px;
+bottom: 0px;
+}
+
+#controls_2{
+		position:absolute;
+		bottom:20px;
+		right: 20px;
+    line-height: 12px;
+		padding-bottom: 0px;
+    z-index: 99999999;
+	}
+  .d1{
+    opacity: 0.7;
+		width:8px;
+		height:8px;
+		display: inline-block;
+		border-radius: 4px;
+    margin-left: 6px;
+    background:#fff;
+	}
+	#controls_1{
+		width:900px;
+		height:48px;
+		font-size:30px;
+		position: absolute;
+		top:160.5px;
+		left:18px;
+    z-index: 2;
+	}
+	#controls_1>div{
+		display: inline-block;
+		padding: 5px 3px;
+		color:#fff;
+		background-color: rgba(111,111,111,0.3);
+	}
+	#controls_1>div:hover{
+		background-color: rgba(111,111,111,0.7);
+		cursor: pointer;
+	}
+	.c1_left{
+    width: 48px;
+    border-radius: 50%;
+		float: left;
+	}
+  .c1_left::before{
+    font-family: 'xxoo';  
+            content: '\e924'; 
+          margin-left: 6px;
+  }
+  .c1_right::before{
+    font-family: 'xxoo';  
+            content: '\e925'; 
+            margin-left: 6px;
+  }
+	.c1_right{
+    width: 48px;
+  border-radius: 50%;
+		float: right;
+	}
+  .bbbb{
+    display: none;
+background:url(888.png) 0 0px;
+position: absolute;
+width: 172px;
+height: 212px;
+right: 40px;
+bottom:70px;
+  }
+  .recomment-box .banner-course-card .course-card {
+    margin-left: 16px;
+}
+  .recomment-box .banner-course-card .course-card-name {
+    width: 226px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #07111B;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.recomment-box .banner-course-card .course-card-info, .recomment-box .banner-course-card .course-card-price {
+    font-size: 12px;
+    color: #545C63;
+    line-height: 18px;
+}
+.qqqq {
+    margin-top:16px;
+}
+
+.container-path .types-content .course-path-container .course-path-info {
+    margin-left: 164px;
+    font-size: 12px;
+    color: #9199A1;
+    height: 18px;
+    line-height: 18px;
+}
+.container-path .types-content .course-path-container .course-path-info i {
+    margin-left: 30px;
+}
+.shop-cart .my-cart .more-box .go-cart {
+    width: 74px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px 0px 10px  21px;
+    background: rgba(240,20,20,0.8);
+    border-radius: 16px;
+    border: none;
+}
+.shop-cart .my-cart .more-box .show-box .text a {
+    color: #93999f;
+}
+.shop-cart .my-cart .more-box .show-box {
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+}
+.footer .footer-link a:hover {
+    color: #07111B;
+}
+.footer .footer-sns a:hover {
+    color: #B7BBBF;
+}
+.footer-sns-weixin:hover {
+    background-position: -52px -262px;
+}
+.footer-sns-weibo:hover {
+    background-position: 0 -262px;
+}
+.item>a:hover{
+  background: rgba(255,255,255, 0.3);
+  color: #fff;
+
+}
+
+.showhide-search:hover{
+  background:rgba(255, 0, 0, 0.6);
+}
+.elevator a span {
+    display: block;
+    font-size: 12px;
+    color: #07111b;
+    line-height: 14px;
+}
+
+</style>
+</head>
+<body id="index">
+    <div id ="header">
+        <div class="page-container clearfix addZ-index" style="background-color: #fff !important;">
+            <div id="logo" class="logo">
+                <a href="/" target="_self" title="首页"><img title="慕课网" src="logo.png">
+                </a>
+            </div>
+            <button type="button" class="navbar-toggle visible-xs-block js-show-menu"> </button>
+            <ul class="nav-item">
+                <li><a  target="_self">免费课程</a></li>
+                <li><a  target="_self">实战课程</a></li>
+                <li><a target="_self">就业班</a></li>
+                <li><a target="_self">专栏</a></li>
+                <li><a target="_self">猿问</a></li>
+                <li><a target="_self">手记</a></li>
+            </ul>
+            <div id="login-area">
+                <ul class="header-unlogin clearfix">
+                    <li class="app-download t11" id="js-app-load">
+                        <a target="_blank" style="widows: 60px;">下载App</a>
+                        <div class="app-load-box clearfix js-load-box tt11" >
+                          <div class="mobile-load-box">
+                            <h4>慕课网APP - 随时随地学编程</h4>
+                            <img src="700.png" class="l">
+                            <div class="r">
+                              <a  class="app-load-btn">
+                                <i class="icon-apple"></i>
+                                App Store下载
+                              </a>
+                              <a class="app-load-btn">
+                                <i class="icon-android"></i>
+                                Android下载
+                              </a>
+                              <p>扫描下载慕课网APP</p>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="shop-cart t12" id="shop--cart">
+                      <div class="t12 tianjia"></div>
+                      <div class="t12 tianjia1"></div>
+                        <a class="shop-cart-icon" target="_blank">
+                            <span class="icon-shopping-cart js-endcart"></span>
+                            <span>购物车</span>
+                        </a>
+                        <div class="my-cart tt12" id="js-my-cart" >
+                          <div class="cart-title-box clearfix">
+                            <h2 class="l">我的购物车</h2>
+                            <h5 class="r">
+                              以加入0门课
+                            </h5>
+                          </div>
+                          <div class="cart-wrap">
+                            <div class="clear-cart">
+                              <span class="cartIcon icon-shopping-cart"></span>
+                              <h3>购物车空空如也</h3>
+                              <div class="text">快去这里选购你中意的课程</div>
+                              <p>
+                                <a class="go-link">实战课程</a>
+                              </p>
+                              <p>
+                                  <a class="go-link">就业班</a>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="more-box clearfix">
+                              <div class="l show-box">
+                                <span class="text">
+                                  <a >我的订单中心</a>
+                                </span>
+                              </div>
+                              <a class="r moco-btn moco-btn-red go-cart">去购物车</a>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="header-signin">
+                        <a id="js-signin-btn">登录</a>/
+                        <a id="js-signup-btn">注册</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-warp clearfix" style="min-width: 32px; height:72px">
+                <div class="pa searchTags">
+
+                </div>
+                <div class="search-area">
+                    <input type="text" class="search-input" data-suggest-trigger="suggest-trigger" placeholder="请输入想搜索的内容..." autocomplete="off">
+                    <input type="hidden" class="btn_search"  data-search-btn="search-btn">
+                </div>
+                <div class="showhide-search" data-show="no">
+                    <i class="icon-search"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">  
+        <div class="bk" style="background-image:url(11.jpg)">
+        </div>
+        <div class="bgfff banner-box">
+            <div class="g-banner-box">
+                <div class="g-banner pr">
+                    <div class="submenu tt1 hide" style="display: none">
+                        <div class="innerBox clearfix">
+                          <div class="subinnerBox">
+                            <div class="cates-box">
+                              <div class="fe-base-box clearfix">
+                                <div class="banner-line">
+                                  <span  class="bold mr10 small-title">前沿技术</span>
+                                </div>
+                                <div class="tag-box l">
+                                  <a >微服务</a>
+                                  <a >区块链</a>
+                                  <a >以太坊</a>
+                                  <a >机器学习</a>
+                                  <a >深度学习</a>
+                                  <a >深度学习</a>
+                                  <a >计算机视觉</a>
+                                  <a >数据分析&挖掘</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="recomment-box">
+                          <div class="l banner-course-card">
+                            <a  class="clearfix">
+                              <img src="130.jpg" class="l">
+                              <div class="l course-card">
+                                <h3 class="course-card-name" >Java 零基础入门</h3>
+                                <div class="course-card-price l">￥568.00</div>
+                                <div class="course-card-dot l">
+                                  <i class="imv2-dot_samll"></i>
+                                </div>
+                                <div class="course-card-info l">
+                                  3步/28课
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="l banner-course-card">
+                              <a  class="clearfix">
+                                <img src="131.jpg" class="l">
+                                <div class="l course-card">
+                                  <h3 class="course-card-name" >Java 零基础入门</h3>
+                                  <div class="course-card-price l">￥568.00</div>
+                                  <div class="course-card-dot l">
+                                    <i class="imv2-dot_samll"></i>
+                                  </div>
+                                  <div class="course-card-info l">
+                                    3步/28课
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="l banner-course-card">
+                                <a  class="clearfix">
+                                  <img src="132.png" class="l">
+                                  <div class="l course-card">
+                                    <h3 class="course-card-name" >Java 零基础入门</h3>
+                                    <div class="course-card-price l">￥568.00</div>
+                                    <div class="course-card-dot l">
+                                      <i class="imv2-dot_samll"></i>
+                                    </div>
+                                    <div class="course-card-info l">
+                                      3步/28课
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="l banner-course-card">
+                                  <a  class="clearfix">
+                                    <img src="133.jpg" class="l">
+                                    <div class="l course-card">
+                                      <h3 class="course-card-name" >Java 零基础入门</h3>
+                                      <div class="course-card-price l">￥568.00</div>
+                                      <div class="course-card-dot l">
+                                        <i class="imv2-dot_samll"></i>
+                                      </div>
+                                      <div class="course-card-info l">
+                                        3步/28课
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                        </div>
+                      </div>
+                  <div class="submenu tt2 hide" style="display: none">
+                    <div class="innerBox clearfix">
+                      <div class="subinnerBox">
+                        <div class="cates-box">
+                          <div class="fe-base-box clearfix">
+                            <div class="banner-line">
+                              <span  class="bold mr10 small-title">前端开发</span>
+                            </div>
+                            <div class="tag-box l">
+                              <a >HTML/CSS</a>
+                              <a >JavaScript</a>
+                              <a >Vue.js</a>
+                              <a >React.JS</a>
+                              <a >Angular</a>
+                              <a >Node.js</a>
+                              <a >jQuery</a>
+                              <a >Bootstrap</a>
+                              <a >Sass/Less</a>
+                              <a >WebApp</a>
+                              <a >小程序</a>
+                              <a >前端工具</a>
+                              <a >Html5</a>
+                              <a >CSS3</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recomment-box">
+                      <div class="l banner-course-card">
+                        <a  class="clearfix">
+                          <img src="133.jpg" class="l">
+                          <div class="l course-card">
+                            <h3 class="course-card-name" >Java 零基础入门</h3>
+                            <div class="course-card-price l">￥568.00</div>
+                            <div class="course-card-dot l">
+                              <i class="imv2-dot_samll"></i>
+                            </div>
+                            <div class="course-card-info l">
+                              3步/28课
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="l banner-course-card">
+                          <a  class="clearfix">
+                            <img src="132.png" class="l">
+                            <div class="l course-card">
+                              <h3 class="course-card-name" >Java 零基础入门</h3>
+                              <div class="course-card-price l">￥568.00</div>
+                              <div class="course-card-dot l">
+                                <i class="imv2-dot_samll"></i>
+                              </div>
+                              <div class="course-card-info l">
+                                3步/28课
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="l banner-course-card">
+                            <a  class="clearfix">
+                              <img src="133.jpg" class="l">
+                              <div class="l course-card">
+                                <h3 class="course-card-name" >Java 零基础入门</h3>
+                                <div class="course-card-price l">￥568.00</div>
+                                <div class="course-card-dot l">
+                                  <i class="imv2-dot_samll"></i>
+                                </div>
+                                <div class="course-card-info l">
+                                  3步/28课
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="l banner-course-card">
+                              <a  class="clearfix">
+                                <img src="131.jpg" class="l">
+                                <div class="l course-card">
+                                  <h3 class="course-card-name" >Java 零基础入门</h3>
+                                  <div class="course-card-price l">￥568.00</div>
+                                  <div class="course-card-dot l">
+                                    <i class="imv2-dot_samll"></i>
+                                  </div>
+                                  <div class="course-card-info l">
+                                    3步/28课
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                    </div>
+                  </div>
+                  <div class="submenu tt3 hide" style="display: none">
+                      <div class="innerBox clearfix">
+                        <div class="subinnerBox">
+                          <div class="cates-box">
+                            <div class="fe-base-box clearfix">
+                              <div class="banner-line">
+                                <span  class="bold mr10 small-title">后端开发</span>
+                              </div>
+                              <div class="tag-box l">
+                                <a >Java</a>
+                                <a >SpringBoot</a>
+                                <a >Spring Cloud</a>
+                                <a >Python</a>
+                                <a >爬虫</a>
+                                <a >Django</a>
+                                <a >Tornado</a>
+                                <a >Go</a>
+                                <a >PHP</a>
+                                <a >C</a>
+                                <a >C++</a>
+                                <a >Ruby</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="recomment-box">
+                        <div class="l banner-course-card">
+                          <a  class="clearfix">            clearInterval(timer);
+                            <img src="132.png" class="l">            clearInterval(timer);
+                            <div class="l course-card">            clearInterval(timer);
+                              <h3 class="course-card-name" >Java 零基础入            clearInterval(timer);门</h3>
+                              <div class="course-card-price l">￥568.00</div>
+                              <div class="course-card-dot l">
+                                <i class="imv2-dot_samll"></i>
+                              </div>
+                              <div class="course-card-info l">
+                                3步/28课
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="l banner-course-card">
+                            <a  class="clearfix">
+                              <img src="130.jpg" class="l">
+                              <div class="l course-card">
+                                <h3 class="course-card-name" >Java 零基础入门</h3>
+                                <div class="course-card-price l">￥568.00</div>
+                                <div class="course-card-dot l">
+                                  <i class="imv2-dot_samll"></i>
+                                </div>
+                                <div class="course-card-info l">
+                                  3步/28课
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="l banner-course-card">
+                              <a  class="clearfix">
+                                <img src="131.jpg" class="l">
+                                <div class="l course-card">
+                                  <h3 class="course-card-name" >Java 零基础入门</h3>
+                                  <div class="course-card-price l">￥568.00</div>
+                                  <div class="course-card-dot l">
+                                    <i class="imv2-dot_samll"></i>
+                                  </div>
+                                  <div class="course-card-info l">
+                                    3步/28课
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="l banner-course-card">
+                                <a  class="clearfix">
+                                  <img src="131.jpg" class="l">
+                                  <div class="l course-card">
+                                    <h3 class="course-card-name" >Java 零基础入门</h3>
+                                    <div class="course-card-price l">￥568.00</div>
+                                    <div class="course-card-dot l">
+                                      <i class="imv2-dot_samll"></i>
+                                    </div>
+                                    <div class="course-card-info l">
+                                      3步/28课
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                      </div>
+                    </div>
+                    <div class="submenu tt4 hide" style="display: none">
+                        <div class="innerBox clearfix">
+                          <div class="subinnerBox">
+                            <div class="cates-box">
+                              <div class="fe-base-box clearfix">
+                                <div class="banner-line">
+                                  <span  class="bold mr10 small-title">移动开发</span>
+                                </div>
+                                <div class="tag-box l">
+                                  <a >Android</a>
+                                  <a >iOS</a>
+                                  <a >React native</a>
+                                  <a >WEEX</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="recomment-box">
+                          <div class="l banner-course-card">
+                            <a  class="clearfix">
+                              <img src="133.jpg" class="l">
+                              <div class="l course-card">
+                                <h3 class="course-card-name" >Java 零基础入门</h3>
+                                <div class="course-card-price l">￥568.00</div>
+                                <div class="course-card-dot l">
+                                  <i class="imv2-dot_samll"></i>
+                                </div>
+                                <div class="course-card-info l">
+                                  3步/28课
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="l banner-course-card">
+                              <a  class="clearfix">
+                                <img src="130.jpg" class="l">
+                                <div class="l course-card">
+                                  <h3 class="course-card-name" >Java 零基础入门</h3>
+                                  <div class="course-card-price l">￥568.00</div>
+                                  <div class="course-card-dot l">
+                                    <i class="imv2-dot_samll"></i>
+                                  </div>
+                                  <div class="course-card-info l">
+                                    3步/28课
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="l banner-course-card">
+                                <a  class="clearfix">
+                                  <img src="132.png" class="l">
+                                  <div class="l course-card">
+                                    <h3 class="course-card-name" >Java 零基础入门</h3>
+                                    <div class="course-card-price l">￥568.00</div>
+                                    <div class="course-card-dot l">
+                                      <i class="imv2-dot_samll"></i>
+                                    </div>
+                                    <div class="course-card-info l">
+                                      3步/28课
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="l banner-course-card">
+                                  <a  class="clearfix">
+                                    <img src="133.jpg" class="l">
+                                    <div class="l course-card">
+                                      <h3 class="course-card-name" >Java 零基础入门</h3>
+                                      <div class="course-card-price l">￥568.00</div>
+                                      <div class="course-card-dot l">
+                                        <i class="imv2-dot_samll"></i>
+                                      </div>
+                                      <div class="course-card-info l">
+                                        3步/28课
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                        </div>
+                      </div>
+                      <div class="submenu tt5 hide" style="display: none">
+                          <div class="innerBox clearfix">
+                            <div class="subinnerBox">
+                              <div class="cates-box">
+                                <div class="fe-base-box clearfix">
+                                  <div class="banner-line">
+                                    <span  class="bold mr10 small-title">计算机基础</span>
+                                  </div>
+                                  <div class="tag-box l">
+                                    <a >计算机基础</a>
+                                    <a >算法与数据结构</a>
+                                    <a >数学</a>
+                                  </div>
+                                </div>
+                                <div class="fe-base-box clearfix">
+                                    <div class="banner-line  qqqq">
+                                      <span  class="bold mr10 small-title">云计算&大数据</span>
+                                    </div>
+                                    <div class="tag-box l">
+                                      <a >大数据</a>
+                                      <a >Hadoop</a>
+                                      <a >Spark</a>
+                                      <a >Hbase</a>
+                                      <a >Storm</a>
+                                      <a >云计算</a>
+                                      <a >AWS</a>
+                                      <a >Docker</a>
+                                      <a >Kubernetes</a>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="recomment-box">
+                            <div class="l banner-course-card">
+                              <a  class="clearfix">
+                                <img src="131.jpg" class="l">
+                                <div class="l course-card">
+                                  <h3 class="course-card-name" >Java 零基础入门</h3>
+                                  <div class="course-card-price l">￥568.00</div>
+                                  <div class="course-card-dot l">
+                                    <i class="imv2-dot_samll"></i>
+                                  </div>
+                                  <div class="course-card-info l">
+                                    3步/28课
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="l banner-course-card">
+                                <a  class="clearfix">
+                                  <img src="130.jpg" class="l">
+                                  <div class="l course-card">
+                                    <h3 class="course-card-name" >Java 零基础入门</h3>
+                                    <div class="course-card-price l">￥568.00</div>
+                                    <div class="course-card-dot l">
+                                      <i class="imv2-dot_samll"></i>
+                                    </div>
+                                    <div class="course-card-info l">
+                                      3步/28课
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="l banner-course-card">
+                                  <a  class="clearfix">
+                                    <img src="132.png" class="l">
+                                    <div class="l course-card">
+                                      <h3 class="course-card-name" >Java 零基础入门</h3>
+                                      <div class="course-card-price l">￥568.00</div>
+                                      <div class="course-card-dot l">
+                                        <i class="imv2-dot_samll"></i>
+                                      </div>
+                                      <div class="course-card-info l">
+                                        3步/28课
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="l banner-course-card">
+                                    <a  class="clearfix">
+                                      <img src="133.jpg" class="l">
+                                      <div class="l course-card">
+                                        <h3 class="course-card-name" >Java 零基础入门</h3>
+                                        <div class="course-card-price l">￥568.00</div>
+                                        <div class="course-card-dot l">
+                                          <i class="imv2-dot_samll"></i>
+                                        </div>
+                                        <div class="course-card-info l">
+                                          3步/28课
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                          </div>
+                        </div>
+                        <div class="submenu tt6 hide" style="display: none">
+                            <div class="innerBox clearfix">
+                              <div class="subinnerBox">
+                                <div class="cates-box">
+                                  <div class="fe-base-box clearfix">
+                                    <div class="banner-line">
+                                      <span  class="bold mr10 small-title">运维&测试</span>
+                                    </div>
+                                    <div class="tag-box l">
+                                      <a >运维</a>
+                                      <a >自动化运维</a>
+                                      <a >运维工具</a>
+                                      <a >中间件</a>
+                                      <a >Linux</a>
+                                      <a >测试</a>
+                                      <a >功能测试</a>
+                                      <a >性能测试</a>
+                                      <a >自动化测试</a>
+                                      <a >接口测试</a>
+                                      <a >安全测试</a>
+                                    </div>
+                                  </div>
+                                  <div class="fe-base-box clearfix">
+                                      <div class="banner-line qqqq">
+                                        <span  class="bold mr10 small-title">数据库</span>
+                                      </div>
+                                      <div class="tag-box l">
+                                        <a >MySQL</a>
+                                        <a >Redis</a>
+                                        <a >MongoDB</a>
+                                        <a >Oracle</a>
+                                        <a >SQL Server</a>
+                                        <a >NoSql</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="recomment-box">
+                              <div class="l banner-course-card">
+                                <a  class="clearfix">
+                                  <img src="131.jpg" class="l">
+                                  <div class="l course-card">
+                                    <h3 class="course-card-name" >Java 零基础入门</h3>
+                                    <div class="course-card-price l">￥568.00</div>
+                                    <div class="course-card-dot l">
+                                      <i class="imv2-dot_samll"></i>
+                                    </div>
+                                    <div class="course-card-info l">
+                                      3步/28课
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="l banner-course-card">
+                                  <a  class="clearfix">
+                                    <img src="130.jpg" class="l">
+                                    <div class="l course-card">
+                                      <h3 class="course-card-name" >Java 零基础入门</h3>
+                                      <div class="course-card-price l">￥568.00</div>
+                                      <div class="course-card-dot l">
+                                        <i class="imv2-dot_samll"></i>
+                                      </div>
+                                      <div class="course-card-info l">
+                                        3步/28课
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="l banner-course-card">
+                                    <a  class="clearfix">
+                                      <img src="131.jpg" class="l">
+                                      <div class="l course-card">
+                                        <h3 class="course-card-name" >Java 零基础入门</h3>
+                                        <div class="course-card-price l">￥568.00</div>
+                                        <div class="course-card-dot l">
+                                          <i class="imv2-dot_samll"></i>
+                                        </div>
+                                        <div class="course-card-info l">
+                                          3步/28课
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                  <div class="l banner-course-card">
+                                      <a  class="clearfix">
+                                        <img src="133.jpg" class="l">
+                                        <div class="l course-card">
+                                          <h3 class="course-card-name" >Java 零基础入门</h3>
+                                          <div class="course-card-price l">￥568.00</div>
+                                          <div class="course-card-dot l">
+                                            <i class="imv2-dot_samll"></i>
+                                          </div>
+                                          <div class="course-card-info l">
+                                            3步/28课
+                                          </div>
+                                        </div>
+                                      </a>
+                                    </div>
+                            </div>
+                          </div>
+                          <div class="submenu tt7 hide" style="display: none">
+                              <div class="innerBox clearfix">
+                                <div class="subinnerBox">
+                                  <div class="cates-box">
+                                    <div class="fe-base-box clearfix">
+                                      <div class="banner-line">
+                                        <span  class="bold mr10 small-title">UI设计&多媒体 </span>
+                                      </div>
+                                      <div class="tag-box l">
+                                        <a >模型制作</a>
+                                        <a >动效动画</a>
+                                        <a >设计基础</a>
+                                        <a >设计工具</a>
+                                        <a >APPUI设计</a>
+                                        <a >产品交互</a>
+                                      </div>
+                                    </div>
+                                    <div class="fe-base-box clearfix">
+                                        <div class="banner-line qqqq">
+                                          <span  class="bold mr10 small-title">游戏</span>
+                                        </div>
+                                        <div class="tag-box l">
+                                          <a >Unity 3D</a>
+                                          <a >Cocos2d-x</a>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="recomment-box">
+                                <div class="l banner-course-card">
+                                  <a  class="clearfix">
+                                    <img src="131.jpg" class="l">
+                                    <div class="l course-card">
+                                      <h3 class="course-card-name" >Java 零基础入门</h3>
+                                      <div class="course-card-price l">￥568.00</div>
+                                      <div class="course-card-dot l">
+                                        <i class="imv2-dot_samll"></i>
+                                      </div>
+                                      <div class="course-card-info l">
+                                        3步/28课
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="l banner-course-card">
+                                    <a  class="clearfix">
+                                      <img src="133.jpg" class="l">
+                                      <div class="l course-card">
+                                        <h3 class="course-card-name" >Java 零基础入门</h3>
+                                        <div class="course-card-price l">￥568.00</div>
+                                        <div class="course-card-dot l">
+                                          <i class="imv2-dot_samll"></i>
+                                        </div>
+                                        <div class="course-card-info l">
+                                          3步/28课
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                  <div class="l banner-course-card">
+                                      <a  class="clearfix">
+                                        <img src="131.jpg" class="l">
+                                        <div class="l course-card">
+                                          <h3 class="course-card-name" >Java 零基础入门</h3>
+                                          <div class="course-card-price l">￥568.00</div>
+                                          <div class="course-card-dot l">
+                                            <i class="imv2-dot_samll"></i>
+                                          </div>
+                                          <div class="course-card-info l">
+                                            3步/28课
+                                          </div>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div class="l banner-course-card">
+                                        <a  class="clearfix">
+                                          <img src="133.jpg" class="l">
+                                          <div class="l course-card">
+                                            <h3 class="course-card-name" >Java 零基础入门</h3>
+                                            <div class="course-card-price l">￥568.00</div>
+                                            <div class="course-card-dot l">
+                                              <i class="imv2-dot_samll"></i>
+                                            </div>
+                                            <div class="course-card-info l">
+                                              3步/28课
+                                            </div>
+                                          </div>
+                                        </a>
+                                      </div>
+                              </div>
+                            </div>
+                    <div class="menuContent">
+                        <div class="item t1" data-id="a">
+                            <a >
+                                <span class="group">前沿 / 区块链 / 人工智能</span>
+                                <i class="imv-arrowl-r"></i>
+                            </a>
+                        </div>
+                        <div class="item t2" data-id="a">
+                            <a >
+                                <span class="group">前端 / 小程序 / JS</span>
+                                <i class="imv-arrowl-r"></i>
+                            </a>
+                        </div>
+                        <div class="item  t3" data-id="a">
+                            <a >
+                                <span class="group">后端 / JAVA / Python</span>
+                                <i class="imv-arrowl-r"></i>
+                            </a>
+                        </div>
+                        <div class="item t4" data-id="a">
+                            <a >
+                                <span class="group">移动 / Android / iOS</span>
+                                <i class="imv-arrowl-r"></i>
+                            </a>
+                        </div>
+                        <div class="item t5" data-id="a">
+                            <a >
+                                <span class="group">云计算 / 大数据 / 容器</span>
+                                <i class="imv-arrowl-r"></i>
+                            </a>
+                        </div>
+                        <div class="item t6" data-id="a">
+                            <a >
+                                <span class="group">运维 / 测试 / 数据库</span>
+                                <i class="imv-arrowl-r"></i>
+                            </a>
+                        </div>
+                        <div class="item t7" data-id="a">
+                            <a >
+                                <span class="group">UI设计 / 3D动画 / 游戏</span>
+                                <i class="imv-arrowl-r"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="g-banner-content">
+                        <div id="controls_1">
+                            <div class="c1_left" onclick="x1(-1)"></div>
+                            <div class="c1_right" onclick="x1(1)"></div>
+                          </div>
+                        <div id="controls_2">
+                            <div class="d1" onmouseover="index=0;x1(0)" style="width:20px;background-color: #fff;cursor: pointer;"></div>
+                            <div class="d1" onmouseover="index=1;x1(0)"></div>
+                            <div class="d1" onmouseover="index=2;x1(0)"></div>
+                            <div class="d1" onmouseover="index=3;x1(0)"></div>
+                            <div class="d1" onmouseover="index=4;x1(0)"></div>
+                          </div>
+                        <div class="g-banner-box">
+                            <a target="_blank" data-track="banner-1-1" class="click-help">
+                                <div class="banner-slide" >
+                                    <img src="11.jpg" class="abc">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bgfff">
+            <div class="container-types container-recommend clearfix">
+                <h3 class="types-title clearfix">
+                  <span>就业班</span>
+                  <span class="intro">零基础快速就业</span>
+                </h3>
+                <div class="path-list clearfix">
+                        <a href="">
+                            <i class="i-web"></i>
+                            <p class="tit">Web前端攻城狮</p>
+                            <p class="desc">踏入IT行业从此开始</p>
+                        </a>
+                        <a href="">
+                            <i class="i-java"></i>
+                            <p class="tit">Java攻城狮</p>
+                            <p class="desc">全球3大编程语言之一</p>
+                        </a>
+                        <a href="">
+                            <i class="i-python"></i>
+                            <p class="tit">Android攻城狮</p>
+                            <p class="desc">5G物联网通万物</p>
+                        </a>
+                        <a href="">
+                            <i class="i-android"></i>
+                            <p class="tit">PHP攻城狮</p>
+                            <p class="desc">打通前后端一步到位</p>
+                        </a>
+                        <a href="">
+                            <i class="i-php"></i>
+                            <p class="tit">Python攻城狮</p>
+                            <p class="desc">爬虫大数据抢占先机</p>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <div class="bgfff">
+                <div class="container-types container-recommend clearfix">
+                    <h3 class="types-title clearfix ">
+                        <span >职场进阶</span>
+                        <span class="intro">1年以上开发经验系统成长</span>
+                    <div class="types-content">
+                        <div class="adsense-box l" style="background-image: url(51.jpg);background-size: 100%">
+                            <a data-track="xsrm-1-1" target="_blank">
+                                <h3 class="ellipsis">大前端——前端高级进阶</h3>
+                                <p class="ellipsis">覆盖前端全栈+全周期+多端应用的体系大课</p>
+                            </a>
+                        </div>
+                        <div class="adsense-box l" style="background-image: url(52.jpg);background-size: 100%">
+                            <a data-track="xsrm-1-1" target="_blank">
+                                <h3 class="ellipsis">从Java后端到全栈</h3>
+                                 <p class="ellipsis">7七月老师亲授的职场进阶大课，浓缩了他从Java工程师到全栈CTO的10年成长历程</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="bg000">
+            <div class="container-types clearfix">
+                <h3 class="types-title clearfix">
+                    <span>课程推荐</span>
+                </h3>
+                <div class="clearfix types-content">
+                    <div class="index-card-container course-card-container container">
+                        <a target="_blank" class="course-card" data-track="sztj-1-1">
+                            <div class="course-card-top hashadow">
+                                <img src="1.png">
+                                <div class="course-label">
+                                    <label >Java</label>
+                                </div>
+                            </div>
+                            <div class="course-card-content">
+                                <h3 class="course-card-name">Java并发编程精讲</h3>
+                                <div class="clearfix course-card-bottom">
+                                    <div class="course-card-info">
+                                        <span>中级</span>
+                                        <span>
+                                            <i class="imv2-set-sns"></i>
+                                            672
+                                        </span>
+                                        <span >评分：10.00</span>
+                                    </div>
+                                    <div class="course-card-price">
+                                        ￥348.00
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="index-card-container course-card-container container">
+                            <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                <div class="course-card-top hashadow">
+                                    <img src="2.jpg">
+                                    <div class="course-label">
+                                        <label >Linux</label>
+                                        <label >计算机网络</label>
+                                    </div>
+                                </div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-name">编程必备基础 计算机组成原理+操作系统+计算机网路</h3>
+                                    <div class="clearfix course-card-botton">
+                                        <div class="course-card-info">
+                            
+                                            <span>中级</span>
+                                            <span>
+                                                <i class="imv2-set-sns"></i>
+                                                1929
+                                            </span>
+                                            <span >评分：9.96</span>
+                                        </div>
+                                        <div class="course-card-price">
+                                            ￥236.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+                    <div class="index-card-container course-card-container container">
+                        <a target="_blank" class="course-card" data-track="sztj-1-1">
+                            <div class="course-card-top hashadow">
+                                <img src="3.jpg" >
+                                    <div class="course-label">
+                                         <label >Python</label>
+                                    </div>
+                            </div>
+                            <div class="course-card-content">
+                                <h3 class="course-card-name">全面系统python3入门+进阶课程  小白也能听懂</h3>
+                                    <div class="clearfix course-card-botton">
+                                         <div class="course-card-info">
+                                            <span>初级</span>
+                                            <span>
+                                                <i class="imv2-set-sns"></i>
+                                                    9517
+                                            </span>
+                                            <span >评分：9.96</span>
+                                        </div>
+                                        <div class="course-card-price">
+                                                ￥366.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+                    <div class="index-card-container course-card-container container">
+                        <a target="_blank" class="course-card" data-track="sztj-1-1">
+                            <div class="course-card-top hashadow">
+                                <img src="4.jpg" >
+                                <div class="course-label">
+                                    <label >Vuejs</label>
+                                </div>
+                            </div>
+                            <div class="course-card-content">
+                                <h3 class="course-card-name">Vue2.5开发去哪儿网App 从零基础入门到实战项目</h3>
+                                <div class="clearfix course-card-botton">
+                                    <div class="course-card-info">
+                                    
+                                        <span>中级</span>
+                                        <span>
+                                            <i class="imv2-set-sns"></i>
+                                                  6632
+                                        </span>
+                                        <span >评分：9.99</span>
+                                    </div>
+                                    <div class="course-card-price">
+                                           ￥266.00
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="index-card-container course-card-container container">
+                        <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                <div class="course-card-top hashadow">
+                                    <img src="5.jpg" alt="">
+                                    <div class="course-label">
+                                        <label >Java</label>
+                                        <label >算法与数据结构</label>
+                                    </div>
+                                </div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-name">剑指Java面试-Offer直通车</h3>
+                                    <div class="clearfix course-card-botton">
+                                        <div class="course-card-info">
+                                                 
+                                            <span>中级</span>
+                                            <span>
+                                                <i class="imv2-set-sns"></i>
+                                                   4383
+                                            </span>
+                                            <span >评分：9.97</span>
+                                        </div>
+                                        <div class="course-card-price">
+                                                ￥299.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="index-card-container course-card-container container">
+                            <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                <div class="course-card-top hashadow">
+                                    <img src="6.png" alt="">
+                                    <div class="course-label">
+                                        <label >Java</label>
+                                        <label >算法与数据结构</label>
+                                    </div>
+                                </div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-name">剑指Java面试-Offer直通车</h3>
+                                    <div class="clearfix course-card-botton">
+                                        <div class="course-card-info">
+                                                         
+                                            <span>中级</span>
+                                            <span>
+                                                <i class="imv2-set-sns"></i>
+                                                       4383
+                                            </span>
+                                            <span >评分：9.97</span>
+                                        </div>
+                                        <div class="course-card-price">
+                                                ￥299.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="index-card-container course-card-container container">
+                            <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                <div class="course-card-top hashadow">
+                                    <img src="7.jpg" alt="">
+                                    <div class="course-label">
+                                        <label >Java</label>
+                                        <label >算法与数据结构</label>
+                                    </div>
+                                </div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-name">剑指Java面试-Offer直通车</h3>
+                                    <div class="clearfix course-card-botton">
+                                        <div class="course-card-info">
+                                                                 
+                                            <span>中级</span>
+                                            <span>
+                                                <i class="imv2-set-sns"></i>
+                                                    4383
+                                            </span>
+                                            <span >评分：9.97</span>
+                                        </div>
+                                        <div class="course-card-price">
+                                             ￥299.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="index-card-container course-card-container container">
+                            <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                <div class="course-card-top hashadow">
+                                    <img src="8.png" alt="">
+                                    <div class="course-label">
+                                        <label >Java</label>
+                                        <label >算法与数据结构</label>
+                                    </div>
+                                </div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-name">剑指Java面试-Offer直通车</h3>
+                                    <div class="clearfix course-card-botton">
+                                        <div class="course-card-info">
+                                                                         
+                                            <span>中级</span>
+                                            <span>
+                                                <i class="imv2-set-sns"></i>
+                                                      4383
+                                            </span>
+                                            <span >评分：9.97</span>
+                                        </div>
+                                        <div class="course-card-price">
+                                               ￥299.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="bgfff">
+            <div class="container-types container-path qu clearfix">
+                <h3 class="types-title clearfix">
+                    <span>学习路线</span>
+                    <ul class="js-path-tab">
+                        <li date-id="hot" class="k1">热门</li>
+                        <li data-id="1" class="k2">前端</li>
+                        <li data-id="2" class="k3">后端</li>
+                        <li data-id="3" class="k4">移动端</li>
+                        <li data-id="4" class="k5">计算机基础</li>
+                        <li data-id="5" class="k6">大数据</li>
+                        <li data-id="6" class="k7">测试</li>
+                    </ul>
+                    <a target="_blank" class="more">
+                        查看更多
+                        <i class="imv2-right2"></i>
+                    </a>
+                </h3>
+                <div class="clearfix types-content  qujs-path-content kk1" style="display: block">
+                    <div class="course-path-container">
+                        <a target="_blank">
+                            <div class="course-banner">
+                                <div class="img-up" style="background:url(21.jpg)"></div>
+                                <div class="img-mid" style="background:url(21.jpg)"></div>
+                                <div class="img-down" style="background:url(21.jpg)" ></div>
+                            </div>
+                            <h4>React.js 框架从入门到精通</h4>
+                            <p>路线从零起步玩转React.js开发，从基础夯实到企业级项目实战，直到源码全覆盖。</p>
+                            <div class="course-path-info">
+                                <span>4步骤*5门课</span>
+                                <span>
+                                    <i class="imv2-star2">4122人收藏</i>
+                                </span>
+                            </div>
+                        </a>pg
+                    </div>
+                    <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(22.jpg)"></div>
+                                    <div class="img-mid" style="background:url(22.jpg)"></div>
+                                    <div class="img-down" style="background:url(22.jpg)"></div>
+                                </div>
+                                <h4>Vue.js 从入门到全栈开发</h4>
+                                <p>优秀的前端工程师都要掌握 一门后端语言，从vue到node，前后端通吃，提高前端工程师的竞争力。</p>
+                                <div class="course-path-info">
+                                    <span>4步骤*4门课</span>
+                                    <span>
+                                        <i class="imv2-star2">11234人收藏</i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="course-path-container">
+                                <a target="_blank">
+                                    <div class="course-banner">
+                                        <div class="img-up" style="background:url(23.jpg)"></div>
+                                        <div class="img-mid" style="background:url(23.jpg)"></div>
+                                        <div class="img-down" style="background:url(23.jpg)"></div>
+                                    </div>
+                                    <h4>Java从初级到高级的进阶面试线路图</h4>
+                                    <p>路线吃透面试学问，伴随身为Java工程师的你一路成长，高效充分准备面试拿offer</p>
+                                    <div class="course-path-info">
+                                        <span>5步骤*6门课</span>
+                                        <span>
+                                            <i class="imv2-star2">9597人收藏</i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-path-container">
+                                    <a target="_blank">
+                                        <div class="course-banner">
+                                            <div class="img-up" style="background:url(24.jpg)"></div>
+                                            <div class="img-mid" style="background:url(24.jpg)"></div>
+                                            <div class="img-down" style="background:url(24.jpg)"></div>
+                                        </div>
+                                        <h4>Java从网路编程到高并发学习路线</h4>
+                                        <p>网络编程、并发编程、高并发、消息队列等问题时Java工程师绕不开的痛点，也是大厂岗位明文要求的，本路线一站式攻克以上四大难关。</p>
+                                        <div class="course-path-info">
+                                            <span>4步骤*6门课</span>
+                                            <span>
+                                                <i class="imv2-star2">5794人收藏</i>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>                 
+                </div>
+                <div class="clearfix types-content js-path-content kk2" style="display: none">
+                    <div class="course-path-container">
+                        <a target="_blank">
+                            <div class="course-banner">
+                                <div class="img-up" style="background:url(101.png)"></div>
+                                <div class="img-mid" style="background:url(101.png)"></div>
+                                <div class="img-down" style="background:url(101.png)" ></div>
+                            </div>
+                            <h4>Node.js 零基础从入门到玩转</h4>
+                            <p>本路线从Node.js基础到热门们框架应用，从理解到实战一步到位。</p>
+                            <div class="course-path-info">
+                                <span>4步骤*4门课</span>
+                                <span>
+                                    <i class="imv2-star2">3516人收藏</i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(22.jpg)"></div>
+                                    <div class="img-mid" style="background:url(22.jpg)"></div>
+                                    <div class="img-down" style="background:url(22.jpg)"></div>
+                                </div>
+                                <h4>Vue.js 从入门到全栈开发</h4>
+                                <p>优秀的前端工程师都要掌握 一门后端语言，从vue到node，前后端通吃，提高前端工程师的竞争力。</p>
+                                <div class="course-path-info">
+                                    <span>4步骤*4门课</span>
+                                    <span>
+                                        <i class="imv2-star2">11234人收藏</i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="course-path-container">
+                                <a target="_blank">
+                                    <div class="course-banner">
+                                        <div class="img-up" style="background:url(102.jpg)"></div>
+                                        <div class="img-mid" style="background:url(102.jpg)"></div>
+                                        <div class="img-down" style="background:url(102.jpg)"></div>
+                                    </div>
+                                    <h4>Vue.js从入门到精通</h4>
+                                    <p>路线专为想学Vue却无从下手的人群设计，以实际项目为例，逐步深入，学透Vue</p>
+                                    <div class="course-path-info">
+                                        <span>3步骤*7门课</span>
+                                        <span>
+                                            <i class="imv2-star2">9597人收藏</i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-path-container">
+                                    <a target="_blank">
+                                        <div class="course-banner">
+                                            <div class="img-up" style="background:url(103.jpg)"></div>
+                                            <div class="img-mid" style="background:url(103.jpg)"></div>
+                                            <div class="img-down" style="background:url(103.jpg)"></div>
+                                        </div>
+                                        <h4>React.js框架从零到全栈开发</h4>
+                                        <p>从React.js基础入手，学习全栈技能，上手全栈项目，路线清晰，不走弯路。</p>
+                                        <div class="course-path-info">
+                                            <span>4步骤*4门课</span>
+                                            <span>
+                                                <i class="imv2-star2">3190人收藏</i>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>                 
+                </div>
+                <div class="clearfix types-content js-path-content kk3" style="display: none">
+                    <div class="course-path-container">
+                        <a target="_blank">
+                            <div class="course-banner">
+                                <div class="img-up" style="background:url(104.jpg)"></div>
+                                <div class="img-mid" style="background:url(104.jpg)"></div>
+                                <div class="img-down" style="background:url(104.jpg)" ></div>
+                            </div>
+                            <h4>Java从初级到高级的进阶面试路线图</h4>
+                            <p>路线吃透面试学问，伴随身为Java工程师的你一路成长，高效充分准备面试拿offer</p>
+                            <div class="course-path-info">
+                                <span>5步骤*6门课</span>
+                                <span>
+                                    <i class="imv2-star2">9672人收藏</i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(105.jpg)"></div>
+                                    <div class="img-mid" style="background:url(105.jpg)"></div>
+                                    <div class="img-down" style="background:url(105.jpg)"></div>
+                                </div>
+                                <h4>SpringCloud全面 进阶之路</h4>
+                                <p>运用SpringCloud完成企业级项目微服务改造，不断提升，掌握几大特色模块和主流技术组合</p>
+                                <div class="course-path-info">
+                                    <span>3步骤*4门课</span>
+                                    <span>
+                                        <i class="imv2-star2">5634人收藏</i>
+                                    </span>
+                                </div>
+                            </a>
+                      </div>
+                       <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(106.jpg)"></div>
+                                    <div class="img-mid" style="background:url(106.jpg)"></div>
+                                    <div class="img-down" style="background:url(106.jpg)"></div>
+                                </div>
+                                <h4>Go语言 从入门到达人之路</h4>
+                                <p>零基础入门 Go语言，在掌握基础语法后向并发提升，并用Go去构建微服务</p>
+                                <div class="course-path-info">
+                                    <span>4步骤*6门课</span>
+                                    <span>
+                                        <i class="imv2-star2">3597人收藏</i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(107.jpg)"></div>
+                                      <div class="img-mid" style="background:url(107.jpg)"></div>
+                                      <div class="img-down" style="background:url(107.jpg)"></div>
+                                </div>
+                                  <h4>SpringBoot从入门到精通</h4>
+                                  <p>本路线旨在帮助想快速掌握SpringBoot应用的工程师 ，全方位多角度带你升级。</p>
+                                <div class="course-path-info">
+                                    <span>4步骤*5门课</span>
+                                    <span>
+                                        <i class="imv2-star2">5794人收藏</i>
+                                      </span>
+                                </div>
+                              </a>
+                       </div>                 
+                </div>
+                <div class="clearfix types-content js-path-content kk4" style="display: none">
+                    <div class="course-path-container">
+                        <a target="_blank">
+                            <div class="course-banner">
+                                <div class="img-up" style="background:url(108.jpg)"></div>
+                                <div class="img-mid" style="background:url(108.jpg)"></div>
+                                <div class="img-down" style="background:url(108.jpg)" ></div>
+                            </div>
+                            <h4>突破Android高级面试学习路线</h4>
+                            <p>路线汇集Android高级工程师的关键技能,还原面试官视觉,助力面试顺利通关。</p>
+                            <div class="course-path-info">
+                                <span>3步骤*3门课</span>
+                                <span>
+                                    <i class="imv2-star2">1148人收藏</i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(109.jpg)"></div>
+                                    <div class="img-mid" style="background:url(109.jpg)"></div>
+                                    <div class="img-down" style="background:url(109.jpg)"></div>
+                                </div>
+                                <h4>流媒体（音视频）开发高手学习路线</h4>
+                                <p>对标大厂岗位需求，从音视频处理核心技术到微服务器设计开发，全面培养高手。</p>
+                                <div class="course-path-info">
+                                    <span>3步骤*3门课</span>
+                                    <span>
+                                        <i class="imv2-star2">1234人收藏</i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="course-path-container">
+                                <a target="_blank">
+                                    <div class="course-banner">
+                                        <div class="img-up" style="background:url(110.jpg)"></div>
+                                        <div class="img-mid" style="background:url(110.jpg)"></div>
+                                        <div class="img-down" style="background:url(110.jpg)"></div>
+                                    </div>
+                                    <h4>Android架构师核心技能学习路线</h4>
+                                    <p>Android架构师必备技能的精选学习路线，软硬实力双向提升，进阶必选。</p>
+                                    <div class="course-path-info">
+                                        <span>4步骤*4门课</span>
+                                        <span>
+                                            <i class="imv2-star2">2597人收藏</i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-path-container">
+                                    <a target="_blank">
+                                        <div class="course-banner">
+                                            <div class="img-up" style="background:url(111.jpg)"></div>
+                                            <div class="img-mid" style="background:url(111.jpg)"></div>
+                                            <div class="img-down" style="background:url(111.jpg)"></div>
+                                        </div>
+                                        <h4>移动端进阶高阶工程师成长路线</h4>
+                                        <p>精选对标移动端高级工程师的岗位需求，技能步步拔高，是移动端工程师进阶高工不二之选。</p>
+                                        <div class="course-path-info">
+                                            <span>3步骤*4门课</span>
+                                            <span>
+                                                <i class="imv2-star2">5492人收藏</i>
+                                            </span>
+                                        </div>
+                                    </a>
+                            </div>                 
+                </div>
+                <div class="clearfix types-content js-path-content kk5"  style="display: none">
+                    <div class="course-path-container">
+                        <a target="_blank">
+                            <div class="course-banner">
+                                <div class="img-up" style="background:url(112.jpg)"></div>
+                                <div class="img-mid" style="background:url(112.jpg)"></div>
+                                <div class="img-down" style="background:url(112.jpg)" ></div>
+                            </div>
+                            <h4>计算机基础学习路线</h4>
+                            <p>本路线精选程序员必修的数学基础课和计算机基础核心知识，有序打基础职场走更远。</p>
+                            <div class="course-path-info">
+                                <span>4步骤*5门课</span>
+                                <span>
+                                    <i class="imv2-star2">7628人收藏</i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(113.jpg)"></div>
+                                    <div class="img-mid" style="background:url(113.jpg)"></div>
+                                    <div class="img-down" style="background:url(113.jpg)"></div>
+                                </div>
+                                <h4>从零开始系统掌握算法</h4>
+                                <p>路线从原理到实操，落脚算法项目的真实场景。搞定算法，搞定晋升，搞定大厂。</p>
+                                <div class="course-path-info">
+                                    <span>3步骤*3门课</span>
+                                    <span>
+                                        <i class="imv2-star2">5298人收藏</i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>              
+                </div>
+                <div class="clearfix types-content js-path-content kk6" style="display: none">
+                    <div class="course-path-container">
+                        <a target="_blank">
+                            <div class="course-banner">
+                                <div class="img-up" style="background:url(21.jpg)"></div>
+                                <div class="img-mid" style="background:url(21.jpg)"></div>
+                                <div class="img-down" style="background:url(21.jpg)" ></div>
+                            </div>
+                            <h4>大数据零基础入门求职路线</h4>
+                            <p>路线面向零基础用户，从入门到实现大数据综合实战，助力大家快速入门转型！</p>
+                            <div class="course-path-info">
+                                <span>5步骤*8门课</span>
+                                <span>
+                                    <i class="imv2-star2">2574人收藏</i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course-path-container">
+                            <a target="_blank">
+                                <div class="course-banner">
+                                    <div class="img-up" style="background:url(22.jpg)"></div>
+                                    <div class="img-mid" style="background:url(22.jpg)"></div>
+                                    <div class="img-down" style="background:url(22.jpg)"></div>
+                                </div>
+                                <h4>大数据容器化实践从入门到进阶</h4>
+                                <p>本路线以开发者的视角逐步深入，从语言基础开始，到最终完成企业级应用容器化部署。</p>
+                                <div class="course-path-info">
+                                    <span>3步骤*4门课</span>
+                                    <span>
+                                        <i class="imv2-star2">3034人收藏</i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>         
+                </div>
+                <div class="clearfix types-content js-path-content kk7" style="display: none">
+                    <div class="course-path-container">
+                        <a target="_blank">
+                            <div class="course-banner">
+                                <div class="img-up" style="background:url(21.jpg)"></div>
+                                <div class="img-mid" style="background:url(21.jpg)"></div>
+                                <div class="img-down" style="background:url(21.jpg)" ></div>
+                            </div>
+                            <h4>从功能测试到自动化测试转型路线</h4>
+                            <p>自动化测试让企业测试更高效，本路线旨在帮助功能测试从业人员成功转型。</p>
+                            <div class="course-path-info">
+                                <span>4步骤*5门课</span>
+                                <span>
+                                    <i class="imv2-star2">10673人收藏</i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>    
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <div class="bg000">
+            <div class="container-types container-read clearfix">
+                <h3 class="types-title clearfix">
+                    <span>慕课专栏</span>
+                    <a class="more" target="_blank">
+                        查看更多
+                        <i class="imv-right2"></i>
+                    </a>
+                </h3>
+                <div class="clearfix types-content">
+                    <div class="course-read-container">
+                        <div class="course-banner">
+                            <a target="_blank">
+                                <img src="31.jpg" alt=" ">
+                                <div class="try-read-img">试读</div>
+                            </a>
+                        </div>
+                        <h4 target="_blank">面试官系统精讲Java源码及大厂真题</h4>
+                        <div class="course-read-info">
+                            <span>共48节*1541人已购买</span>
+                        </div>
+                        <div class="course-read-teacher">
+                            <a target="_blank">
+                                <span>文贺</span>
+                                /知名电商Java技术专家
+                            </a>
+                        </div>
+                        <div class="course-read-price">
+                            <a target="_blank">
+                                <span class="sale">￥68.00</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="course-read-container">
+                            <div class="course-banner">
+                                <a target="_blank">
+                                    <img src="32.jpg" alt=" ">
+                                    <div class="try-read-img">试读</div>
+                                </a>
+                            </div>
+                            <h4 target="_blank">一线数据库工程师带你深入了解MySQL</h4>
+                            <div class="course-read-info">
+                                <span>共32节*988人已购买</span>
+                            </div>
+                            <div class="course-read-teacher">
+                                <a target="_blank">
+                                    <span>马听老师</span>
+                                    /一线数据库工程师
+                                </a>
+                            </div>
+                            <div class="course-read-price">
+                                <a target="_blank">
+                                    <span class="sale">￥46.00</span>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="course-read-container">
+                          <div class="course-banner">
+                              <a target="_blank">
+                                  <img src="33.jpg" alt=" ">
+                                  <div class="try-read-img">试读</div>
+                              </a>
+                           </div>
+                           <h4 target="_blank">Linux命令行与Shell脚本编程大全</h4>
+                           <div class="course-read-info">
+                                <span>共49节*989人已购买</span>
+                           </div>
+                          <div class="course-read-teacher">
+                              <a target="_blank">
+                              <span>Oscar</span>
+                                        /10年Linux老司机
+                              </a>
+                           </div>
+                          <div class="course-read-price">
+                                <a target="_blank">
+                                  <span class="sale">￥68.00</span>
+                                 </a>
+                          </div>
+                    </div>
+                        <div class="course-read-container">
+                            <div class="course-banner">
+                                <a target="_blank">
+                                    <img src="34.jpg" alt=" ">
+                                    <div class="try-read-img">试读</div>
+                                </a>
+                            </div>
+                            <h4 target="_blank">JavaScript设计模式精讲</h4>
+                             <div class="course-read-info">
+                                <span>共29节*1033人已购买</span>
+                            </div>
+                            <div class="course-read-teacher">
+                                <a target="_blank">
+                                    <span>SHERlocked93</span>
+                                            /开源社区活跃贡献者
+                                </a>
+                            </div>
+                            <div class="course-read-price">
+                                <a target="_blank">
+                                    <span class="sale">￥48.00</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="course-read-container">
+                            <div class="course-banner">
+                                <a target="_blank">
+                                    <img src="35.jpg" alt=" ">
+                                    <div class="try-read-img">试读</div>
+                                </a>
+                            </div>
+                            <h4 target="_blank">零基础学通TypeScript</h4>
+                            <div class="course-read-info">
+                                <span>共39节*784人已购买</span>
+                            </div>
+                            <div class="course-read-teacher">
+                                <a target="_blank">
+                                    <span>Lison
+                                    </span>
+                                                /前端高级工程师
+                                </a>
+                            </div>
+                            <div class="course-read-price">
+                                <a target="_blank">
+                                    <span class="sale">￥68.00</span>
+                                </a>
+                            </div>
+                      </div>
+
+                      <div class="course-read-container">
+                          <div class="course-banner">
+                               <a target="_blank">
+                                    <img src="36.jpg" alt=" ">
+                                    <div class="try-read-img">试读</div>
+                                </a>
+                                </div>
+                                <h4 target="_blank">用技术人的眼光看世界*程序员技术指北</h4>
+                                <div class="course-read-info">
+                                    <span>共62节*885人已购买</span>
+                                </div>
+                                <div class="course-read-teacher">
+                                    <a target="_blank">
+                                       <span>liuyubobobo</span>
+                                                    /算法大师 
+                                     </a>
+                                  </div>
+                              <div class="course-read-price">
+                                    <a target="_blank">
+                                    <span class="sale">￥99.00</span>
+                                    </a>
+                               </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="bgfff">
+                <div class="container-types container-rank clearfix qu">
+                        <h3 class="types-title clearfix">
+                            <span>排行榜</span>
+                            <ul class="js-rank-tab">
+                              <li class="kkk">实战课程</li>
+                              <li class="ggg">免费课程</li>
+                            </ul>
+                            <div class="r  rank-info  t10">
+                              <i class="imv2-ques"></i>
+                              <dl class="info  tt10">
+                                <dt>实战课排行榜规则</dt>
+                                <dd>根据近30天购买人数由高到低进行推荐</dd>
+                                <dt class="free">免费课排行榜规则</dt>
+                                <dd>根据近30天观看人数由高到低进行推荐</dd>
+                              </dl>
+                            </div>
+                        </h3>
+                        <div class="clearfix types-content kk" >
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                    <div class="course-card-top hashadow">
+                                        <img src="114.jpg">
+                                        <div class="course-label">
+                                            <label >C</label>
+                                        </div>
+                                    </div>
+                                    <div class="course-card-content">
+                                        <h3 class="course-card-name">C语言入门</h3>
+                                        <div class="clearfix course-card-bottom">
+                                            <div class="course-card-info">
+                                                <span>入门</span>
+                                                <span>
+                                                    <i class="imv2-set-sns"></i>
+                                                    "779582"
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="115.jpg">
+                                            <div class="course-label">
+                                                <label >Python</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">初识Python</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                    
+                                                    <span>入门</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                        "698929"
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                    <div class="course-card-top hashadow">
+                                        <img src="116.jpg" >
+                                            <div class="course-label">
+                                                 <label >Java</label>
+                                            </div>
+                                    </div>
+                                    <div class="course-card-content">
+                                        <h3 class="course-card-name">Java入门第一季</h3>
+                                            <div class="clearfix course-card-botton">
+                                                 <div class="course-card-info">
+                                                    <span>中级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                            "1018604"
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                    <div class="course-card-top hashadow">
+                                        <img src="117.jpg" >
+                                        <div class="course-label">
+                                            <label >HTML+CSS</label>
+                                        </div>
+                                    </div>
+                                    <div class="course-card-content">
+                                        <h3 class="course-card-name">初识HTML+CSS</h3>
+                                        <div class="clearfix course-card-botton">
+                                            <div class="course-card-info">
+                                            
+                                                <span>入门</span>
+                                                <span>
+                                                    <i class="imv2-set-sns"></i>
+                                                          "1093632"
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="118.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >Vue.js</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">Vue-cli全集</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                         
+                                                    <span>入门</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                           "6383"
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="119.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >JavaScript</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">JavaScript入门篇</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                                 
+                                                    <span>入门</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                               "668383"
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="120.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >设计工具</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">PS入门教程——新手过招</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                                         
+                                                    <span>入门</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                            "584388"
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="121.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >小程序</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">轻松入门微信小程序与云开发</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                                                 
+                                                    <span>初级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                              "32808"
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>                    
+                        </div>
+
+                        <div class="clearfix types-content gg">
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                    <div class="course-card-top hashadow">
+                                        <img src="41.jpg">
+                                        <div class="course-label">
+                                            <label >Python</label>
+                                        </div>
+                                    </div>
+                                    <div class="course-card-content">
+                                        <h3 class="course-card-name">全面系统python3入门+进阶课程小白也能听懂</h3>
+                                        <div class="clearfix course-card-bottom">
+                                            <div class="course-card-info">
+                                                <span>初级</span>
+                                                <span>
+                                                    <i class="imv2-set-sns"></i>
+                                                    "9582"
+                                                </span>
+                                                <span >评分：9.96</span>
+                                            </div>
+                                            <div class="course-card-price">
+                                                ￥366.00
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="42.jpg">
+                                            <div class="course-label">
+                                                <label >Html5</label>
+                                                <label >小程序</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">微信小程序入门与实战 常用组件API开发技巧项目实战</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                    
+                                                    <span>初级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                        "18929"
+                                                    </span>
+                                                    <span >评分：9.98</span>
+                                                </div>
+                                                <div class="course-card-price">
+                                                    ￥149.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                    <div class="course-card-top hashadow">
+                                        <img src="43.jpg" >
+                                            <div class="course-label">
+                                                 <label >数据结构</label>
+                                            </div>
+                                    </div>
+                                    <div class="course-card-content">
+                                        <h3 class="course-card-name">玩转算法系列--数据结构精讲 更适合0算法基础入门到进阶（java版）</h3>
+                                            <div class="clearfix course-card-botton">
+                                                 <div class="course-card-info">
+                                                    <span>中级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                            "4604"
+                                                    </span>
+                                                    <span >评分：9.99</span>
+                                                </div>
+                                                <div class="course-card-price">
+                                                        ￥299.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                    <div class="course-card-top hashadow">
+                                        <img src="44.jpg" >
+                                        <div class="course-label">
+                                            <label >Vuejs</label>
+                                        </div>
+                                    </div>
+                                    <div class="course-card-content">
+                                        <h3 class="course-card-name">Spring Cloud Alibaba微服务从入门到进阶</h3>
+                                        <div class="clearfix course-card-botton">
+                                            <div class="course-card-info">
+                                            
+                                                <span>高级</span>
+                                                <span>
+                                                    <i class="imv2-set-sns"></i>
+                                                          "632"
+                                                </span>
+                                                <span >评分：10.00</span>
+                                            </div>
+                                            <div class="course-card-price">
+                                                   ￥399.00
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="index-card-container course-card-container container">
+                                <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="45.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >WebApp</label>
+                                                <label >Vue.js</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">Vue.js2.5+cube-ui重构饿了么App（经典再升级）</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                         
+                                                    <span>中级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                           "8383"
+                                                    </span>
+                                                    <span >评分：9.92</span>
+                                                </div>
+                                                <div class="course-card-price">
+                                                        ￥199.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="46.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >C++</label>
+                                                <label >算法</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">算法与数据结构--综合提升篇（c++版）</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                                 
+                                                    <span>中级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                               "8383"
+                                                    </span>
+                                                    <span >评分：9.99</span>
+                                                </div>
+                                                <div class="course-card-price">
+                                                        ￥166.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="47.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >C++</label>
+                                                <label >算法</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">玩转算法面试--Leetcode真题分门别类讲解</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                                         
+                                                    <span>中级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                            "4388"
+                                                    </span>
+                                                    <span >评分：10.00</span>
+                                                </div>
+                                                <div class="course-card-price">
+                                                     ￥266.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="index-card-container course-card-container container">
+                                    <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                        <div class="course-card-top hashadow">
+                                            <img src="48.jpg" alt="">
+                                            <div class="course-label">
+                                                <label >SpringBoot</label>
+                                                <label >SSM</label>
+                                            </div>
+                                        </div>
+                                        <div class="course-card-content">
+                                            <h3 class="course-card-name">Java主流技术栈SSM+SpringBoot商铺系统（升级更新）</h3>
+                                            <div class="clearfix course-card-botton">
+                                                <div class="course-card-info">
+                                                                                 
+                                                    <span>初级</span>
+                                                    <span>
+                                                        <i class="imv2-set-sns"></i>
+                                                              "2808"
+                                                    </span>
+                                                    <span >评分：9.98</span>
+                                                </div>
+                                                <div class="course-card-price">
+                                                       ￥299.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>                    
+                        </div>
+                    </div>
+        </div>
+        <div class="elite-bg"></div>
+        <div class="bgfff"></div>
+    </div>
+    <div class="footer idx-minwidth">
+      <div class="container">
+        <div class="footer-wrap idx-width">
+          <div class="footer-sns clearfix">
+            <div class="l">
+              <a class="footer-sns-weixin  p7" title="微信"><i class="footer-sns-weixin-expand"></i></a>
+              <p>官方公众号</p>
+              <div class="bbbb"></div>
+            </div>
+            <div class="r">
+              <a class="footer-sns-weibo hide-text" title="新浪微博"></a>
+              <p>官方微博</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-link">
+          <a>企业合作</a>
+          <a>人才招聘</a>
+          <a>联系我们</a>
+          <a>讲师招募</a>
+          <a>帮助中心</a>
+          <a>意见反馈</a>
+          <a>慕课大学</a>
+          <a>代码托管</a>
+          <a >友情链接</a>
+        </div>
+        <div class="footer-copyright">
+          <p><img src="111.png" >
+            2019 imooc.com  京ICP备 12003892号-11 北京奥鹏文化传媒有限公司</p>
+        </div>
+      </div>
+    </div>
+    <div id="J_GoToTop"  class="elevator">
+      <a >
+        <div class="p1"></div>
+        <i class="icon-feedback pp1"> </i>
+        <span class="ppp1">意见反馈</span>
+      </a>        
+      <a class="elevator-dist">
+          <div class="p2"></div>
+        <i class="pp2"></i>
+        <span class="ppp2">邀请有奖</span>        
+      </a>
+      <a class="elevator-faq">
+          <div class="p3"></div>
+        <i class="icon-ques pp3"></i>
+        <span class="ppp3">帮助中心</span>
+      </a>
+      <a class="elevator-app">
+          <div class="p4"></div>
+        <i class="icon-appdownload pp4"></i>
+        <span class="ppp4">APP下载</span>
+        <div class="elevator-app-box">
+            <div class="nnnn"></div>
+        </div>
+      </a>
+      <a class="elevator-weixin ">
+          <div class="p5"></div>
+        <i class="icon-wxgzh pp5"></i>
+        <span class="ppp5">官方微信</span>
+        <div elevator-weixin-box>
+            <div class="mmmm"></div>
+        </div>
+      </a>
+      <a class="elevator-top" id="myBtn">
+          <div class="p6"></div>
+        <i class="icon-up2 pp6"></i>
+        <span class="ppp6">返回顶部</span>
+      </a>
+    </div>
+</body>
+</html>

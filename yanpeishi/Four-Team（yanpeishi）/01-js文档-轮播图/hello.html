@@ -8,17 +8,9 @@
 	var imgPaths = ["images/0.jpg","images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg"];
 	//用于存储当前显示的图片的下标 
 	var index = 0 ;
-    var timer;
-    function play(){
 	    timer = setInterval(function(){
 	       x1(1);
-	    },5000);
-    }
-    function stop(){
-    	clearInterval(timer);
-    }
-    play();
-  
+	    },1000);
 	function x1(i){
 		index+=i;
 		//当从0下标 向上一张切换时, 会切换成-1 , 
@@ -36,10 +28,10 @@
 		for(j=0;j<d1s.length;j++){
 			if(index==j){
 				//当前下标 对应的div
-				d1s[j].style="background-color: #fff;cursor: pointer;";
+				d1s[j].style="background-color: #fff;cursor: pointer;width:15px;";
 			}else{
 				//其他div
-				d1s[j].style="";
+				d1s[j].style="background-color: #fff";
 			}
 		}
 
@@ -99,6 +91,11 @@
 		padding-bottom: 0px;
 		
 	}
+	.aaa{
+		width: 200px;
+		height:200px;
+		background: #000;
+	}
 </style>
 </head>
 <body >
@@ -118,5 +115,6 @@
 			<div class="d1" onmouseover="index=5;x1(0)"></div>
 		</div>
 	</div>
+	<div class="aaa"></div>
 </body>
 </html>
