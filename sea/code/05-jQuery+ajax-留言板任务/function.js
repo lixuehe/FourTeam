@@ -71,10 +71,27 @@ $(function(){
             }
         })
     });
-    // 回复 函数
+    // 点击回复 函数
     $("body").on("click",".replyMessage",function(event){
-        console.log(event.currentTarget.id);
-        $(".replyArea").toggle();
+        // console.log(event.currentTarget.id);
+        // 点击，使用toggle函数实现隐藏和显示。
+        $(".replyArea"+event.currentTarget.id).toggle();
+    })
+    // 点击确认 函数
+    $("body").on("click",".confirmButton", function(event){
+        console.log("你点击了第"+event.currentTarget.id+"个确认按钮");
+        var data = {};
+        data["replyName"] = $(".replyName"+event.currentTarget.id);
+        data["replyContent"] = $(".replyContent"+event.currentTarget.id);
+        console.log(data.replyName[0].value);
+        console.log(data.replyContent[0].value);
+ /*        $.ajax({
+            type: "POST",
+            url: "/text.json",
+            contentType: "application/json;charset=utf-8",
+            dataType:"json",
+            data:JSON.stringify(data),
+        })*/
     })
     // 请求服务端，并把结果输出到dom,加载全部的数据
     function requestServer(){
@@ -92,7 +109,10 @@ $(function(){
                                 姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
                                 <button class="replyMessage" id="${messageId}">回复</button>
                                 <button class="deleteMessage" id="${messageId}">删除</button>
-                                <div class="replyArea"><input type="text"><button>确认</button></div>
+                                <div class="replyArea${messageId}" style="display:none">
+                                <input type="text" class="replyName${messageId}"/><br>
+                                <textarea cols="25" rows="5" class="replyContent${messageId}"></textarea>
+                                <button class="confirmButton" id="${messageId}">确认</button></div>
                                 <br><br><br>
                             </div>`);
                 messageId++;//每生成一个留言。id自增1，给留言标序
@@ -115,7 +135,10 @@ $(function(){
                             姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
                             <button class="replyMessage" id="${messageId}">回复</button>
                             <button class="deleteMessage" id="${messageId}">删除</button>
-                            <div class="replyArea"><input type="text"><button>确认</button></div>
+                            <div class="replyArea${messageId}"  style="display:none">
+                            <input type="text" class="replyName${messageId}"><br>
+                            <textarea cols="30" rows="5" class="replyContent${messageId}"></textarea>
+                            <button class="confirmButton" id="${messageId}">确认</button></div>
                             <br><br><br>
                         </div>`);
             messageId++;//每生成一个留言。id自增1，给留言标序
