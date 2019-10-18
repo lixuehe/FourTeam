@@ -14,7 +14,7 @@
       timer = self.setInterval(function(){
         clearInterval(setInterval);       
              x1(1);
-          },1000);
+          },2000);
       function stop(){
         clearInterval(timer);
       }
@@ -49,7 +49,46 @@
       }     
      
     </script>
+    <script>
+    $(function () {
+      $(".hou").click(function(){
+        $(this).addClass("curr");
+        $(this).siblings().removeClass("curr");
+      })      
+    })
+    
+    </script>
+<script>
 
+  var countDownDate = new Date("Oct 25, 2019 10:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+      // Get todays date and time
+      var now = new Date().getTime();
+      
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+      
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Output the result in an element with id="demo"
+      document.getElementById("demo1").innerHTML = days + "天  " + hours + " : "
+      + minutes + " : " + seconds ;
+      
+      // If the count down is over, write some text 
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo1").innerHTML = "EXPIRED";
+      }
+  }, 1000);
+  
+  </script>
     <script>
         $(document).ready(function(){
 
@@ -64,9 +103,8 @@ function scrollFunction() {console.log(121);
 }
  
 $(".p6").click(function(){       
-  // document.body.scrollTop = 0;
-  //   document.documentElement.scrollTop = 0;
-  $("*").scrollTop(-2000);
+
+  $("*").animate({scrollTop:0},1200)
           }),
 
           $(".ppp1").hide();
@@ -171,15 +209,19 @@ $(".p1").mouseenter(function(){
 
           $(".tt12").mouseenter(function(){           
             $(".tt12").show();
+            $(".shop-cart-icon").css("color","red");
           }),
           $(".tt12").mouseleave(function(){
               $(".tt12").hide();
+              $(".shop-cart-icon").css("color","#787d82");
           }),
           $(".t12").mouseenter(function(){           
             $(".tt12").show();
+            $(".shop-cart-icon").css("color","red");
           }),
           $(".t12").mouseleave(function(){
               $(".tt12").hide();
+              $(".shop-cart-icon").css("color","#787d82");
           });
 
             $(".tt1").mouseenter(function(){           
@@ -190,7 +232,7 @@ $(".p1").mouseenter(function(){
             $(".tt1").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
           $(".t1").mouseenter(function(){           
             $(".tt1").show();
@@ -201,7 +243,7 @@ $(".p1").mouseenter(function(){
             $(".tt1").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           });
           $(".tt2").mouseenter(function(){           
             $(".tt2").show();
@@ -211,7 +253,7 @@ $(".p1").mouseenter(function(){
             $(".tt2").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
           $(".t2").mouseenter(function(){           
             $(".tt2").show();
@@ -221,7 +263,7 @@ $(".p1").mouseenter(function(){
             $(".tt2").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           });
           $(".tt3").mouseenter(function(){           
             $(".tt3").show();
@@ -231,7 +273,7 @@ $(".p1").mouseenter(function(){
             $(".tt3").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
           $(".t3").mouseenter(function(){           
             $(".tt3").show();
@@ -241,7 +283,7 @@ $(".p1").mouseenter(function(){
             $(".tt3").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           });
           $(".tt4").mouseenter(function(){           
             $(".tt4").show();
@@ -251,7 +293,7 @@ $(".p1").mouseenter(function(){
             $(".tt4").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
           $(".t4").mouseenter(function(){           
             $(".tt4").show();
@@ -261,7 +303,7 @@ $(".p1").mouseenter(function(){
             $(".tt4").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           });
           $(".tt5").mouseenter(function(){           
             $(".tt5").show();
@@ -271,7 +313,7 @@ $(".p1").mouseenter(function(){
             $(".tt5").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
           $(".t5").mouseenter(function(){           
             $(".tt5").show();
@@ -281,7 +323,7 @@ $(".p1").mouseenter(function(){
             $(".tt5").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           });
           $(".tt6").mouseenter(function(){           
             $(".tt6").show();
@@ -291,7 +333,7 @@ $(".p1").mouseenter(function(){
             $(".tt6").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
           $(".t6").mouseenter(function(){           
             $(".tt6").show();
@@ -301,7 +343,7 @@ $(".p1").mouseenter(function(){
             $(".tt6").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           });
           $(".tt7").mouseenter(function(){           
             $(".tt7").show();
@@ -311,7 +353,7 @@ $(".p1").mouseenter(function(){
             $(".tt7").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
           $(".abc").mouseenter(function(){           
 
@@ -321,7 +363,7 @@ $(".p1").mouseenter(function(){
 
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           }),
 
           $(".d1").mouseenter(function(){           
@@ -332,7 +374,7 @@ $(".d1").mouseleave(function(){
 
 timer = self.setInterval(function(){   
  x1(1);
-},1000);
+},2000);
 }),
 
           $(".t7").mouseenter(function(){           
@@ -343,7 +385,7 @@ timer = self.setInterval(function(){
             $(".tt7").hide();
             timer = self.setInterval(function(){   
              x1(1);
-          },1000);
+          },2000);
           });
         });
         </script>
@@ -1566,6 +1608,7 @@ timer = self.setInterval(function(){
           line-height: 26px;
           cursor: pointer;
           color: #545C63;
+          font-weight: 400;
         }
         .container-types .types-title ul li.curr {
           color: #F20D0D;
@@ -1784,7 +1827,7 @@ timer = self.setInterval(function(){
           color: #ffffff;
         }
 
-        /*改版样式*/
+
         .container-types.container-recommend {
           padding-top: 0px;
           padding-bottom: 44px;
@@ -1794,8 +1837,20 @@ timer = self.setInterval(function(){
           font-size: 12px;
           color: #545C63;
         }
-
- 
+        .course-card-price-aa{
+          font-size: 12px;
+          color: red;
+          font-weight: 800;
+        }
+        .course-card-price-aa .sales-tip {
+    box-sizing: border-box;
+    background: rgba(242, 13, 13, 0.08);
+    border-radius: 2px;
+    font-weight: 200;
+    color: #F20D0D;
+    padding: 0 4px;
+    display: inline-block;
+}
         .course-card-container {
           width: 270px;
           height: 268px;
@@ -1921,9 +1976,6 @@ timer = self.setInterval(function(){
           line-height: 24px;
           margin-top: 8px;
           font-weight: 400;
-        }
-        .container-path {
-          height: 380px;
         }
         .container-path .types-content {
           margin-left: -24px;
@@ -2102,17 +2154,6 @@ timer = self.setInterval(function(){
         .container-read .course-read-container .course-banner img {
           height: 118px;
           width: 104px;
-        }
-        .container-read .course-read-container .course-banner .try-read-img {
-          margin-top: 5px;
-          text-indent: 999em;
-          overflow: hidden;
-          background: url(/static/img/column/try-read-img_new_2x.png);
-          background-repeat: no-repeat;
-          background-size: 34px auto;
-          background-position: center;
-          width: 30px;
-          height: 20px;
         }
         .container-read .course-read-container h4 {
           margin-left: 112px;
@@ -2295,12 +2336,17 @@ timer = self.setInterval(function(){
         background: #4d555d;
         border-radius: 18px;
       }
+      .app-download .app-load-box .app-load-btn:hover{
+        background: black;
+      }
       .app-load-btn i{
         font-size: 16px;
         margin: 0 8px 0 -3px;
         vertical-align: -2px;
       }
-
+      .shop-cart .my-cart .cart-wrap .clear-cart .go-link:hover{
+        color: red;
+      }
       .shop-cart .my-cart{
         display: none;
         width:344px;
@@ -2576,7 +2622,51 @@ bottom:70px;
     color: #07111b;
     line-height: 14px;
 }
+#header .nav-item li a .icn-new {
+    position: absolute;
+    display: inline-block;
+    top: 14px;
+    width: 16px;
+    height: 16px;
+    background: url(200.png) no-repeat 0 0;
+}
+.zzz{
+  font-weight: 400;
+  color: #9199A1;
+}
+.container-read .course-read-container .course-banner .try-read-img {
+    margin-top: 5px;
+    text-indent: 999em;
+    overflow: hidden;
+    background: url(201.png);
+    background-repeat: no-repeat;
+    background-size: 34px auto;
+    background-position: center;
+    width: 30px;
+    height: 20px;
+}
+.course-card-price-aa .sales-tip i {
+    font-style: normal;
+}
 
+.course-card-container .course-stat.new {
+    background-color: #FFAA00;
+    background-image: linear-gradient(90deg, #ffaa00 17%, #f76b1c 100%);
+}
+.curr{
+  border-bottom: 1px solid #F20D0D;
+  color: red;
+}
+@media screen and (max-width: 1500px) {
+  #header .nav-item li a {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #header .nav-item li a {
+    padding: 0 5px;
+  }
+}
 </style>
 </head>
 <body id="index">
@@ -2591,7 +2681,9 @@ bottom:70px;
                 <li><a  target="_self">免费课程</a></li>
                 <li><a  target="_self">实战课程</a></li>
                 <li><a target="_self">就业班</a></li>
-                <li><a target="_self">专栏</a></li>
+                <li><a target="_self">专栏
+                  <i class="icn-new"></i>
+                </a></li>
                 <li><a target="_self">猿问</a></li>
                 <li><a target="_self">手记</a></li>
             </ul>
@@ -2627,7 +2719,7 @@ bottom:70px;
                         <div class="my-cart tt12" id="js-my-cart" >
                           <div class="cart-title-box clearfix">
                             <h2 class="l">我的购物车</h2>
-                            <h5 class="r">
+                            <h5 class="r  zzz">
                               以加入0门课
                             </h5>
                           </div>
@@ -2665,7 +2757,8 @@ bottom:70px;
 
                 </div>
                 <div class="search-area">
-                    <input type="text" class="search-input" data-suggest-trigger="suggest-trigger" placeholder="请输入想搜索的内容..." autocomplete="off">
+                    <input type="text" class="search-input" data-suggest-trigger="suggest-trigger" placeholder="请输入想搜索的内容..." autocomplete="off" 
+                    style="outline: none">
                     <input type="hidden" class="btn_search"  data-search-btn="search-btn">
                 </div>
                 <div class="showhide-search" data-show="no">
@@ -2796,7 +2889,7 @@ bottom:70px;
                     <div class="recomment-box">
                       <div class="l banner-course-card">
                         <a  class="clearfix">
-                          <img src="133.jpg" class="l">
+                          <img src="140.jpg" class="l">
                           <div class="l course-card">
                             <h3 class="course-card-name" >Java 零基础入门</h3>
                             <div class="course-card-price l">￥568.00</div>
@@ -2811,7 +2904,7 @@ bottom:70px;
                       </div>
                       <div class="l banner-course-card">
                           <a  class="clearfix">
-                            <img src="132.png" class="l">
+                            <img src="141.jpg" class="l">
                             <div class="l course-card">
                               <h3 class="course-card-name" >Java 零基础入门</h3>
                               <div class="course-card-price l">￥568.00</div>
@@ -2826,7 +2919,7 @@ bottom:70px;
                         </div>
                         <div class="l banner-course-card">
                             <a  class="clearfix">
-                              <img src="133.jpg" class="l">
+                              <img src="142.png" class="l">
                               <div class="l course-card">
                                 <h3 class="course-card-name" >Java 零基础入门</h3>
                                 <div class="course-card-price l">￥568.00</div>
@@ -2841,7 +2934,7 @@ bottom:70px;
                           </div>
                           <div class="l banner-course-card">
                               <a  class="clearfix">
-                                <img src="131.jpg" class="l">
+                                <img src="143.jpg" class="l">
                                 <div class="l course-card">
                                   <h3 class="course-card-name" >Java 零基础入门</h3>
                                   <div class="course-card-price l">￥568.00</div>
@@ -2884,10 +2977,10 @@ bottom:70px;
                       </div>
                       <div class="recomment-box">
                         <div class="l banner-course-card">
-                          <a  class="clearfix">            clearInterval(timer);
-                            <img src="132.png" class="l">            clearInterval(timer);
-                            <div class="l course-card">            clearInterval(timer);
-                              <h3 class="course-card-name" >Java 零基础入            clearInterval(timer);门</h3>
+                          <a  class="clearfix">          
+                            <img src="150.jpg" class="l">            
+                            <div class="l course-card">           
+                              <h3 class="course-card-name" >Java 零基础入 </h3>
                               <div class="course-card-price l">￥568.00</div>
                               <div class="course-card-dot l">
                                 <i class="imv2-dot_samll"></i>
@@ -2900,7 +2993,7 @@ bottom:70px;
                         </div>
                         <div class="l banner-course-card">
                             <a  class="clearfix">
-                              <img src="130.jpg" class="l">
+                              <img src="151.png" class="l">
                               <div class="l course-card">
                                 <h3 class="course-card-name" >Java 零基础入门</h3>
                                 <div class="course-card-price l">￥568.00</div>
@@ -2915,7 +3008,7 @@ bottom:70px;
                           </div>
                           <div class="l banner-course-card">
                               <a  class="clearfix">
-                                <img src="131.jpg" class="l">
+                                <img src="152.jpg" class="l">
                                 <div class="l course-card">
                                   <h3 class="course-card-name" >Java 零基础入门</h3>
                                   <div class="course-card-price l">￥568.00</div>
@@ -2930,7 +3023,7 @@ bottom:70px;
                             </div>
                             <div class="l banner-course-card">
                                 <a  class="clearfix">
-                                  <img src="131.jpg" class="l">
+                                  <img src="153.jpg" class="l">
                                   <div class="l course-card">
                                     <h3 class="course-card-name" >Java 零基础入门</h3>
                                     <div class="course-card-price l">￥568.00</div>
@@ -2996,7 +3089,7 @@ bottom:70px;
                             </div>
                             <div class="l banner-course-card">
                                 <a  class="clearfix">
-                                  <img src="132.png" class="l">
+                                  <img src="141.jpg" class="l">
                                   <div class="l course-card">
                                     <h3 class="course-card-name" >Java 零基础入门</h3>
                                     <div class="course-card-price l">￥568.00</div>
@@ -3011,7 +3104,7 @@ bottom:70px;
                               </div>
                               <div class="l banner-course-card">
                                   <a  class="clearfix">
-                                    <img src="133.jpg" class="l">
+                                    <img src="150.jpg" class="l">
                                     <div class="l course-card">
                                       <h3 class="course-card-name" >Java 零基础入门</h3>
                                       <div class="course-card-price l">￥568.00</div>
@@ -3163,7 +3256,7 @@ bottom:70px;
                             <div class="recomment-box">
                               <div class="l banner-course-card">
                                 <a  class="clearfix">
-                                  <img src="131.jpg" class="l">
+                                  <img src="140.jpg" class="l">
                                   <div class="l course-card">
                                     <h3 class="course-card-name" >Java 零基础入门</h3>
                                     <div class="course-card-price l">￥568.00</div>
@@ -3193,7 +3286,7 @@ bottom:70px;
                                 </div>
                                 <div class="l banner-course-card">
                                     <a  class="clearfix">
-                                      <img src="131.jpg" class="l">
+                                      <img src="150.jpg" class="l">
                                       <div class="l course-card">
                                         <h3 class="course-card-name" >Java 零基础入门</h3>
                                         <div class="course-card-price l">￥568.00</div>
@@ -3270,7 +3363,7 @@ bottom:70px;
                                 </div>
                                 <div class="l banner-course-card">
                                     <a  class="clearfix">
-                                      <img src="133.jpg" class="l">
+                                      <img src="143.jpg" class="l">
                                       <div class="l course-card">
                                         <h3 class="course-card-name" >Java 零基础入门</h3>
                                         <div class="course-card-price l">￥568.00</div>
@@ -3285,7 +3378,7 @@ bottom:70px;
                                   </div>
                                   <div class="l banner-course-card">
                                       <a  class="clearfix">
-                                        <img src="131.jpg" class="l">
+                                        <img src="152.jpg" class="l">
                                         <div class="l course-card">
                                           <h3 class="course-card-name" >Java 零基础入门</h3>
                                           <div class="course-card-price l">￥568.00</div>
@@ -3300,7 +3393,7 @@ bottom:70px;
                                     </div>
                                     <div class="l banner-course-card">
                                         <a  class="clearfix">
-                                          <img src="133.jpg" class="l">
+                                          <img src="141.jpg" class="l">
                                           <div class="l course-card">
                                             <h3 class="course-card-name" >Java 零基础入门</h3>
                                             <div class="course-card-price l">￥568.00</div>
@@ -3464,8 +3557,12 @@ bottom:70px;
                                         </span>
                                         <span >评分：10.00</span>
                                     </div>
-                                    <div class="course-card-price">
+                                    <div class="course-card-price-aa">
                                         ￥348.00
+                                        <span class="sales-tip">限时优惠
+                                          <i class="sales-timer js-sales-end-timer" id="demo1"></i>
+                                        </span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -3473,6 +3570,7 @@ bottom:70px;
                     </div>
                     <div class="index-card-container course-card-container container">
                             <a target="_blank" class="course-card" data-track="sztj-1-1">
+                              <div class="course-stat new">新课</div>
                                 <div class="course-card-top hashadow">
                                     <img src="2.jpg">
                                     <div class="course-label">
@@ -3527,6 +3625,7 @@ bottom:70px;
                     </div>
                     <div class="index-card-container course-card-container container">
                         <a target="_blank" class="course-card" data-track="sztj-1-1">
+                            <div class="course-stat new">新课</div>
                             <div class="course-card-top hashadow">
                                 <img src="4.jpg" >
                                 <div class="course-label">
@@ -3638,6 +3737,7 @@ bottom:70px;
                         </div>
                         <div class="index-card-container course-card-container container">
                             <a target="_blank" class="course-card" data-track="sztj-1-1">
+                                <div class="course-stat new">新课</div>
                                 <div class="course-card-top hashadow">
                                     <img src="8.png" alt="">
                                     <div class="course-label">
@@ -3672,13 +3772,13 @@ bottom:70px;
                 <h3 class="types-title clearfix">
                     <span>学习路线</span>
                     <ul class="js-path-tab">
-                        <li date-id="hot" class="k1">热门</li>
-                        <li data-id="1" class="k2">前端</li>
-                        <li data-id="2" class="k3">后端</li>
-                        <li data-id="3" class="k4">移动端</li>
-                        <li data-id="4" class="k5">计算机基础</li>
-                        <li data-id="5" class="k6">大数据</li>
-                        <li data-id="6" class="k7">测试</li>
+                        <li date-id="hot" class="k1  hou  curr">热门</li>
+                        <li data-id="1" class="k2  hou">前端</li>
+                        <li data-id="2" class="k3  hou">后端</li>
+                        <li data-id="3" class="k4  hou">移动端</li>
+                        <li data-id="4" class="k5  hou">计算机基础</li>
+                        <li data-id="5" class="k6  hou">大数据</li>
+                        <li data-id="6" class="k7  hou">测试</li>
                     </ul>
                     <a target="_blank" class="more">
                         查看更多
@@ -3701,7 +3801,7 @@ bottom:70px;
                                     <i class="imv2-star2">4122人收藏</i>
                                 </span>
                             </div>
-                        </a>pg
+                        </a>
                     </div>
                     <div class="course-path-container">
                             <a target="_blank">
@@ -4113,6 +4213,9 @@ bottom:70px;
                             <div class="course-read-price">
                                 <a target="_blank">
                                     <span class="sale">￥46.00</span>
+                                    <div class="countdown r" style="clear:both">
+                                      <span class="name">限时优惠</span>
+                                    </div>
                                 </a>
                             </div>
                     </div>
@@ -4219,8 +4322,8 @@ bottom:70px;
                         <h3 class="types-title clearfix">
                             <span>排行榜</span>
                             <ul class="js-rank-tab">
-                              <li class="kkk">实战课程</li>
-                              <li class="ggg">免费课程</li>
+                              <li class="kkk hou  curr">实战课程</li>
+                              <li class="ggg  hou">免费课程</li>
                             </ul>
                             <div class="r  rank-info  t10">
                               <i class="imv2-ques"></i>
