@@ -10,25 +10,97 @@
                 margin-bottom:10px;
             }
             #messageContent{
-                border:1px solid red;
                 width:auto;
                 height:auto;
                 margin-top:50px;
                 margin-bottom:50px;
             }
+            .article p{
+                line-height:35px;
+                color:#636b6f;
+            }
+            #box {
+                background:#f0f2f5;
+            }
+            #submit {
+                margin:20px 0;
+            }
+            #alertArea {
+                display:none;
+            }
+
+            ::selection {
+                background-color: #cce2ff;
+                color: rgba(0,0,0,.87);
+            }
         </style>
         <script src="./js/jquery.js"></script>
         <script src="function.js"></script>
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-    <body>
-    <h1>留言板</h1>
-    <div id="messageContent"></div>
-    <div id="inputName">
-        <input type="text" placeholder="请输入你的名字" id="inputNameTag">
-    </div>
-    <div id="submitMessageArea">
-        <textarea cols="30" rows="10" id="submitMessageTag"></textarea>
-        <button id="submit">提交留言</button>
-    </div>
+    <body id="box">
+    <div class="container">
+            <h2>我的小站</h2>
+            <div class="article panel panel-default">
+                <div class="panel-body">
+                    <h3>这是文章的标题</h3>
+                    <hr>
+                    <p>
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                    </p>
+                    <h3>这是文章的标题2</h3>
+                    <hr>
+                    <p>
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容.
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                    </p>
+                    <img class="img-responsive center-block" src="https://cdn.learnku.com/uploads/images/201910/17/26413/RX8xYDkLkF.png!/fw/1240">
+                    <h3>这是文章的标题3</h3>
+                    <hr>
+                    <p>
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容.
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                    </p>
+                    <h3>这是文章的标题4</h3>
+                    <hr>
+                    <p>
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容.
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                        这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。这是文章的内容。
+                    </p>
+                    <img class="img-responsive center-block" src="https://cdn.learnku.com/uploads/images/201907/24/24257/eKDvEz46qA.jpeg!large" alt="">
+                </div>
+            </div>
+            <hr>
+            <div class="message">
+                <div id="messageContent"></div>
+                <div class="alert alert-warning alert-dismissable" id="alertArea">
+                    <button type="button" class="close closeWarning">
+                        &times;
+                    </button>
+                    姓名或内容不能为空
+                </div>
+                <div class="form-group">
+                    <div id="inputName">
+                        <input type="text" placeholder="请输入你的名字" id="inputNameTag" class="form-control">
+                    </div>
+                    <div id="submitMessageArea">
+                            <textarea cols="30" rows="10" id="submitMessageTag" class="form-control"></textarea>
+                            <button id="submit" class="btn btn-success pull-right">
+                                <span class="glyphicon glyphicon-comment" style="top:2px;"></span> 评论
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

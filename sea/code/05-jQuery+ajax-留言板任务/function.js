@@ -1,5 +1,6 @@
 //自增函数，标识id，开始为0
 var messageId = 0;
+
 //当前div的id
 var currentDivId = 0;
 // 时间戳转时间函数
@@ -27,12 +28,15 @@ $(function(){
         data["content"] = $("#submitMessageTag").val();
         data["time"] = currentTime().toString();
         if(data["name"].length===0){
-            alert("姓名不能为空！");
+            $("#alertArea").show();
             return false;
         }
         if(data["content"].length===0){
-            alert("内容不能为空！");
-            return false;}
+            $("#alertArea").show();
+            return false;
+        }
+        // 如果上面的条件都满足了，则隐藏提示。
+        $("#alertArea").hide();
         // ajax post发送json数据
         $.ajax({
             type: "POST",
@@ -64,6 +68,8 @@ $(function(){
                 currentDivId = event.currentTarget.id;
                 // 这里 要想办法重新渲染dom（或者直接删除那个dom）
                 $("#div"+currentDivId).remove();
+                $(".modal-backdrop").remove();
+                $("body").removeClass('modal-open');
                 console.log("删除成功,id为："+event.currentTarget.id);
             },
             error:function(){
@@ -71,27 +77,8 @@ $(function(){
             }
         })
     });
-    // 点击回复 函数
-    $("body").on("click",".replyMessage",function(event){
-        // console.log(event.currentTarget.id);
-        // 点击，使用toggle函数实现隐藏和显示。
-        $(".replyArea"+event.currentTarget.id).toggle();
-    })
-    // 点击确认 函数
-    $("body").on("click",".confirmButton", function(event){
-        console.log("你点击了第"+event.currentTarget.id+"个确认按钮");
-        var data = {};
-        data["replyName"] = $(".replyName"+event.currentTarget.id);
-        data["replyContent"] = $(".replyContent"+event.currentTarget.id);
-        console.log(data.replyName[0].value);
-        console.log(data.replyContent[0].value);
- /*        $.ajax({
-            type: "POST",
-            url: "/text.json",
-            contentType: "application/json;charset=utf-8",
-            dataType:"json",
-            data:JSON.stringify(data),
-        })*/
+    $(".closeWarning").click(function(){
+        $("#alertArea").hide();
     })
     // 请求服务端，并把结果输出到dom,加载全部的数据
     function requestServer(){
@@ -105,16 +92,43 @@ $(function(){
                 let messageContent = messageData.message[i].content;
                 let messageTime = timestampToTime(messageData.message[i].time);
                 //使用es6模板字符串，省去一大部分操作。
-                $("#messageContent").append(`<div id="div${messageId}">
-                                姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
-                                <button class="replyMessage" id="${messageId}">回复</button>
-                                <button class="deleteMessage" id="${messageId}">删除</button>
-                                <div class="replyArea${messageId}" style="display:none">
-                                <input type="text" class="replyName${messageId}"/><br>
-                                <textarea cols="25" rows="5" class="replyContent${messageId}"></textarea>
-                                <button class="confirmButton" id="${messageId}">确认</button></div>
-                                <br><br><br>
-                            </div>`);
+                $("#messageContent").append(`
+                    <div id="div${messageId}" class="panel panel-default">
+                       <div class="panel-body">
+                            <strong>${messageName} </strong><span class="glyphicon glyphicon-fire" style="top:2px"></span>
+                            <hr>
+                            <p>${messageContent}</p>
+                            <span style="color:rgba(0, 0, 0, 0.4);">${messageTime}</span>
+                            <hr>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-thumbs-up" style="top:2px;"></span> 点赞
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-comment" style="top:2px;"></span> 举报
+                                </button>
+                            </div>
+                            <button class="btn btn-warning pull-right" id="${messageId}" data-toggle="modal" data-target="#myModal${messageId}">
+                                <span class="glyphicon glyphicon-trash" style="top:2px"></span> 删除
+                            </button>
+                            
+                            <div class="modal fade" id="myModal${messageId}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">确认框</h4>
+                                        </div>
+                                        <div class="modal-body">您确定删除这条留言吗？</div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-danger deleteMessage" id="${messageId}">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>`);
                 messageId++;//每生成一个留言。id自增1，给留言标序
             }
         });
@@ -131,16 +145,43 @@ $(function(){
             let messageName = messageData.message[newValue].name;
             let messageContent = messageData.message[newValue].content;
             let messageTime = timestampToTime(messageData.message[newValue].time);
-            $("#messageContent").append(`<div id="div${messageId}">
-                            姓名: ${messageName}<br>内容: ${messageContent}<br>时间: ${messageTime}<br>
-                            <button class="replyMessage" id="${messageId}">回复</button>
-                            <button class="deleteMessage" id="${messageId}">删除</button>
-                            <div class="replyArea${messageId}"  style="display:none">
-                            <input type="text" class="replyName${messageId}"><br>
-                            <textarea cols="30" rows="5" class="replyContent${messageId}"></textarea>
-                            <button class="confirmButton" id="${messageId}">确认</button></div>
-                            <br><br><br>
-                        </div>`);
+            $("#messageContent").append(`
+                <div id="div${messageId}" class="panel panel-default">
+                    <div class="panel-body">
+                        <strong>${messageName} </strong><span class="glyphicon glyphicon-fire" style="top:2px"></span>
+                        <hr>
+                        <p>${messageContent}</p>
+                        <span style="color:rgba(0, 0, 0, 0.4);">${messageTime}</span>
+                        <hr>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-thumbs-up" style="top:2px;"></span> 点赞
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-comment" style="top:2px;"></span> 举报
+                                </button>
+                            </div>
+                            <button class="btn btn-warning pull-right" id="${messageId}" data-toggle="modal" data-target="#myModal${messageId}">
+                                <span class="glyphicon glyphicon-trash" style="top:2px"></span> 删除
+                            </button>
+                            
+                            <div class="modal fade" id="myModal${messageId}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">确认框</h4>
+                                        </div>
+                                        <div class="modal-body">您确定删除这条留言吗？</div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-danger deleteMessage" id="${messageId}">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>`);
             messageId++;//每生成一个留言。id自增1，给留言标序
         })
     }
