@@ -35,7 +35,7 @@ $(function(){
             $("#alertArea").show();
             return false;
         }
-        // 如果上面的条件都满足了，则隐藏提示。
+        // 如果上面的条件都满足了，则隐藏提示。请求ajax。
         $("#alertArea").hide();
         // ajax post发送json数据
         $.ajax({
@@ -68,6 +68,7 @@ $(function(){
                 currentDivId = event.currentTarget.id;
                 // 这里 要想办法重新渲染dom（或者直接删除那个dom）
                 $("#div"+currentDivId).remove();
+                //删除黑框（bootstrap模态框的遮罩）
                 $(".modal-backdrop").remove();
                 $("body").removeClass('modal-open');
                 console.log("删除成功,id为："+event.currentTarget.id);
