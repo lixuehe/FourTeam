@@ -507,3 +507,40 @@ console.log('\u01D1'.normalize());
 console.log('\u01D1'.normalize() === '\u004F\u030c'.normalize());*/
 
 // console.log('\u004F\u030C'.normalize('NFKD').length);
+
+/*
+let s = 'Hello world';
+console.log(s.startsWith('world', 6));
+console.log(s.endsWith('Hello', 5));
+console.log(s.includes('o',5));
+*/
+/*
+let x = 'x'.repeat(300000);
+console.log(x);
+*/
+
+// console.log('hello'.repeat(20));
+/*
+console.log('na'.repeat(0));
+
+console.log('na'.repeat(2.9));*/
+/*
+console.log('x'.padStart(4,'ab'));
+console.log('x'.padEnd(40,'ab'));*/
+
+/*
+console.log('abc'.padStart(10,'0123456789'));
+console.log('abc'.padEnd(10,'0123456789'));*/
+
+/*
+console.log('1'.padStart(10,'0'));
+console.log('1'.padEnd(10,'0'));*/
+// console.log('123456'.padStart(10,'0'));
+// console.log('09-12'.padStart(10,'YYYY-MM-DD'));
+
+/*
+const s = '     abc    ';
+console.log(s);
+console.log(s.trim());
+console.log(s.trimStart());
+console.log(s.trimEnd());*/
