@@ -125,3 +125,74 @@ a = '2015-01-02'.replace(re,(
 });
 console.log(a);*/
 
+/*
+var regex = /t(e)(st(\d?))/g;
+var string = 'test1test2test3';
+
+var matches = [];
+var match;
+while (match = regex.exec(string)) {
+    matches.push(match);
+}
+console.log(match);*/
+
+// console.log(0b111110111 === 503)
+
+/*
+(function(){
+    console.log(0o11==011);
+})();
+
+(function(){
+    console.log("test");
+})()
+*/
+/*
+(function(){
+    'use strict';
+    console.log(0o11 === 011);
+})()*/
+
+// console.log(Number('0o10'));
+// console.log(Number.isFinite(true));
+// console.log(Number.isNaN('true' / 0));
+/*
+console.log(parseInt('12.34'));
+console.log(parseFloat('123.45#'));
+console.log(Number.parseInt('12.34'));
+console.log(Number.parseFloat('123.45#'));*/
+
+// console.log(Number.isInteger(true);
+// console.log(Number.isInteger(3.00000000000000000000002));
+/*
+console.log(Number.EPSILON);
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 - 0.3);*/
+
+// console.log(0.1+0.2===0.3);
+
+/*
+function withinErrorMargin (left, right) {
+    return Math.abs(left - right) < Number.EPSILON * Math.pow(2, 2);
+}
+
+console.log(withinErrorMargin(0.1 + 0.2, 0.3));
+console.log(withinErrorMargin(1.1 + 1.3, 2.4));*/
+
+// console.log(Math.pow(2, 53) == Math.pow(2, 53) + 1);
+// console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER -1));
+// console.log(9007199254740993 === 9007199254740992);
+
+/*console.log(Math.trunc(undefined));
+
+console.log(Math.clz32(0));*/
+
+// console.log(Math.imul(0x7fffffff, 0x7fffffff));
+
+// console.log(2 ** 53);
+/*
+let a = 2;
+console.log(a **= 3);*/
+/*
+console.log(Math.pow(99, 99));
+console.log(99 ** 99);*/
