@@ -249,3 +249,9 @@ let foo = {...['a','b','c']};
 console.log(foo);*/
 
 // console.log({...{}, a:1});
+
+// console.log({...'hello'});
+/*
+
+console.log(Object.is('foo', 'foo'));
+console.log(Object.is({}, {}));*/
