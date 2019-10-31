@@ -87,10 +87,29 @@ console.log(Object.getOwnPropertyNames(obj));
 console.log(Object.getOwnPropertySymbols(obj));
 */
 
+/*
 let obj = {
     [Symbol('my_key')]: 1,
     enum: 2,
     nonEnum: 3
 };
 
-console.log(Reflect.ownKeys(obj));
+console.log(Reflect.ownKeys(obj));*/
+
+/*
+let s1 = Symbol.for('foo');
+let s2 = Symbol.for('foo');
+console.log(s1 === s2);*/
+
+/*
+console.log(Symbol.for("bar") === Symbol.for("bar"));
+console.log(Symbol("bar") === Symbol("bar"));*/
+
+/*
+let s1 = Symbol.for("foo");
+console.log(Symbol.keyFor(s1));
+
+let s2 = Symbol("foo");
+onsole.log(Symbol.keyFor(s2));
+*/
+
