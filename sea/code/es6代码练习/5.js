@@ -378,8 +378,9 @@ var sum = tco(function(x, y) {
 
 sum(1, 100000)*/
 // 100001
+/*
 
 function test (){
     console.log("fuckyou!!");
 }
-console.log(test.toString());
+console.log(test.toString());*/
